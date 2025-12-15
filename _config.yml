@@ -1,0 +1,30 @@
+
+title: "FrankE Projects"
+description: "Portfolio site showcasing projects with Python, SQL, Power BI, and more."
+url: "https://<your-username>.github.io" # Replace with your GitHub Pages URL
+baseurl: "" # Leave empty unless using a subpath
+
+theme: jekyll-theme-primer
+
+# Markdown processor
+markdown: kramdown
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Pagination settings
+paginate: 5
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+ 
