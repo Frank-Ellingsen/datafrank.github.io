@@ -8,6 +8,36 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Add background image to banner */
+      #banner {
+        background: url('images/chart-comparison.png') no-repeat center center;
+        background-size: contain;
+        position: relative;
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Optional overlay for better text contrast */
+      #banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      /* Ensure text stays above overlay */
+      #banner h2,
+      #banner .banner-subtitle {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
   </head>
   <body>
     <div id="page-wrapper">
@@ -38,7 +68,7 @@
             <h2>Storytelling With Data</h2>
             <span class="banner-subtitle">
               Extract - Transform - Load - Analyse - Model - Automate -
-              Visualise
+              Visualize
             </span>
           </div>
         </div>
@@ -52,14 +82,14 @@
               <section>
                 <h2>Welcome To datafrank!</h2>
                 <p>
-                   A Showcase Website
-                	Designed By
+                  A Showcase Website Designed By
                   <a
                     href="https://www.linkedin.com/in/frankellingsen9117/"
                     target="_blank"
                     >Frank Ellingsen</a
-                  ><br>Featuring Projects with Python, SQL, Power BI and
-                  Excel.                      
+                  ><br />
+                  Featuring Projects with Python, SQL, Power BI and Excel.
+                </p>
               </section>
             </div>
             <div class="col-4 col-6-medium col-12-small">
@@ -73,61 +103,43 @@
                         alt="Frank Ellingsen"
                         class="left"
                     /></a>
-                    <h4>Bachelor in Finance & Business Administration</h4>
-                    <p>
-                      with Specialisation in Data Analysis
-                    </p>
-               
-                 
-                   
-                   
-                    </p>
-                  
-             
-           
+                    <h4>Bachelor in Finance &amp; Business Administration,</h4>
+                    <p>frankellingsen@hotmail.com</p>
+                  </li>
+                </ul>
+              </section>
             </div>
             <div class="col-4 col-6-medium col-12-small">
-             
-                <h2>How About Some Links?</h2>
-                <div>
-                  <div class="row">
-                    <div class="col-6 col-12-small">
-                      <ul class="link-list">
-                       
-                          <a
-                            href="https://github.com/Frank-Ellingsen?tab=repositories"
-                            target="_blank"
-                            >GitHub Repositories</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826"
-                            target="_blank"
-                            >Maven Showcase Profile</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            href="https://housing-price-predictor-8u16.onrender.com/"
-                            target="_blank"
-                            >Housing Price Predictor</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
+              <h2>How About Some Links?</h2>
+              <div>
+                <div class="row">
+                  <div class="col-6 col-12-small">
+                    <ul class="link-list">
+                      <li>
+                        <a
+                          href="https://github.com/Frank-Ellingsen?tab=repositories"
+                          target="_blank"
+                          >GitHub Repositories</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826"
+                          target="_blank"
+                          >Maven Showcase Profile</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://housing-price-predictor-8u16.onrender.com/"
+                          target="_blank"
+                          >Housing Price Predictor</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
-           
-            </div>
-
-            
-                </p>
-             
-            </div>
-
-          
-              </article>
+              </div>
             </div>
           </div>
         </div>
