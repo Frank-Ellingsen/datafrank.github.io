@@ -27,14 +27,13 @@ jobs:
           gem install bundler
           bundle install
 
-      # 4. Build Jekyll site
+      # 4. Build Jekyll site (root source)
       - name: Build Jekyll site
-        run: bundle exec jekyll build --source docs --destination docs/_site
-        # If your site is in root, remove --source and --destination
+        run: bundle exec jekyll build
 
       # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+          github_token: ${{ secrets.G          github_token: ${{ secrets.GITHUB_TOKEN }}
+
