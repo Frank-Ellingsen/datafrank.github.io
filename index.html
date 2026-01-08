@@ -1,12 +1,10 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>FrankE Projects</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
       /* Add background image to banner */
@@ -36,6 +34,24 @@
       #banner .banner-subtitle {
         position: relative;
         z-index: 2;
+      }
+
+      /* Responsive iframe */
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+      }
+
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
       }
     </style>
   </head>
@@ -67,8 +83,7 @@
           <div id="banner">
             <h2>Storytelling With Data</h2>
             <span class="banner-subtitle">
-              Extract - Transform - Load - Analyse - Model - Automate -
-              Visualize
+              Extract - Transform - Load - Analyse - Model - Automate - Visualize
             </span>
           </div>
         </div>
@@ -83,11 +98,7 @@
                 <h2>Welcome To data_frank!</h2>
                 <p>
                   A Showcase Website Designed By
-                  <a
-                    href="https://www.linkedin.com/in/frankellingsen9117/"
-                    target="_blank"
-                    >Frank Ellingsen</a
-                  ><br />
+                  <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">Frank Ellingsen</a><br />
                   Featuring Projects with Python, SQL, Power BI and Excel.
                 </p>
               </section>
@@ -97,12 +108,7 @@
                 <h2>whoami</h2>
                 <ul class="small-image-list">
                   <li>
-                    <a href="#"
-                      ><img
-                        src="images/profil.jpg"
-                        alt="Frank Ellingsen"
-                        class="left"
-                    /></a>
+                    <a href="#"><img src="images/profil.jpg" alt="Frank Ellingsen" class="left" /></a>
                     <h4>Bachelor in Finance &amp; Business Administration,</h4>
                     <p>frankellingsen@hotmail.com</p>
                   </li>
@@ -115,30 +121,23 @@
                 <div class="row">
                   <div class="col-6 col-12-small">
                     <ul class="link-list">
-                      <li>
-                        <a
-                          href="https://github.com/Frank-Ellingsen?tab=repositories"
-                          target="_blank"
-                          >GitHub Repositories</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826"
-                          target="_blank"
-                          >Maven Showcase Profile</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://housing-price-predictor-8u16.onrender.com/"
-                          target="_blank"
-                          >Housing Price Predictor</a
-                        >
-                      </li>
+                      <li><a href="https://github.com/Frank-Ellingsen?tab=repositories" target="_blank">GitHub Repositories</a></li>
+                      <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase Profile</a></li>
+                      <li><a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Housing Price Predictor</a></li>
+                      <li><a href="https://frank-ellingsen.github.io/krs_weather_report/" target="_blank">KRS Weather Report</a></li>
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Weather Report -->
+          <div class="row">
+            <div class="col-12">
+              <h2>KRS Weather Report (Embedded)</h2>
+              <div class="iframe-container">
+                <iframe src="https://frank-ellingsen.github.io/krs_weather_report/" title="KRS Weather Report"></iframe>
               </div>
             </div>
           </div>
