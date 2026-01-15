@@ -64,5 +64,3 @@ but *“How does this help the business decide?”*
 
 ---
 
-📫 **Let’s connect**  
-If you’re interested in analytics, business analysis, or the practical use of AI in decision-making, feel free to reach out.
