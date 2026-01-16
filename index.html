@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,8 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
     <style>
-      /* Add background image to banner */
+      /* -----------------------------
+         Banner
+      ------------------------------ */
       #banner {
         background: url('images/chart-comparison.png') no-repeat center center;
         background-size: contain;
@@ -17,63 +19,142 @@
         color: white;
       }
 
-      /* Optional overlay for better text contrast */
       #banner::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
         background: rgba(0, 0, 0, 0.4);
         z-index: 1;
       }
 
-      /* Ensure text stays above overlay */
       #banner h2,
       #banner .banner-subtitle {
         position: relative;
         z-index: 2;
       }
 
-      /* Responsive iframe */
+      /* -----------------------------
+         Global spacing & typography
+      ------------------------------ */
+      section {
+        margin-bottom: 2.5rem;
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      ul {
+        margin-bottom: 1rem;
+      }
+
+      /* -----------------------------
+         Iframe (responsive)
+      ------------------------------ */
       .iframe-container {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9 ratio */
+        padding-bottom: 56.25%;
         height: 0;
         overflow: hidden;
       }
 
       .iframe-container iframe {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         border: none;
       }
+
+      /* -----------------------------
+         Featured project cards
+      ------------------------------ */
+      .featured-section {
+        margin-top: 4rem;
+      }
+
+      .featured-project {
+        background: #f8f9fb;
+        padding: 2rem;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        margin-bottom: 3rem;
+      }
+
+      .project-subtitle {
+        color: #666;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+      }
+
+      .project-tags {
+        margin-bottom: 1.5rem;
+      }
+
+      .project-tags span {
+        display: inline-block;
+        background: #e4e7ec;
+        color: #333;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        margin-right: 0.5rem;
+      }
+
+      /* -----------------------------
+         Mobile improvements
+      ------------------------------ */
+      @media (max-width: 768px) {
+
+        #banner {
+          padding: 60px 15px;
+        }
+
+        .main-row > div {
+          margin-bottom: 2rem;
+        }
+
+        .featured-project {
+          padding: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.4rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
     </style>
   </head>
+
   <body>
     <div id="page-wrapper">
+
       <!-- Header -->
       <div id="header-wrapper">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <header id="header">
-                <h1><a href="index.html" id="logo">data_frank</a></h1>
-                <nav id="nav">
-                  <a href="index.html" class="current-page-item">Home</a>
-                  <a href="p1.html">MS Fabric</a>
-                  <a href="p2.html">Power BI</a>
-                  <a href="p3.html">Exploratory Dashboard</a>
-                  <a href="p4.html">Excel Data Model</a>
-                </nav>
-              </header>
-            </div>
-          </div>
+          <header id="header">
+            <h1><a href="index.html" id="logo">data_frank</a></h1>
+            <nav id="nav">
+              <a href="index.html" class="current-page-item">Home</a>
+              <a href="p1.html">MS Fabric</a>
+              <a href="p2.html">Power BI</a>
+              <a href="p3.html">Exploratory Dashboard</a>
+              <a href="p4.html">Excel Data Model</a>
+            </nav>
+          </header>
         </div>
       </div>
 
@@ -83,7 +164,7 @@
           <div id="banner">
             <h2>Storytelling With Data</h2>
             <span class="banner-subtitle">
-              Extract - Transform - Load - Analyse - Model - Automate - Visualize
+              Extract · Transform · Load · Analyse · Model · Automate · Visualize
             </span>
           </div>
         </div>
@@ -92,73 +173,120 @@
       <!-- Main -->
       <div id="main">
         <div class="container">
+
+          <!-- Intro -->
           <div class="row main-row">
             <div class="col-4 col-12-medium">
               <section>
-                <h2>Welcome To data_frank!</h2>
+                <h2>Welcome to data_frank</h2>
                 <p>
-                  A Showcase Website Designed By
-                  <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">Frank Ellingsen</a><br />
-                  Featuring Projects with Python, SQL, Power BI and Excel<br>
+                  A portfolio by
+                  <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
+                    Frank Ellingsen
+                  </a>
+                </p>
+                <p>
                   This portfolio showcases data analytics and data science projects focusing on:
-- End-to-end data workflows (ETL → Analysis → Modeling → Visualization)
-- Business-focused problem solving
-- Clear communication of insights
-
-Projects use a combination of Python, SQL, Power BI, and Excel, with an emphasis on
-practical, real-world use cases.<br>
-                  <br>
+                </p>
+                <ul>
+                  <li>End-to-end data workflows (ETL → Analysis → Modeling → Visualization)</li>
+                  <li>Business-focused problem solving</li>
+                  <li>Clear communication of insights</li>
+                </ul>
+                <p>
+                  Projects use Python, SQL, Power BI, and Excel with a practical, real-world focus.
                 </p>
               </section>
             </div>
+
             <div class="col-4 col-6-medium col-12-small">
               <section>
-                <h2>whoami</h2>
+                <h2>Who am I?</h2>
                 <ul class="small-image-list">
                   <li>
-  <a href="#"><img src="images/profil.jpg" alt="Frank Ellingsen" class="left" /></a>
-  <h4>Bachelor in Finance &amp; Business Administration</h4>
-
-  <p>
-    <a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a>
-  </p>
-
-  <p>
-    Business Intellingence-Analyst with background from Finance &amp; Business Administration having genuine interest in data extraction, transformation, modelling, automation, analytics, visualization, and Storytelling with Data.
-  </p>
-</li>
-
+                    <img src="images/profil.jpg" alt="Frank Ellingsen" class="left" />
+                    <h4>Bachelor in Finance &amp; Business Administration</h4>
+                    <p>
+                      <a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a>
+                    </p>
+                    <p>
+                      Business Intelligence Analyst with strong interest in data extraction,
+                      transformation, modeling, automation, analytics, visualization,
+                      and storytelling with data.
+                    </p>
+                  </li>
                 </ul>
               </section>
             </div>
+
             <div class="col-4 col-6-medium col-12-small">
-              <h2>How About Some Links?</h2>
-              <div>
-                <div class="row">
-                  <div class="col-6 col-12-small">
-                    <ul class="link-list">
-                      <li><a href="https://github.com/Frank-Ellingsen?tab=repositories" target="_blank">GitHub Repositories</a></li>
-                      <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase Profile</a></li>
-                      <li><a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Housing Price Predictor</a></li>
-                     
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <section>
+                <h2>Links</h2>
+                <ul class="link-list">
+                  <li><a href="https://github.com/Frank-Ellingsen" target="_blank">GitHub Repositories</a></li>
+                  <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
+                </ul>
+              </section>
             </div>
           </div>
 
-          <!-- Embedded Weather Report -->
-          <div class="row">
-            <div class="col-12">
+          <!-- Featured Projects -->
+          <div class="featured-section">
+
+            <!-- Housing Price Predictor -->
+            <div class="featured-project">
+              <h2>Housing Price Predictor</h2>
+              <p class="project-subtitle">
+                Machine learning model for predicting housing prices using structured property data.
+              </p>
+
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Regression</span>
+                <span>EDA</span>
+              </div>
+
+              <p>
+                Built an end-to-end predictive model that cleans raw housing data, explores key
+                price drivers, and evaluates multiple regression approaches to support
+                data-driven real estate decisions.
+              </p>
+
+              <p>
+                <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">
+                  View Live App →
+                </a>
+              </p>
+            </div>
+
+            <!-- KRS Weather Report -->
+            <div class="featured-project">
               <h2>KRS Weather Report</h2>
+              <p class="project-subtitle">
+                Interactive weather dashboard built on real-world time-series data.
+              </p>
+
+              <div class="project-tags">
+                <span>Python</span>
+                <span>APIs</span>
+                <span>Time Series</span>
+                <span>Visualization</span>
+              </div>
+
               <div class="iframe-container">
-                <iframe src="https://frank-ellingsen.github.io/krs_weather_report/" title="KRS Weather Report"></iframe>
+                <iframe
+                  src="https://frank-ellingsen.github.io/krs_weather_report/"
+                  title="KRS Weather Report">
+                </iframe>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
+
     </div>
   </body>
 </html>
