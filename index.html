@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Frank Ellingsen | Data Analyst Portfolio</title>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Data Analyst and Business Intelligence portfolio showcasing Python, SQL, Power BI, machine learning, and real-world analytics projects." />
+  <meta name="description"
+        content="Data Analyst and Business Intelligence portfolio showcasing Python, SQL, Power BI, machine learning, and real-world analytics projects." />
 
   <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -47,16 +49,33 @@
     }
 
     h4 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       line-height: 1.6;
     }
 
-    ul {
-      margin-bottom: 1rem;
+    /* =============================
+       FIX: Who am I alignment
+    ============================== */
+    .profile-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .profile-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .profile-text {
+      flex: 1;
     }
 
     /* =============================
@@ -99,10 +118,6 @@
       margin-bottom: 1.25rem;
     }
 
-    .project-tags {
-      margin-bottom: 1.25rem;
-    }
-
     .project-tags span {
       display: inline-block;
       background: #e4e7ec;
@@ -116,7 +131,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      margin-bottom: 1.25rem;
+      margin: 1.25rem 0;
     }
 
     .metric {
@@ -137,25 +152,14 @@
        Mobile improvements
     ============================== */
     @media (max-width: 768px) {
-
-      #banner {
-        padding: 60px 15px;
+      .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      .main-row > div {
-        margin-bottom: 2rem;
-      }
-
-      .featured-project {
-        padding: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      p {
-        font-size: 0.95rem;
+      .profile-text {
+        text-align: center;
       }
     }
   </style>
@@ -196,8 +200,8 @@
   <div id="main">
     <div class="container">
 
-      <!-- Intro -->
       <div class="row main-row">
+        <!-- Welcome -->
         <div class="col-4 col-12-medium">
           <section>
             <h2>Welcome</h2>
@@ -205,37 +209,43 @@
               I’m <strong>Frank Ellingsen</strong>, a Data Analyst / Business Intelligence Analyst
               with a background in Finance & Business Administration.
             </p>
-            <p>This portfolio showcases:</p>
             <ul>
               <li>End-to-end data workflows (ETL → Analysis → Modeling → Visualization)</li>
               <li>Predictive analytics & machine learning</li>
               <li>Business-focused data storytelling</li>
             </ul>
             <p>
-              Tools include Python, SQL, Power BI, Excel, APIs, and automated data pipelines.
+              Tools: Python, SQL, Power BI, Excel, APIs, automated pipelines.
             </p>
           </section>
         </div>
 
+        <!-- Who am I (FIXED) -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Who am I?</h2>
-            <ul class="small-image-list">
-              <li>
-                <img src="images/profil.jpg" alt="Frank Ellingsen" class="left" />
+
+            <div class="profile-card">
+              <img src="images/profil.jpg" alt="Frank Ellingsen">
+
+              <div class="profile-text">
                 <h4>Bachelor in Finance & Business Administration</h4>
                 <p>
-                  <a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a>
+                  <a href="mailto:frankellingsen@hotmail.com">
+                    frankellingsen@hotmail.com
+                  </a>
                 </p>
                 <p>
-                  BI / Data Analyst with strong interest in data engineering,
-                  analytics, automation, visualization, and stakeholder communication.
+                  BI / Data Analyst with strong interest in analytics engineering,
+                  automation, visualization, and stakeholder communication.
                 </p>
-              </li>
-            </ul>
+              </div>
+            </div>
+
           </section>
         </div>
 
+        <!-- Links -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Links</h2>
@@ -250,12 +260,9 @@
       <!-- Featured Projects -->
       <div class="featured-section">
 
-        <!-- Housing -->
         <div class="featured-project">
           <h2>Housing Price Predictor</h2>
-          <p class="project-subtitle">
-            Machine learning project for predictive analytics in real estate pricing.
-          </p>
+          <p class="project-subtitle">Machine learning regression model for real estate pricing.</p>
 
           <div class="project-tags">
             <span>Python</span>
@@ -267,57 +274,13 @@
           <div class="project-metrics">
             <div class="metric">R²: 0.82</div>
             <div class="metric">RMSE ↓ 18%</div>
-            <div class="metric">Top 3 price drivers identified</div>
+            <div class="metric">Top drivers identified</div>
           </div>
 
           <p>
-            Built an end-to-end regression model using structured housing data,
-            including feature engineering, model evaluation, and business interpretation.
+            Built an end-to-end predictive pipeline including feature engineering,
+            model evaluation, and business interpretation.
           </p>
-
-          <div class="project-actions">
-            <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/HOUSING_REPO_NAME" target="_blank">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
-          </div>
-        </div>
-
-        <!-- Weather -->
-        <div class="featured-project">
-          <h2>KRS Weather Report</h2>
-          <p class="project-subtitle">
-            Time-series analysis and interactive dashboard using real-world weather data.
-          </p>
-
-          <div class="project-tags">
-            <span>Python</span>
-            <span>APIs</span>
-            <span>Time Series</span>
-            <span>Visualization</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">10k+ API records processed</div>
-            <div class="metric">Seasonal trends identified</div>
-            <div class="metric">Automated pipeline</div>
-          </div>
-
-          <p>
-            Ingested weather data via API, transformed time-series data,
-            and visualized trends to support planning and insight generation.
-          </p>
-
-          <div class="project-actions">
-            <a href="weather_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/WEATHER_REPO_NAME" target="_blank">GitHub →</a>
-          </div>
-
-          <div class="iframe-container">
-            <iframe
-              src="https://frank-ellingsen.github.io/krs_weather_report/"
-              title="KRS Weather Report">
-            </iframe>
-          </div>
         </div>
 
       </div>
