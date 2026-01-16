@@ -38,32 +38,19 @@
     }
 
     /* =============================
-       Global spacing & typography
+       Global spacing
     ============================== */
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    h4 {
-      margin-bottom: 0.4rem;
-    }
-
-    p {
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
+    section { margin-bottom: 2.5rem; }
+    h2 { margin-bottom: 1rem; }
+    p { line-height: 1.6; }
 
     /* =============================
-       FIX: Who am I alignment
+       Who am I fix
     ============================== */
     .profile-card {
       display: flex;
-      align-items: flex-start;
       gap: 1rem;
+      align-items: flex-start;
     }
 
     .profile-card img {
@@ -71,11 +58,48 @@
       height: 90px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
     }
 
-    .profile-text {
-      flex: 1;
+    /* =============================
+       Featured projects
+    ============================== */
+    .featured-section { margin-top: 4rem; }
+
+    .featured-project {
+      background: #f8f9fb;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      margin-bottom: 3rem;
+    }
+
+    .project-tags span {
+      background: #e4e7ec;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
+
+    .project-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .metric {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      padding: 0.5rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .project-actions a {
+      display: inline-block;
+      margin-right: 1rem;
+      font-weight: 600;
     }
 
     /* =============================
@@ -98,68 +122,11 @@
       border: none;
     }
 
-    /* =============================
-       Featured projects
-    ============================== */
-    .featured-section {
-      margin-top: 4rem;
-    }
-
-    .featured-project {
-      background: #f8f9fb;
-      padding: 2rem;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      margin-bottom: 3rem;
-    }
-
-    .project-subtitle {
-      color: #666;
-      margin-bottom: 1.25rem;
-    }
-
-    .project-tags span {
-      display: inline-block;
-      background: #e4e7ec;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 0.5rem;
-    }
-
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.25rem 0;
-    }
-
-    .metric {
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
-      padding: 0.5rem 0.9rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-    }
-
-    .project-actions a {
-      display: inline-block;
-      margin-right: 1rem;
-      font-weight: 600;
-    }
-
-    /* =============================
-       Mobile improvements
-    ============================== */
     @media (max-width: 768px) {
       .profile-card {
         flex-direction: column;
+        text-align: center;
         align-items: center;
-        text-align: center;
-      }
-
-      .profile-text {
-        text-align: center;
       }
     }
   </style>
@@ -201,6 +168,7 @@
     <div class="container">
 
       <div class="row main-row">
+
         <!-- Welcome -->
         <div class="col-4 col-12-medium">
           <section>
@@ -210,38 +178,31 @@
               with a background in Finance & Business Administration.
             </p>
             <ul>
-              <li>End-to-end data workflows (ETL → Analysis → Modeling → Visualization)</li>
+              <li>End-to-end data workflows</li>
               <li>Predictive analytics & machine learning</li>
-              <li>Business-focused data storytelling</li>
+              <li>Business-focused storytelling</li>
             </ul>
             <p>
-              Tools: Python, SQL, Power BI, Excel, APIs, automated pipelines.
+              Tools: Python, SQL, Power BI, Excel, APIs.
             </p>
           </section>
         </div>
 
-        <!-- Who am I (FIXED) -->
+        <!-- Who am I -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Who am I?</h2>
-
             <div class="profile-card">
               <img src="images/profil.jpg" alt="Frank Ellingsen">
-
-              <div class="profile-text">
+              <div>
                 <h4>Bachelor in Finance & Business Administration</h4>
+                <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
                 <p>
-                  <a href="mailto:frankellingsen@hotmail.com">
-                    frankellingsen@hotmail.com
-                  </a>
-                </p>
-                <p>
-                  BI / Data Analyst with strong interest in analytics engineering,
+                  BI / Data Analyst with strong interest in analytics,
                   automation, visualization, and stakeholder communication.
                 </p>
               </div>
             </div>
-
           </section>
         </div>
 
@@ -255,20 +216,18 @@
             </ul>
           </section>
         </div>
+
       </div>
 
       <!-- Featured Projects -->
       <div class="featured-section">
 
+        <!-- Housing -->
         <div class="featured-project">
           <h2>Housing Price Predictor</h2>
-          <p class="project-subtitle">Machine learning regression model for real estate pricing.</p>
 
           <div class="project-tags">
-            <span>Python</span>
-            <span>Machine Learning</span>
-            <span>Regression</span>
-            <span>EDA</span>
+            <span>Python</span><span>Machine Learning</span><span>Regression</span>
           </div>
 
           <div class="project-metrics">
@@ -278,9 +237,47 @@
           </div>
 
           <p>
-            Built an end-to-end predictive pipeline including feature engineering,
-            model evaluation, and business interpretation.
+            Machine learning regression model built to support data-driven
+            real estate pricing decisions.
           </p>
+
+          <div class="project-actions">
+            <a href="housing_details.html">Project Details →</a>
+            <a href="https://github.com/Frank-Ellingsen/HOUSING_REPO_NAME" target="_blank">GitHub →</a>
+            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="featured-project">
+          <h2>KRS Weather Report</h2>
+
+          <div class="project-tags">
+            <span>Python</span><span>APIs</span><span>Time Series</span>
+          </div>
+
+          <div class="project-metrics">
+            <div class="metric">10k+ records</div>
+            <div class="metric">Automated pipeline</div>
+            <div class="metric">Seasonality analysis</div>
+          </div>
+
+          <p>
+            API-driven time-series analysis with an embedded interactive dashboard.
+          </p>
+
+          <div class="project-actions">
+            <a href="weather_details.html">Project Details →</a>
+            <a href="https://github.com/Frank-Ellingsen/WEATHER_REPO_NAME" target="_blank">GitHub →</a>
+          </div>
+
+          <div class="iframe-container">
+            <iframe
+              src="https://frank-ellingsen.github.io/krs_weather_report/"
+              title="KRS Weather Report Dashboard"
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
 
       </div>
