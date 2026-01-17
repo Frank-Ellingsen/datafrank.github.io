@@ -37,226 +37,16 @@
       z-index: 2;
     }
 
-    section { margin-bottom: 2.5rem; }
-    h2 { margin-bottom: 1rem; }
-    p { line-height: 1.6; }
-
-    .profile-card {
-      display: flex;
-      gap: 1.25rem;
-      align-items: center;
-    }
-
-    .profile-card img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .featured-section { margin-top: 4rem; }
-
-    .featured-project {
-      background: #f8f9fb;
-      padding: 2rem;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      margin-bottom: 3rem;
-    }
-
-    .project-tags span {
-      background: #e4e7ec;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 0.5rem;
-    }
-
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.2rem 0;
-    }
-
-    .metric {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 0.5rem 0.9rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-    }
-
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin-top: 1.5rem;
-    }
-
-    .iframe-container iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    @media (max-width: 768px) {
-      .profile-card {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
-
-<body>
-<div id="page-wrapper">
-
-  <div id="header-wrapper">
-    <div class="container">
-      <header id="header">
-        <h1><a href="index.html" id="logo">data_frank</a></h1>
-        <nav id="nav">
-          <a href="index.html" class="current-page-item">Home</a>
-          <a href="p1.html">MS Fabric</a>
-          <a href="p2.html">Power BI</a>
-          <a href="p3.html">Exploratory Dashboard</a>
-          <a href="p4.html">Excel Data Model</a>
-        </nav>
-      </header>
-    </div>
-  </div>
-
-  <div id="banner-wrapper">
-    <div class="container">
-      <div id="banner">
-        <h2>Storytelling With Data</h2>
-        <span class="banner-subtitle">
-          ETL · Analytics · Machine Learning · Visualization · Business Intelligence
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <div id="main">
-    <div class="container">
-
-      <div class="row main-row">
-
-        <div class="col-4 col-12-medium">
-          <section>
-            <h2>Welcome</h2>
-            <p>
-              I’m <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
-              <strong>Frank Ellingsen</strong>
-              </a>, Business / Data Analyst
-              with background in Finance & Business Administration
-            </p>
-            <ul>
-              <li>End-to-end data workflows</li>
-              <li>Predictive analytics & applied AI</li>
-              <li>Business-focused storytelling</li>
-            </ul>
-            <p>
-              Tools: SQL, Python, Power BI, Excel, API
-            </p>
-          </section>
-        </div>
-
-        <div class="col-4 col-6-medium col-12-small">
-          <section>
-            <h2>Who am I?</h2>
-            <div class="profile-card">
-              <img src="images/profil.jpg" alt="Frank Ellingsen">
-              <div>
-                <h4>Bachelor in Finance & Business Administration</h4>
-                <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
-                <p>
-                  Business Analyst with strong interest in
-                  automation and AI use cases
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div class="col-4 col-6-medium col-12-small">
-          <section>
-            <h2>Links</h2>
-            <ul class="link-list">
-              <li><a href="https://github.com/Frank-Ellingsen" target="_blank">GitHub Profile</a></li>
-              <li><a href="https://github.com/Frank-Ellingsen/datafrank.github.io" target="_blank">Portfolio Repository</a></li>
-              <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
-            </ul>
-          </section>
-        </div>
-
-      </div>
-      <!-- Featured Projects -->
-      <div class="featured-section">
-
-        <!-- Housing -->
-        <div class="featured-project">
-          <h2>Housing Price Predictor</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span><span>Regression</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">R²: 0.82</div>
-            <div class="metric">RMSE ↓ 18%</div>
-            <div class="metric">Key drivers identified</div>
-          </div>
-
-         <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Frank Ellingsen | Data Analyst Portfolio</title>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Business Analyst and Data Analyst portfolio showcasing SQL, Python, Power BI, machine learning, and real-world analytics projects." />
-
-  <link rel="stylesheet" href="assets/css/main.css" />
-
-  <style>
     /* =============================
-       Banner
+       Global spacing & typography
     ============================== */
-    #banner {
-      background: url('images/chart-comparison.png') no-repeat center center;
-      background-size: contain;
-      position: relative;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    #banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    #banner h2,
-    #banner .banner-subtitle {
-      position: relative;
-      z-index: 2;
-    }
-
-    section { margin-bottom: 2.5rem; }
-    h2 { margin-bottom: 1rem; }
+    section { margin-bottom: 2.2rem; }
+    h2 { margin-bottom: 0.8rem; }
     p { line-height: 1.6; }
 
+    /* =============================
+       Profile card
+    ============================== */
     .profile-card {
       display: flex;
       gap: 1.25rem;
@@ -269,8 +59,21 @@
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
+      transition: transform 0.3s ease;
     }
 
+    .profile-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .tight-lines {
+      margin-bottom: 0;
+      line-height: 1.3;
+    }
+
+    /* =============================
+       Featured projects
+    ============================== */
     .featured-section { margin-top: 4rem; }
 
     .featured-project {
@@ -279,6 +82,12 @@
       border-radius: 14px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
       margin-bottom: 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .featured-project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
     }
 
     .project-tags span {
@@ -304,6 +113,18 @@
       font-size: 0.85rem;
     }
 
+    .project-actions a {
+      font-weight: 600;
+      margin-right: 1rem;
+    }
+
+    .project-actions a:hover {
+      text-decoration: underline;
+    }
+
+    /* =============================
+       Responsive iframe
+    ============================== */
     .iframe-container {
       position: relative;
       width: 100%;
@@ -311,6 +132,7 @@
       height: 0;
       overflow: hidden;
       margin-top: 1.5rem;
+      border-radius: 12px;
     }
 
     .iframe-container iframe {
@@ -321,10 +143,17 @@
       border: none;
     }
 
+    /* =============================
+       Mobile tweaks
+    ============================== */
     @media (max-width: 768px) {
       .profile-card {
         flex-direction: column;
         text-align: center;
+      }
+
+      .featured-project {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -333,6 +162,7 @@
 <body>
 <div id="page-wrapper">
 
+  <!-- Header -->
   <div id="header-wrapper">
     <div class="container">
       <header id="header">
@@ -348,6 +178,7 @@
     </div>
   </div>
 
+  <!-- Banner -->
   <div id="banner-wrapper">
     <div class="container">
       <div id="banner">
@@ -359,19 +190,23 @@
     </div>
   </div>
 
+  <!-- Main -->
   <div id="main">
     <div class="container">
 
       <div class="row main-row">
 
+        <!-- Welcome -->
         <div class="col-4 col-12-medium">
           <section>
             <h2>Welcome</h2>
             <p>
-              I’m <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
-              <strong>Frank Ellingsen</strong>
-              </a>, Business / Data Analyst
-              with background in Finance & Business Administration
+              I’m
+              <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
+                <strong>Frank Ellingsen</strong>
+              </a>,
+              Business / Data Analyst with background in
+              Finance & Business Administration.
             </p>
             <ul>
               <li>End-to-end data workflows</li>
@@ -384,6 +219,7 @@
           </section>
         </div>
 
+        <!-- Who am I -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Who am I?</h2>
@@ -392,8 +228,8 @@
               <div>
                 <h4>Bachelor in Finance & Business Administration</h4>
                 <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
-                <p>
-                  Business Analyst with strong interest in
+                <p class="tight-lines">
+                  Business Analyst with strong interest in<br>
                   automation and AI use cases
                 </p>
               </div>
@@ -401,6 +237,7 @@
           </section>
         </div>
 
+        <!-- Links -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Links</h2>
@@ -413,6 +250,7 @@
         </div>
 
       </div>
+
       <!-- Featured Projects -->
       <div class="featured-section">
 
@@ -456,63 +294,6 @@
             <div class="metric">Seasonality analysis</div>
           </div>
 
-          <p style="margin-bottom: 0;">
-          Business Analyst with strong interest in<br>
-          automation and AI use cases
-          </p>
-
-
-          <div class="project-actions">
-            <a href="weather_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/krs_weather_report" target="_blank">GitHub →</a>
-          </div>
-
-          <div class="iframe-container">
-            <iframe
-              src="https://frank-ellingsen.github.io/krs_weather_report/"
-              title="KRS Weather Report Dashboard"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-      </div> <!-- end featured-section -->
-
-    </div> <!-- end container -->
-  </div> <!-- end main -->
-
-</div> <!-- end page-wrapper -->
-</body>
-</html>
-
-    </div>
-  </div>
-
-</div>
-</body>
-</html>
-
-          <div class="project-actions">
-            <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
-          </div>
-        </div>
-
-        <!-- Weather -->
-        <div class="featured-project">
-          <h2>KRS Weather Report</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>APIs</span><span>Time Series</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">1k+ records</div>
-            <div class="metric">Automated pipeline</div>
-            <div class="metric">Seasonality analysis</div>
-          </div>
-
           <p>
             Automated weather reporting pipeline with
             time-series analysis and interactive visualization.
@@ -532,14 +313,7 @@
           </div>
         </div>
 
-      </div> <!-- end featured-section -->
-
-    </div> <!-- end container -->
-  </div> <!-- end main -->
-
-</div> <!-- end page-wrapper -->
-</body>
-</html>
+      </div>
 
     </div>
   </div>
