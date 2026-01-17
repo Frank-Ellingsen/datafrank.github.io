@@ -1,54 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Housing Price Predictor | data_frank</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/main.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Machine learning project focused on predicting housing prices using Python and regression models." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body>
-<div class="container">
+<div id="page-wrapper">
 
-<h1>Housing Price Predictor</h1>
+  <!-- Header -->
+  <div id="header-wrapper">
+    <div class="container">
+      <header id="header">
+        <h1><a href="index.html" id="logo">data_frank</a></h1>
+        <nav id="nav">
+          <a href="index.html">Home</a>
+          <a href="p1.html">SQL Data Warehouse</a>
+          <a href="p2.html">Power BI</a>
+          <a href="p3.html">Weather Analytics</a>
+          <a href="p4.html" class="current-page-item">Machine Learning</a>
+        </nav>
+      </header>
+    </div>
+  </div>
 
-<h3>Business Problem</h3>
-<p>
-Accurately predicting housing prices is critical for buyers, sellers,
-and real estate professionals. This project builds a machine learning
-model to support data-driven pricing decisions.
-</p>
+  <!-- Main -->
+  <div id="main">
+    <div class="container">
 
-<h3>Data & Tools</h3>
-<ul>
-  <li>Python (Pandas, NumPy, scikit-learn)</li>
-  <li>Regression models</li>
-  <li>Exploratory Data Analysis (EDA)</li>
-</ul>
+      <section>
+        <h2>Housing Price Predictor</h2>
+        <p>
+          This project applies machine learning techniques to predict housing prices
+          and identify the most important drivers behind property value.
+        </p>
+      </section>
 
-<h3>Process</h3>
-<ul>
-  <li>Data cleaning and preprocessing</li>
-  <li>Feature engineering</li>
-  <li>Model training and evaluation</li>
-</ul>
+      <section>
+        <h3>Business Problem</h3>
+        <p>
+          Accurately pricing residential properties is critical for buyers, sellers,
+          and real estate professionals. Manual pricing methods are often subjective
+          and fail to capture complex interactions between location, size, and quality.
+        </p>
+        <p>
+          The goal of this project is to support <strong>data-driven pricing decisions</strong>
+          by building a predictive model that estimates housing prices and highlights
+          the key factors influencing value.
+        </p>
+      </section>
 
-<h3>Results</h3>
-<ul>
-  <li>R² score of 0.82</li>
-  <li>RMSE reduced by 18%</li>
-  <li>Key drivers: location, size, number of rooms</li>
-</ul>
+      <section>
+        <h3>Data & Tools</h3>
+        <ul>
+          <li><strong>Python:</strong> Pandas, NumPy, scikit-learn</li>
+          <li><strong>Machine Learning:</strong> Random Forest Regression</li>
+          <li><strong>Analysis:</strong> Exploratory Data Analysis (EDA)</li>
+          <li><strong>Visualization:</strong> Matplotlib, Seaborn</li>
+        </ul>
+      </section>
 
-<h3>Why This Matters</h3>
-<p>
-Demonstrates applied machine learning, analytical thinking,
-and the ability to translate model outputs into business insights.
-</p>
+      <section>
+        <h3>Process</h3>
+        <ul>
+          <li>Cleaned and standardized raw housing data</li>
+          <li>Engineered features such as price tiers and location-based bins</li>
+          <li>Trained and evaluated regression models</li>
+          <li>Compared predictions against actual prices</li>
+          <li>Identified key drivers using feature importance</li>
+        </ul>
+      </section>
 
-<p>
-<a href="index.html">← Back to portfolio</a>
-</p>
+      <section>
+        <h3>Results & Insights</h3>
+        <ul>
+          <li><strong>R² Score:</strong> 0.82</li>
+          <li><strong>RMSE:</strong> Reduced by 18% compared to baseline</li>
+          <li><strong>Top price drivers:</strong> Location, living area, number of rooms</li>
+        </ul>
+        <p>
+          The model demonstrates strong predictive performance while remaining
+          interpretable enough to support business decision-making.
+        </p>
+      </section>
+
+      <section>
+        <h3>Why This Matters</h3>
+        <p>
+          This project demonstrates the ability to:
+        </p>
+        <ul>
+          <li>Apply machine learning to a real-world business problem</li>
+          <li>Translate model results into actionable insights</li>
+          <li>Balance predictive accuracy with interpretability</li>
+          <li>Communicate technical results to non-technical stakeholders</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Project Links</h3>
+        <ul class="link-list">
+          <li>
+            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">
+              GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">
+              Live Streamlit App
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p>
+        <a href="index.html">← Back to portfolio</a>
+      </p>
+
+    </div>
+  </div>
 
 </div>
 </body>
