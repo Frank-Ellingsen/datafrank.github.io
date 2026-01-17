@@ -37,20 +37,14 @@
       z-index: 2;
     }
 
-    /* =============================
-       Global spacing
-    ============================== */
     section { margin-bottom: 2.5rem; }
     h2 { margin-bottom: 1rem; }
     p { line-height: 1.6; }
 
-    /* =============================
-       Profile card (FIXED)
-    ============================== */
     .profile-card {
       display: flex;
       gap: 1.25rem;
-      align-items: center; /* vertical alignment fix */
+      align-items: center;
     }
 
     .profile-card img {
@@ -61,17 +55,6 @@
       flex-shrink: 0;
     }
 
-    .profile-card h4 {
-      margin-bottom: 0.3rem;
-    }
-
-    .profile-card p {
-      margin-bottom: 0.4rem;
-    }
-
-    /* =============================
-       Featured projects
-    ============================== */
     .featured-section { margin-top: 4rem; }
 
     .featured-project {
@@ -105,15 +88,6 @@
       font-size: 0.85rem;
     }
 
-    .project-actions a {
-      display: inline-block;
-      margin-right: 1rem;
-      font-weight: 600;
-    }
-
-    /* =============================
-       Responsive iframe
-    ============================== */
     .iframe-container {
       position: relative;
       width: 100%;
@@ -131,9 +105,6 @@
       border: none;
     }
 
-    /* =============================
-       Responsive tweaks
-    ============================== */
     @media (max-width: 768px) {
       .profile-card {
         flex-direction: column;
@@ -146,7 +117,6 @@
 <body>
 <div id="page-wrapper">
 
-  <!-- Header -->
   <div id="header-wrapper">
     <div class="container">
       <header id="header">
@@ -162,7 +132,6 @@
     </div>
   </div>
 
-  <!-- Banner -->
   <div id="banner-wrapper">
     <div class="container">
       <div id="banner">
@@ -174,19 +143,18 @@
     </div>
   </div>
 
-  <!-- Main -->
   <div id="main">
     <div class="container">
 
       <div class="row main-row">
 
-        <!-- Welcome -->
         <div class="col-4 col-12-medium">
           <section>
             <h2>Welcome</h2>
             <p>
               I’m <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
-              <strong>Frank Ellingsen</strong>, Business/Data Analyst
+              <strong>Frank Ellingsen</strong>
+              </a>, Business/Data Analyst
               with background in Finance & Business Administration
             </p>
             <ul>
@@ -200,7 +168,6 @@
           </section>
         </div>
 
-        <!-- Who am I -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Who am I?</h2>
@@ -218,7 +185,6 @@
           </section>
         </div>
 
-        <!-- Links -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Links</h2>
@@ -228,70 +194,6 @@
               <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
             </ul>
           </section>
-        </div>
-
-      </div>
-
-      <!-- Featured Projects -->
-      <div class="featured-section">
-
-        <!-- Housing -->
-        <div class="featured-project">
-          <h2>Housing Price Predictor</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span><span>Regression</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">R²: 0.82</div>
-            <div class="metric">RMSE ↓ 18%</div>
-            <div class="metric">Key drivers identified</div>
-          </div>
-
-          <p>
-            Machine learning regression model built to support
-            data-driven real estate pricing decisions.
-          </p>
-
-          <div class="project-actions">
-            <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
-          </div>
-        </div>
-
-        <!-- Weather -->
-        <div class="featured-project">
-          <h2>KRS Weather Report</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>APIs</span><span>Time Series</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">10k+ records</div>
-            <div class="metric">Automated pipeline</div>
-            <div class="metric">Seasonality analysis</div>
-          </div>
-
-          <p>
-            Automated weather reporting pipeline with
-            time-series analysis and interactive visualization.
-          </p>
-
-          <div class="project-actions">
-            <a href="weather_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/krs_weather_report" target="_blank">GitHub →</a>
-          </div>
-
-          <div class="iframe-container">
-            <iframe
-              src="https://frank-ellingsen.github.io/krs_weather_report/"
-              title="KRS Weather Report Dashboard"
-              loading="lazy">
-            </iframe>
-          </div>
         </div>
 
       </div>
