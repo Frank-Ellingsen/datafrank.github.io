@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KRS Weather Report | Project Details</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Automated weather analytics project using Python, APIs, and time-series analysis to generate business-ready insights and visualizations." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    section { margin-bottom: 3rem; }
+    h2 { margin-bottom: 1rem; }
+    p { line-height: 1.6; }
+
+    .tag span {
+      background: #e4e7ec;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
+
+    .metric-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .metric {
+      background: #f8f9fb;
+      border: 1px solid #e0e0e0;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-right: 1.2rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+<div id="page-wrapper">
+
+  <!-- Header -->
+  <div id="header-wrapper">
+    <div class="container">
+      <header id="header">
+        <h1><a href="index.html" id="logo">data_frank</a></h1>
+        <nav id="nav">
+          <a href="index.html">Home</a>
+          <a href="p1.html">SQL Data Warehouse</a>
+          <a href="p2.html">Power BI</a>
+          <a href="p3.html" class="current-page-item">Weather Analytics</a>
+          <a href="p4.html">Machine Learning</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div id="main">
+    <div class="container">
+
+      <!-- Title -->
+      <section>
+        <h2>KRS Weather Report</h2>
+
+        <div class="tag">
+          <span>Python</span>
+          <span>APIs</span>
+          <span>Time Series</span>
+          <span>Automation</span>
+          <span>Data Visualization</span>
+        </div>
+
+        <p>
+          This project analyzes historical weather data for <strong>Kristiansand (KRS)</strong>
+          and transforms raw API data into <strong>automated, business-ready analytics outputs</strong>.
+          The focus is on repeatability, clarity, and decision-support rather than ad-hoc analysis.
+        </p>
+      </section>
+
+      <!-- Business Case -->
+      <section>
+        <h2>Business Case</h2>
+        <p>
+          Weather trends influence planning and operational decisions across industries such as
+          logistics, energy, tourism, and infrastructure.
+          This project demonstrates how external data sources can be integrated into an analytics
+          workflow to provide <strong>consistent, shareable insights</strong> over time.
+        </p>
+      </section>
+
+      <!-- Metrics -->
+      <section>
+        <h2>Project Snapshot</h2>
+
+        <div class="metric-box">
+          <div class="metric">10,000+ records processed</div>
+          <div class="metric">Automated data pipeline</div>
+          <div class="metric">Time-series trend analysis</div>
+          <div class="metric">Static, shareable outputs</div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section>
+        <h2>How It Works</h2>
+        <ol>
+          <li>Weather data is retrieved from an external API</li>
+          <li>Data is cleaned and transformed using Pandas</li>
+          <li>Time-series trends and seasonality are analyzed</li>
+          <li>Interactive visualizations are exported as HTML</li>
+          <li>A CSV snapshot of the <strong>latest 100 records</strong> is generated</li>
+          <li>Outputs are published via GitHub Pages</li>
+        </ol>
+      </section>
+
+      <!-- Visualization -->
+      <section>
+        <h2>Temperature Trend</h2>
+        <p>
+          The visualization below shows historical temperature patterns and seasonality
+          for Kristiansand. The chart is exported as a standalone HTML file and can be viewed
+          without running Python locally.
+        </p>
+
+        <div class="iframe-container">
+          <iframe
+            src="https://frank-ellingsen.github.io/krs_weather_report/temperature_trend.html"
+            title="Temperature Trend"
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Outputs -->
+      <section>
+        <h2>Outputs</h2>
+        <ul>
+          <li>Interactive HTML dashboards (temperature & precipitation)</li>
+          <li>Downloadable CSV containing the most recent 100 records</li>
+          <li>Static, version-controlled analytics artifacts</li>
+        </ul>
+      </section>
+
+      <!-- Links -->
+      <section>
+        <h2>Project Links</h2>
+        <div class="project-links">
+          <a href="https://github.com/Frank-Ellingsen/krs_weather_report" target="_blank">
+            GitHub Repository →
+          </a>
+          <a href="https://frank-ellingsen.github.io/krs_weather_report/" target="_blank">
+            Live Weather Dashboard →
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
