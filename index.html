@@ -10,6 +10,21 @@
 
   <link rel="stylesheet" href="assets/css/main.css" />
 
+  <!-- ==============================
+       Google Analytics (GA4)
+       Replace G-0GSFTVZHPX with your ID
+  =============================== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GSFTVZHPX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0GSFTVZHPX', {
+      anonymize_ip: true,
+      transport_type: 'beacon'
+    });
+  </script>
+
   <style>
     /* =============================
        Banner
@@ -38,14 +53,14 @@
     }
 
     /* =============================
-       Global spacing & typography
+       Global Spacing & Typography
     ============================== */
     section { margin-bottom: 2.2rem; }
     h2 { margin-bottom: 0.8rem; }
     p { line-height: 1.6; }
 
     /* =============================
-       Profile card
+       Profile Card
     ============================== */
     .profile-card {
       display: flex;
@@ -83,7 +98,7 @@
     .profile-card + * { margin-top: 1rem; }
 
     /* =============================
-       Featured projects
+       Featured Projects
     ============================== */
     .featured-section { margin-top: 4rem; }
 
@@ -168,24 +183,6 @@
       .featured-project { padding: 1.5rem; }
     }
   </style>
-
-  <!-- ========================================================= -->
-  <!-- Google tag (gtag.js) — GA4 Analytics                     -->
-  <!-- Replace G-XXXXXXXXXX with your actual Measurement ID     -->
-  <!-- ========================================================= -->
-  https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX</script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-XXXXXXXXXX', {
-      anonymize_ip: true,
-      transport_type: 'beacon'
-    });
-  </script>
-  <!-- ========================================================= -->
-
 </head>
 
 <body>
@@ -235,11 +232,11 @@
                 <strong>Frank Ellingsen</strong>
               </a>,
               Business / Data Analyst with background in
-              Finance &amp; Business Administration.
+              Finance & Business Administration.
             </p>
             <ul>
               <li>End-to-end data workflows</li>
-              <li>Predictive analytics &amp; applied AI</li>
+              <li>Predictive analytics & applied AI</li>
               <li>Business-focused storytelling</li>
             </ul>
             <p>Tools: SQL, Python, Power BI, Excel, API</p>
@@ -253,7 +250,7 @@
             <div class="profile-card">
               <img src="images/profil.jpg" alt="Frank Ellingsen">
               <div>
-                <h4>Bachelor in Finance &amp; Business Administration</h4>
+                <h4>Bachelor in Finance & Business Administration</h4>
                 <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
                 <p class="tight-lines">
                   Business Analyst with big interest in<br>
@@ -272,7 +269,7 @@
               <li><a href="https://github.com/Frank-Ellingsen" target="_blank">GitHub Profile</a></li>
               <li><a href="https://github.com/Frank-Ellingsen/datafrank.github.io" target="_blank">Portfolio Repository</a></li>
               <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
-              <li><a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank">plotly test</a></li>
+              <li><a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank">Plotly test</a></li>
             </ul>
           </section>
         </div>
