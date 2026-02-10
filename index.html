@@ -45,14 +45,14 @@
     p { line-height: 1.6; }
 
     /* =============================
-       Profile card – subtle spacing (updated)
+       Profile card
     ============================== */
     .profile-card {
       display: flex;
       align-items: center;
-      gap: 1.25rem;             /* space between image and text */
-      margin: 1rem 0;           /* space around the card */
-      padding: 0.875rem 1rem;   /* inner padding */
+      gap: 1.25rem;
+      margin: 1rem 0;
+      padding: 0.875rem 1rem;
       border: 1px solid #e6e8ec;
       border-radius: 12px;
       background: #fff;
@@ -60,7 +60,7 @@
     }
 
     .profile-card img {
-      width: 100px;             /* larger profile image */
+      width: 100px;
       height: 100px;
       border-radius: 50%;
       object-fit: cover;
@@ -68,28 +68,19 @@
       transition: transform 0.3s ease;
     }
 
-    .profile-card img:hover {
-      transform: scale(1.05);
-    }
+    .profile-card img:hover { transform: scale(1.05); }
 
     .profile-card h4 {
-      margin: 0 0 0.4rem 0;     /* tighter heading spacing */
+      margin: 0 0 0.4rem 0;
     }
 
     .profile-card p {
-      margin: 0.25rem 0;        /* tighter paragraph spacing */
+      margin: 0.25rem 0;
     }
 
-    /* Keep the tight-lines class slightly compact */
-    .tight-lines {
-      margin-bottom: 0;
-      line-height: 1.35;
-    }
+    .tight-lines { margin-bottom: 0; line-height: 1.35; }
 
-    /* Micro-rhythm helper: add a bit of space after the card */
-    .profile-card + * {
-      margin-top: 1rem;
-    }
+    .profile-card + * { margin-top: 1rem; }
 
     /* =============================
        Featured projects
@@ -138,9 +129,7 @@
       margin-right: 1rem;
     }
 
-    .project-actions a:hover {
-      text-decoration: underline;
-    }
+    .project-actions a:hover { text-decoration: underline; }
 
     /* =============================
        Responsive iframe
@@ -164,7 +153,7 @@
     }
 
     /* =============================
-       Mobile tweaks
+       Mobile
     ============================== */
     @media (max-width: 768px) {
       .profile-card {
@@ -174,15 +163,29 @@
         padding: 0.9rem;
       }
 
-      .profile-card img {
-        margin: 0 auto;
-      }
+      .profile-card img { margin: 0 auto; }
 
-      .featured-project {
-        padding: 1.5rem;
-      }
+      .featured-project { padding: 1.5rem; }
     }
   </style>
+
+  <!-- ========================================================= -->
+  <!-- Google tag (gtag.js) — GA4 Analytics                     -->
+  <!-- Replace G-XXXXXXXXXX with your actual Measurement ID     -->
+  <!-- ========================================================= -->
+  https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      transport_type: 'beacon'
+    });
+  </script>
+  <!-- ========================================================= -->
+
 </head>
 
 <body>
@@ -239,9 +242,7 @@
               <li>Predictive analytics &amp; applied AI</li>
               <li>Business-focused storytelling</li>
             </ul>
-            <p>
-              Tools: SQL, Python, Power BI, Excel, API
-            </p>
+            <p>Tools: SQL, Python, Power BI, Excel, API</p>
           </section>
         </div>
 
