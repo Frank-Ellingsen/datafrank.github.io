@@ -10,10 +10,7 @@
 
   <link rel="stylesheet" href="assets/css/main.css" />
 
-  <!-- ==============================
-       Google Analytics (GA4)
-       Replace G-0GSFTVZHPX with your ID
-  =============================== -->
+  <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GSFTVZHPX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,9 +23,7 @@
   </script>
 
   <style>
-    /* =============================
-       Banner
-    ============================== */
+    /* Banner */
     #banner {
       background: url('images/chart-comparison.png') no-repeat center center;
       background-size: contain;
@@ -52,16 +47,10 @@
       z-index: 2;
     }
 
-    /* =============================
-       Global Spacing & Typography
-    ============================== */
     section { margin-bottom: 2.2rem; }
     h2 { margin-bottom: 0.8rem; }
     p { line-height: 1.6; }
 
-    /* =============================
-       Profile Card
-    ============================== */
     .profile-card {
       display: flex;
       align-items: center;
@@ -85,21 +74,6 @@
 
     .profile-card img:hover { transform: scale(1.05); }
 
-    .profile-card h4 {
-      margin: 0 0 0.4rem 0;
-    }
-
-    .profile-card p {
-      margin: 0.25rem 0;
-    }
-
-    .tight-lines { margin-bottom: 0; line-height: 1.35; }
-
-    .profile-card + * { margin-top: 1rem; }
-
-    /* =============================
-       Featured Projects
-    ============================== */
     .featured-section { margin-top: 4rem; }
 
     .featured-project {
@@ -139,16 +113,6 @@
       font-size: 0.85rem;
     }
 
-    .project-actions a {
-      font-weight: 600;
-      margin-right: 1rem;
-    }
-
-    .project-actions a:hover { text-decoration: underline; }
-
-    /* =============================
-       Responsive iframe
-    ============================== */
     .iframe-container {
       position: relative;
       width: 100%;
@@ -167,182 +131,15 @@
       border: none;
     }
 
-    /* =============================
-       Mobile
-    ============================== */
     @media (max-width: 768px) {
       .profile-card {
         flex-direction: column;
         text-align: center;
         gap: 0.8rem;
-        padding: 0.9rem;
       }
-
-      .profile-card img { margin: 0 auto; }
 
       .featured-project { padding: 1.5rem; }
     }
   </style>
 </head>
 
-<body>
-<div id="page-wrapper">
-
-  <!-- Header -->
-  <div id="header-wrapper">
-    <div class="container">
-      <header id="header">
-        <h1><a href="index.html" id="logo">data_frank</a></h1>
-        <nav id="nav">
-          <a href="index.html" class="current-page-item">Home</a>
-          <a href="p1.html">MS Fabric</a>
-          <a href="p2.html">Power BI</a>
-          <a href="p3.html">Exploratory Dashboard</a>
-          <a href="p4.html">Excel Data Model</a>
-        </nav>
-      </header>
-    </div>
-  </div>
-
-  <!-- Banner -->
-  <div id="banner-wrapper">
-    <div class="container">
-      <div id="banner">
-        <h2>Storytelling With Data</h2>
-        <span class="banner-subtitle">
-          ETL · Analytics · Machine Learning · Visualization · Business Intelligence
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main -->
-  <div id="main">
-    <div class="container">
-
-      <div class="row main-row">
-
-        <!-- Welcome -->
-        <div class="col-4 col-12-medium">
-          <section>
-            <h2>Welcome</h2>
-            <p>
-              I’m
-              <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
-                <strong>Frank Ellingsen</strong>
-              </a>,
-              Business / Data Analyst with background in
-              Finance & Business Administration.
-            </p>
-            <ul>
-              <li>End-to-end data workflows</li>
-              <li>Predictive analytics & applied AI</li>
-              <li>Business-focused storytelling</li>
-            </ul>
-            <p>Tools: SQL, Python, Power BI, Excel, API</p>
-          </section>
-        </div>
-
-        <!-- Who am I -->
-        <div class="col-4 col-6-medium col-12-small">
-          <section>
-            <h2>Who am I?</h2>
-            <div class="profile-card">
-              <img src="images/profil.jpg" alt="Frank Ellingsen">
-              <div>
-                <h4>Bachelor in Finance & Business Administration</h4>
-                <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
-                <p class="tight-lines">
-                  Business Analyst with big interest in<br>
-                  automation and AI use cases
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-        
-        <!-- Links -->
-        <div class="col-4 col-6-medium col-12-small">
-          <section>
-            <h2>Links</h2>
-            <ul class="link-list">
-              <li><a href="https://github.com/Frank-Ellingsen" target="_blank">GitHub Profile</a></li>
-              <li><a href="https://github.com/Frank-Ellingsen/datafrank.github.io" target="_blank">Portfolio Repository</a></li>
-              <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
-              <li><a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank">Plotly test</a></li>
-            </ul>
-          </section>
-        </div>
-
-      </div>
-
-      <!-- Featured Projects -->
-      <div class="featured-section">
-
-        <!-- Housing -->
-        <div class="featured-project">
-          <h2>Housing Price Predictor</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span><span>Regression</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">R²: 0.82</div>
-            <div class="metric">RMSE ↓ 18%</div>
-            <div class="metric">Key drivers identified</div>
-          </div>
-
-          <p>
-            Machine learning regression model built to support
-            data-driven real estate pricing decisions.
-          </p>
-
-          <div class="project-actions">
-            <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
-          </div>
-        </div>
-
-        <!-- Weather -->
-        <div class="featured-project">
-          <h2>KRS Weather Report</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>APIs</span><span>Time Series</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">10k+ records</div>
-            <div class="metric">Automated pipeline</div>
-            <div class="metric">Seasonality analysis</div>
-          </div>
-
-          <p>
-            Automated weather reporting pipeline with
-            time-series analysis and interactive visualization.
-          </p>
-
-          <div class="project-actions">
-            <a href="weather_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/krs_weather_report" target="_blank">GitHub →</a>
-          </div>
-
-          <div class="iframe-container">
-            <iframe
-              src="https://frank-ellingsen.github.io/krs_weather_report/"
-              title="KRS Weather Report Dashboard"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
-</body>
-</html>
