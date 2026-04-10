@@ -23,94 +23,20 @@
   </script>
 
   <style>
-    /* Banner */
-    #banner {
-      background: url('images/chart-comparison.png') no-repeat center center;
-      background-size: contain;
-      position: relative;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 2rem;
     }
-
-    #banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    #banner h2,
-    #banner .banner-subtitle {
-      position: relative;
-      z-index: 2;
-    }
-
-    section { margin-bottom: 2.2rem; }
-    h2 { margin-bottom: 0.8rem; }
-    p { line-height: 1.6; }
-
-    .profile-card {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      margin: 1rem 0;
-      padding: 0.875rem 1rem;
-      border: 1px solid #e6e8ec;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-    }
-
-    .profile-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-
-    .profile-card img:hover { transform: scale(1.05); }
-
-    .featured-section { margin-top: 4rem; }
 
     .featured-project {
       background: #f8f9fb;
       padding: 2rem;
       border-radius: 14px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-      margin-bottom: 3rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .featured-project:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-    }
-
-    .project-tags span {
-      background: #e4e7ec;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 0.5rem;
-    }
-
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.2rem 0;
-    }
-
-    .metric {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 0.5rem 0.9rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .iframe-container {
@@ -130,16 +56,28 @@
       height: 100%;
       border: none;
     }
-
-    @media (max-width: 768px) {
-      .profile-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.8rem;
-      }
-
-      .featured-project { padding: 1.5rem; }
-    }
   </style>
 </head>
 
+<body>
+
+  <div class="featured-project">
+    <h2>KRS Weather Report</h2>
+
+    <p>
+      Automated weather analytics pipeline with hourly updates,
+      persistent storage, and live reporting via GitHub Pages.
+    </p>
+
+    <div class="iframe-container">
+      <iframe
+        src="https://frank-ellingsen.github.io/weather-project/"
+        title="KRS Weather Report"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+</body>
+</html>
