@@ -2011,3 +2011,7 @@ input, select, textarea {
 				}
 
 	}
+.fade-top {
+  mask-image: linear-gradient(to bottom, transparent, black 70%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 40%);
+}
