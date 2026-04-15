@@ -147,7 +147,24 @@
     .project-actions a:hover { text-decoration: underline; }
 
     /* =============================
+       Optional: Primary CTA button
+    ============================== */
+    .project-actions a.primary {
+      display: inline-block;
+      background: #1f2937;
+      color: #fff;
+      padding: 0.55rem 0.9rem;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .project-actions a.primary:hover {
+      background: #111827;
+      text-decoration: none;
+    }
+
+    /* =============================
        Responsive iframe
+       (kept in case you reuse it elsewhere)
     ============================== */
     .iframe-container {
       position: relative;
@@ -228,15 +245,15 @@
             <h2>Welcome</h2>
             <p>
               I’m
-              <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank">
+              <a href="https://www.linkedin.com/in/frankellingsen9117/" target="_blank" rel="noopener">
                 <strong>Frank Ellingsen</strong>
               </a>,
               Business / Data Analyst with background in
-              Finance & Business Administration.
+              Finance &amp; Business Administration.
             </p>
             <ul>
               <li>End-to-end data workflows</li>
-              <li>Predictive analytics & applied AI</li>
+              <li>Predictive analytics &amp; applied AI</li>
               <li>Business-focused storytelling</li>
             </ul>
             <p>Tools: SQL, Python, Power BI, Excel, API</p>
@@ -250,7 +267,7 @@
             <div class="profile-card">
               <img src="images/profil.jpg" alt="Frank Ellingsen">
               <div>
-                <h4>Bachelor in Finance & Business Administration</h4>
+                <h4>Bachelor in Finance &amp; Business Administration</h4>
                 <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
                 <p class="tight-lines">
                   Business Analyst with big interest in<br>
@@ -260,16 +277,16 @@
             </div>
           </section>
         </div>
-        
+
         <!-- Links -->
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Links</h2>
             <ul class="link-list">
-              <li><a href="https://github.com/Frank-Ellingsen" target="_blank">GitHub Profile</a></li>
-              <li><a href="https://github.com/Frank-Ellingsen/datafrank.github.io" target="_blank">Portfolio Repository</a></li>
-              <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank">Maven Showcase</a></li>
-              <li><a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank">Plotly test</a></li>
+              <li><a href="https://github.com/Frank-Ellingsen" target="_blank" rel="noopener">GitHub Profile</a></li>
+              <li><a href="https://github.com/Frank-Ellingsen/datafrank.github.io" target="_blank" rel="noopener">Portfolio Repository</a></li>
+              <li><a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank" rel="noopener">Maven Showcase</a></li>
+              <li><a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank" rel="noopener">Plotly test</a></li>
             </ul>
           </section>
         </div>
@@ -300,49 +317,4 @@
 
           <div class="project-actions">
             <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">Live App →</a>
-          </div>
-        </div>
-
-        <!-- Weather -->
-        <div class="featured-project">
-          <h2>KRS Weather Report</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>APIs</span><span>Time Series</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">10k+ records</div>
-            <div class="metric">Automated pipeline</div>
-            <div class="metric">Seasonality analysis</div>
-          </div>
-
-          <p>
-            Automated weather reporting pipeline with
-            time-series analysis and interactive visualization.
-          </p>
-
-          <div class="project-actions">
-            <a href="weather_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/krs_weather_report" target="_blank">GitHub →</a>
-          </div>
-
-          <div class="iframe-container">
-            <iframe
-              src="https://frank-ellingsen.github.io/krs_weather_report/"
-              title="KRS Weather Report Dashboard"
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
-</body>
-</html>
+            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
