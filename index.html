@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <title>Frank Ellingsen | Data Analyst Portfolio</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GSFTVZHPX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0GSFTVZHPX', {
+      'transport_type': 'beacon'
+    });
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,266 +18,6 @@
         content="Business Analyst and Data Analyst portfolio showcasing SQL, Python, Power BI, machine learning, and real-world analytics projects." />
 
   <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- ==============================
-       Google Analytics (GA4)
-       Replace G-0GSFTVZHPX with your ID
-  =============================== -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GSFTVZHPX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-0GSFTVZHPX', {
-      anonymize_ip: true,
-      transport_type: 'beacon'
-    });
-  </script>
-
-  <style>
-    /* =============================
-       Global Spacing & Typography
-    ============================== */
-    body {
-      font-family: 'Ubuntu Condensed', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f7f6;
-      color: #4a4a4a;
-    }
-
-    section { margin-bottom: 3rem; }
-    h2 { 
-      margin-bottom: 1.5rem; 
-      font-size: 2rem;
-      color: #007897;
-      border-bottom: 2px solid #007897;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    h3 { color: #005f73; }
-    p { margin-bottom: 1rem; }
-
-    /* =============================
-       Banner
-    ============================== */
-    #banner {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('images/chart-comparison.png') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      padding: 120px 20px;
-      text-align: center;
-      color: white;
-      border-radius: 0 0 15px 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    #banner h2 {
-      font-size: 3rem;
-      color: #fff;
-      border: none;
-      margin-bottom: 0.5rem;
-      text-transform: none;
-    }
-
-    #banner .banner-subtitle {
-      font-size: 1.25rem;
-      opacity: 0.9;
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
-
-    /* =============================
-       Profile Card
-    ============================== */
-    .profile-card {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-      padding: 1.5rem;
-      border: none;
-      border-radius: 15px;
-      background: #fff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .profile-card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 3px solid #007897;
-    }
-
-    .profile-card h4 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    .profile-card p {
-      margin: 0.2rem 0;
-      font-size: 0.95rem;
-    }
-
-    .tight-lines { margin-bottom: 0; line-height: 1.4; }
-
-    /* =============================
-       Featured Projects
-    ============================== */
-    .featured-section { margin-top: 4rem; }
-
-    .featured-project {
-      background: #fff;
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.07);
-      margin-bottom: 3rem;
-      transition: all 0.3s ease;
-      border-left: 5px solid #007897;
-    }
-
-    .featured-project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-    }
-
-    .featured-project h2 {
-      border: none;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-
-    .project-tags {
-      margin-bottom: 1.5rem;
-    }
-
-    .project-tags span {
-      background: #f0f4f8;
-      color: #007897;
-      padding: 0.4rem 0.8rem;
-      border-radius: 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-right: 0.6rem;
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .metric {
-      background: #f9fafb;
-      border: 1px solid #edf2f7;
-      padding: 0.6rem 1rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      color: #4a5568;
-      display: flex;
-      align-items: center;
-    }
-
-    .metric::before {
-      content: '📊';
-      margin-right: 8px;
-    }
-
-    .project-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .project-actions a {
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.7rem 1.2rem;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-      font-size: 0.95rem;
-    }
-
-    .project-actions a:not(.primary) {
-      background: #f1f5f9;
-      color: #475569;
-    }
-
-    .project-actions a:not(.primary):hover {
-      background: #e2e8f0;
-      color: #1e293b;
-    }
-
-    .project-actions a.primary {
-      background: #007897;
-      color: #fff;
-    }
-
-    .project-actions a.primary:hover {
-      background: #005f73;
-      transform: scale(1.05);
-    }
-
-    /* =============================
-       Links List
-    ============================== */
-    .link-list li {
-      margin-bottom: 0.8rem;
-    }
-    .link-list a {
-      color: #007897;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      transition: color 0.2s;
-    }
-    .link-list a:hover {
-      color: #005f73;
-    }
-    .link-list a::before {
-      content: '🔗';
-      margin-right: 10px;
-      font-size: 0.9rem;
-    }
-
-    /* =============================
-       Mobile
-    ============================== */
-    @media (max-width: 768px) {
-      #banner {
-        padding: 80px 20px;
-      }
-      #banner h2 {
-        font-size: 2.2rem;
-      }
-      .profile-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        padding: 2rem 1.5rem;
-      }
-      .profile-card img { margin: 0 auto; }
-      .featured-project { padding: 1.8rem; }
-      .project-actions {
-        flex-direction: column;
-      }
-      .project-actions a {
-        text-align: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -285,6 +34,7 @@
           <a href="p2.html">Power BI</a>
           <a href="p3.html">Exploratory Dashboard</a>
           <a href="p4.html">Excel Data Model</a>
+          <a href="login.html">Login</a>
         </nav>
       </header>
     </div>
@@ -325,7 +75,13 @@
               <li>Predictive analytics &amp; applied AI</li>
               <li>Business-focused storytelling</li>
             </ul>
-            <p>Tools: SQL, Python, Power BI, Excel, API</p>
+            <div style="margin-top: 1.5rem;">
+              <span class="tag-badge primary">SQL</span>
+              <span class="tag-badge primary">Python</span>
+              <span class="tag-badge primary">Power BI</span>
+              <span class="tag-badge primary">Excel</span>
+              <span class="tag-badge primary">API</span>
+            </div>
           </section>
         </div>
 
@@ -333,15 +89,12 @@
         <div class="col-4 col-6-medium col-12-small">
           <section>
             <h2>Who am I?</h2>
-            <div class="profile-card">
-              <img src="images/profil.jpg" alt="Frank Ellingsen">
+            <div class="profile-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+              <img src="images/profil.jpg" alt="Frank Ellingsen" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #007897;">
               <div>
-                <h4>Bachelor in Finance &amp; Business Administration</h4>
-                <p><a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a></p>
-                <p class="tight-lines">
-                  Business Analyst with big interest in<br>
-                  automation and AI use cases
-                </p>
+                <h4 style="margin: 0;">Frank Ellingsen</h4>
+                <p style="font-size: 0.9em; margin: 0.2rem 0;"><a href="mailto:frankellingsen@hotmail.com">Email Me</a></p>
+                <p style="font-size: 0.85em; color: #64748b; line-height: 1.3;">Bachelor in Finance & Business Administration</p>
               </div>
             </div>
           </section>
@@ -364,52 +117,58 @@
 
       <!-- Featured Projects -->
       <div class="featured-section">
+        <h2 style="margin-bottom: 2rem;">Featured Projects</h2>
 
         <!-- Housing -->
-        <div class="featured-project">
-          <h2>Housing Price Predictor</h2>
-
-          <div class="project-tags">
-            <span>Python</span><span>Machine Learning</span><span>Regression</span>
-          </div>
-
-          <div class="project-metrics">
-            <div class="metric">R²: 0.82</div>
-            <div class="metric">RMSE ↓ 18%</div>
-            <div class="metric">Key drivers identified</div>
-          </div>
-
-          <p>
-            Machine learning regression model built to support
-            data-driven real estate pricing decisions.
-          </p>
-
-          <div class="project-actions">
-            <a href="housing_details.html">Project Details →</a>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank" rel="noopener">Live App →</a>
+        <div class="project-card">
+          <div class="row">
+            <div class="col-8 col-12-medium">
+              <h3>Housing Price Predictor</h3>
+              <div class="tag-box">
+                <span class="tag-badge">Python</span>
+                <span class="tag-badge">Machine Learning</span>
+                <span class="tag-badge">Regression</span>
+              </div>
+              <p>
+                End-to-end machine learning project designed to support data-driven real estate pricing. 
+                Focuses on feature engineering from raw housing data and identifying key property value drivers.
+              </p>
+              <div class="metric-box">
+                <div class="metric-item">R² Score: 0.82</div>
+                <div class="metric-item">RMSE ↓ 18%</div>
+                <div class="metric-item">Top Drivers Identified</div>
+              </div>
+              <ul class="link-list" style="display: flex; gap: 1.5rem; margin-top: 1rem;">
+                <li><a href="housing_details.html">Project Details →</a></li>
+                <li><a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank" rel="noopener">Live App</a></li>
+              </ul>
+            </div>
+            <div class="col-4 col-12-medium" style="display: flex; align-items: center;">
+              <img src="images/chart-comparison.png" alt="Housing Price Chart" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
           </div>
         </div>
 
-        <!-- Weather (UPDATED: single button link only) -->
-        <div class="featured-project">
-          <h2>Weather Report</h2>
-
-          <p>
-            View the latest automated weather report here:
-          </p>
-
-          <div class="project-actions">
-            <a class="primary"
-               href="https://frank-ellingsen.github.io/weather-project/"
-               target="_blank"
-               rel="noopener">
-              Open Weather Report →
-            </a>
+        <!-- Weather -->
+        <div class="project-card">
+          <h3>Automated Weather Reporting</h3>
+          <div class="tag-box">
+            <span class="tag-badge">Python</span>
+            <span class="tag-badge">API</span>
+            <span class="tag-badge">Automation</span>
           </div>
+          <p>
+            An automated data pipeline that fetches real-time weather data via API, performs time-series analysis, 
+            and generates insights for operational planning.
+          </p>
+          <ul class="link-list">
+            <li><a href="https://frank-ellingsen.github.io/weather-project/" target="_blank" rel="noopener" class="button">Open Weather Report →</a></li>
+          </ul>
         </div>
 
       </div>
+
 
     </div>
   </div>

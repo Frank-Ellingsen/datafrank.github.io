@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Housing Price Predictor | data_frank</title>
-
+  <title>Housing Price Predictor | Frank Ellingsen</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GSFTVZHPX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0GSFTVZHPX', {
+      'transport_type': 'beacon'
+    });
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Machine learning project focused on predicting housing prices using Python and regression models." />
-
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -21,10 +26,11 @@
         <h1><a href="index.html" id="logo">data_frank</a></h1>
         <nav id="nav">
           <a href="index.html">Home</a>
-          <a href="p1.html">SQL Data Warehouse</a>
+          <a href="p1.html">MS Fabric</a>
           <a href="p2.html">Power BI</a>
-          <a href="p3.html">Weather Analytics</a>
-          <a href="p4.html" class="current-page-item">Machine Learning</a>
+          <a href="p3.html">Exploratory Dashboard</a>
+          <a href="p4.html">Excel Data Model</a>
+          <a href="login.html">Login</a>
         </nav>
       </header>
     </div>
@@ -33,96 +39,87 @@
   <!-- Main -->
   <div id="main">
     <div class="container">
+      <div class="row main-row">
+        
+        <!-- Left: Project Content -->
+        <div class="col-8 col-12-medium">
+          <section>
+            <h2 style="border-bottom: none; font-size: 2.5em; margin-bottom: 0.5rem;">Housing Price Predictor</h2>
+            <div style="margin-bottom: 2rem;">
+              <span class="tag-badge primary">Python</span>
+              <span class="tag-badge primary">Machine Learning</span>
+              <span class="tag-badge primary">Regression</span>
+            </div>
+            
+            <img src="images/chart-comparison.png" alt="Housing Price Chart" class="top" style="width: 100%;">
+            
+            <h3>Business Problem</h3>
+            <p>
+              Accurately pricing residential properties is critical for buyers, sellers, and real estate professionals. 
+              Manual pricing methods are often subjective and fail to capture complex interactions between location, size, and quality.
+            </p>
+            <p>
+              The goal of this project is to support <strong>data-driven pricing decisions</strong> by building a predictive model 
+              that estimates housing prices and highlights the key factors influencing value.
+            </p>
 
-      <section>
-        <h2>Housing Price Predictor</h2>
-        <p>
-          This project applies machine learning techniques to predict housing prices
-          and identify the most important drivers behind property value.
-        </p>
-      </section>
+            <h3>The Process</h3>
+            <ul>
+              <li><strong>Data Cleaning:</strong> Standardized raw housing datasets and handled missing values.</li>
+              <li><strong>Feature Engineering:</strong> Created location-based bins and price tiers to improve model accuracy.</li>
+              <li><strong>Model Selection:</strong> Evaluated multiple algorithms, selecting Random Forest for its balance of performance and interpretability.</li>
+              <li><strong>Validation:</strong> Compared predictions against actual market prices to ensure reliability.</li>
+            </ul>
 
-      <section>
-        <h3>Business Problem</h3>
-        <p>
-          Accurately pricing residential properties is critical for buyers, sellers,
-          and real estate professionals. Manual pricing methods are often subjective
-          and fail to capture complex interactions between location, size, and quality.
-        </p>
-        <p>
-          The goal of this project is to support <strong>data-driven pricing decisions</strong>
-          by building a predictive model that estimates housing prices and highlights
-          the key factors influencing value.
-        </p>
-      </section>
+            <h3>Insights & Business Value</h3>
+            <p>
+              The model demonstrates strong predictive performance with an <strong>R² Score of 0.82</strong> and an <strong>18% reduction in RMSE</strong> 
+              compared to baseline estimates. Beyond raw predictions, the analysis identified that location and living area remain the primary price drivers.
+            </p>
+          </section>
+        </div>
 
-      <section>
-        <h3>Data & Tools</h3>
-        <ul>
-          <li><strong>Python:</strong> Pandas, NumPy, scikit-learn</li>
-          <li><strong>Machine Learning:</strong> Random Forest Regression</li>
-          <li><strong>Analysis:</strong> Exploratory Data Analysis (EDA)</li>
-          <li><strong>Visualization:</strong> Matplotlib, Seaborn</li>
-        </ul>
-      </section>
+        <!-- Right: Sidebar -->
+        <div class="col-4 col-12-medium">
+          <section class="project-card" style="padding: 1.5rem; border-left: none; border-top: 6px solid #007897;">
+            <h3>Tools Used</h3>
+            <div style="margin-bottom: 1.5rem;">
+              <span class="tag-badge">Pandas</span>
+              <span class="tag-badge">scikit-learn</span>
+              <span class="tag-badge">Matplotlib</span>
+              <span class="tag-badge">Seaborn</span>
+              <span class="tag-badge">Streamlit</span>
+            </div>
 
-      <section>
-        <h3>Process</h3>
-        <ul>
-          <li>Cleaned and standardized raw housing data</li>
-          <li>Engineered features such as price tiers and location-based bins</li>
-          <li>Trained and evaluated regression models</li>
-          <li>Compared predictions against actual prices</li>
-          <li>Identified key drivers using feature importance</li>
-        </ul>
-      </section>
+            <h3>Key Metrics</h3>
+            <div class="metric-box" style="flex-direction: column;">
+              <div class="metric-item">R²: 0.82</div>
+              <div class="metric-item">RMSE ↓ 18%</div>
+              <div class="metric-item">8k+ Data Points</div>
+            </div>
 
-      <section>
-        <h3>Results & Insights</h3>
-        <ul>
-          <li><strong>R² Score:</strong> 0.82</li>
-          <li><strong>RMSE:</strong> Reduced by 18% compared to baseline</li>
-          <li><strong>Top price drivers:</strong> Location, living area, number of rooms</li>
-        </ul>
-        <p>
-          The model demonstrates strong predictive performance while remaining
-          interpretable enough to support business decision-making.
-        </p>
-      </section>
+            <h3 style="margin-top: 1.5rem;">Project Links</h3>
+            <ul class="link-list">
+              <li><a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank" rel="noopener">GitHub Repository →</a></li>
+              <li><a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank" rel="noopener">Live Streamlit App →</a></li>
+            </ul>
+          </section>
 
-      <section>
-        <h3>Why This Matters</h3>
-        <p>
-          This project demonstrates the ability to:
-        </p>
-        <ul>
-          <li>Apply machine learning to a real-world business problem</li>
-          <li>Translate model results into actionable insights</li>
-          <li>Balance predictive accuracy with interpretability</li>
-          <li>Communicate technical results to non-technical stakeholders</li>
-        </ul>
-      </section>
+          <p style="text-align: center;">
+            <a href="index.html" style="font-weight: 600;">← Back to Portfolio</a>
+          </p>
+        </div>
 
-      <section>
-        <h3>Project Links</h3>
-        <ul class="link-list">
-          <li>
-            <a href="https://github.com/Frank-Ellingsen/Housing-Price-Predictor" target="_blank">
-              GitHub Repository
-            </a>
-          </li>
-          <li>
-            <a href="https://housing-price-predictor-8u16.onrender.com/" target="_blank">
-              Live Streamlit App
-            </a>
-          </li>
-        </ul>
-      </section>
+      </div>
+    </div>
+  </div>
 
-      <p>
-        <a href="index.html">← Back to portfolio</a>
-      </p>
-
+  <!-- Footer -->
+  <div id="footer-wrapper">
+    <div class="container">
+      <div id="copyright">
+        &copy; Frank Ellingsen. All rights reserved.
+      </div>
     </div>
   </div>
 
