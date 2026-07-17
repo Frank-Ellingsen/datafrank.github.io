@@ -17,6 +17,302 @@
         content="Business Analyst and Data Analyst portfolio showcasing SQL, Python, Power BI, machine learning, and real-world analytics projects." />
 
   <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(106, 168, 179, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(96, 125, 139, 0.14), transparent 24%),
+        linear-gradient(180deg, #f6f8f5 0%, #edf2ee 42%, #e3e9dc 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 82%);
+      opacity: 0.55;
+    }
+
+    body::after {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(0, 120, 151, 0.08), transparent 12%),
+        radial-gradient(circle at 82% 28%, rgba(56, 189, 248, 0.06), transparent 16%),
+        radial-gradient(circle at 72% 78%, rgba(15, 23, 42, 0.06), transparent 18%);
+      filter: blur(2px);
+      opacity: 0.9;
+    }
+
+    #page-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    #header-wrapper {
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      position: relative;
+      z-index: 2;
+    }
+
+    #banner-wrapper {
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.72), transparent 34%),
+        linear-gradient(135deg, #dce7df 0%, #edf2ef 46%, #dae3ee 100%);
+      padding: 2.5em 0 2em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #banner-wrapper::before,
+    #banner-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    #banner-wrapper::before {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.4), transparent 42%),
+        radial-gradient(circle at 20% 30%, rgba(0, 120, 151, 0.13), transparent 0 30%),
+        radial-gradient(circle at 78% 25%, rgba(15, 23, 42, 0.08), transparent 0 24%),
+        radial-gradient(circle at 88% 76%, rgba(0, 120, 151, 0.08), transparent 0 18%);
+      opacity: 0.95;
+    }
+
+    #banner-wrapper::after {
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 100%),
+        linear-gradient(rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 100%);
+      background-size: 120px 120px;
+      opacity: 0.35;
+      mix-blend-mode: screen;
+    }
+
+    #banner {
+      position: relative;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5.5em 2em;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(9, 30, 42, 0.92), rgba(5, 72, 90, 0.86)),
+        url('assets/css/images/banner.png');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    #banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: 0.45;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 95%);
+    }
+
+    .banner-copy {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 880px;
+      color: #f8fbff;
+      text-shadow: 0 2px 18px rgba(15, 23, 42, 0.4);
+    }
+
+    .banner-copy h2 {
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin: 0;
+      color: #f8fbff;
+      text-transform: none;
+    }
+
+    .banner-copy span {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(248, 251, 255, 0.92);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .storytelling-visual {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .storytelling-visual::before {
+      content: "";
+      position: absolute;
+      inset: auto -5% -8% -5%;
+      height: 48%;
+      background:
+        radial-gradient(circle at 18% 80%, rgba(99, 220, 255, 0.36), transparent 16%),
+        radial-gradient(circle at 42% 24%, rgba(255, 255, 255, 0.18), transparent 12%),
+        radial-gradient(circle at 70% 74%, rgba(255, 255, 255, 0.12), transparent 18%),
+        linear-gradient(135deg, rgba(3, 37, 49, 0.02), rgba(255, 255, 255, 0.16));
+      filter: blur(1px);
+      opacity: 0.85;
+    }
+
+    .story-bars {
+      position: absolute;
+      left: 8%;
+      bottom: 18%;
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      width: min(44vw, 520px);
+      height: 42%;
+      opacity: 0.9;
+    }
+
+    .story-bars span {
+      flex: 1;
+      border-radius: 18px 18px 6px 6px;
+      background: linear-gradient(180deg, rgba(122, 235, 255, 0.95), rgba(19, 162, 199, 0.4));
+      box-shadow: 0 12px 30px rgba(6, 182, 212, 0.18);
+      min-height: 20px;
+      height: var(--h);
+      transform-origin: bottom center;
+      animation: rise 1.6s ease-out both;
+    }
+
+    .story-bars span:nth-child(2n) {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(124, 211, 252, 0.26));
+    }
+
+    .story-bars span:nth-child(3n) {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(59, 130, 246, 0.26));
+    }
+
+    .story-line {
+      position: absolute;
+      inset: auto 6% 16% auto;
+      width: min(52vw, 650px);
+      height: 48%;
+      opacity: 0.95;
+      filter: drop-shadow(0 12px 20px rgba(7, 89, 133, 0.22));
+    }
+
+    .story-line path {
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: draw 2.2s ease-out forwards;
+    }
+
+    .story-dot {
+      fill: #f8fbff;
+      stroke: #0ea5c6;
+      stroke-width: 6;
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes rise {
+      from {
+        transform: scaleY(0.25);
+        opacity: 0;
+      }
+      to {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 980px) {
+      #banner {
+        min-height: 240px;
+        padding: 4.5em 1.5em;
+      }
+
+      .story-bars {
+        left: 6%;
+        width: 60vw;
+        gap: 0.7rem;
+      }
+
+      .story-line {
+        right: 2%;
+        width: 62vw;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      #banner-wrapper {
+        padding: 1.5em 0 1.2em;
+      }
+
+      #banner {
+        min-height: 210px;
+        padding: 3.5em 1.2em;
+        border-radius: 18px;
+      }
+
+      .banner-copy span {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+      }
+
+      .story-bars {
+        left: 4%;
+        bottom: 14%;
+        width: 72vw;
+      }
+
+      .story-line {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -47,12 +343,31 @@
   <div id="banner-wrapper">
     <div class="container">
       <div id="banner">
-       <h2 style="font-size: 5em; color: #35464bef;"> Storytelling & Data Driven Decision Making 
-        
-       </h2>
+        <div class="storytelling-visual" aria-hidden="true">
+          <div class="story-bars">
+            <span style="--h: 32%;"></span>
+            <span style="--h: 48%;"></span>
+            <span style="--h: 64%;"></span>
+            <span style="--h: 40%;"></span>
+            <span style="--h: 78%;"></span>
+            <span style="--h: 58%;"></span>
+          </div>
 
-  
-<br>
+          <svg class="story-line" viewBox="0 0 700 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M20 250 C90 220, 135 180, 200 188 C272 198, 314 116, 382 130 C447 144, 493 78, 566 90 C620 100, 650 54, 680 48" stroke="rgba(248,251,255,0.95)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M20 250 C90 220, 135 180, 200 188 C272 198, 314 116, 382 130 C447 144, 493 78, 566 90 C620 100, 650 54, 680 48" stroke="rgba(14,165,233,0.75)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle class="story-dot" cx="20" cy="250" r="7" />
+            <circle class="story-dot" cx="200" cy="188" r="7" />
+            <circle class="story-dot" cx="382" cy="130" r="7" />
+            <circle class="story-dot" cx="566" cy="90" r="7" />
+            <circle class="story-dot" cx="680" cy="48" r="7" />
+          </svg>
+        </div>
+
+        <div class="banner-copy">
+          <h2>Storytelling with Data</h2>
+          <span>Turning numbers into clear, visual decisions</span>
+        </div>
 
       </div>
     </div>
