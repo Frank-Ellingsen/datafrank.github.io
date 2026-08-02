@@ -59,8 +59,7 @@ Used for quick analysis, validation, and aligning logic with business expectatio
 
 ## 🎯 What I Care About
 
-I enjoy working at the intersection of **business understanding, analytics, and AI** — building solutions that answer not just *“What does the data say?”*  
-but *“How does this help the business decide?”*
+I enjoy working at the intersection of **business understanding, analytics, and AI** — building solutions that answer not just _“What does the data say?”_  
+but _“How does this help the business decide?”_
 
 ---
-
