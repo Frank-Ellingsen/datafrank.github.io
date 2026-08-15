@@ -1,5 +1,12 @@
 # Portfolio Projects Documentation
 
+## PMO EVM Analytics in Microsoft Fabric
+- **Description**: Enterprise PMO and Earned Value Management platform built on Microsoft Fabric Lakehouse (Direct Lake) for naval defense construction (Skjold-Class Stealth Fast Patrol Boats). Features triple S-Curves, CPI/SPI indices, WBS Gantt scheduling, EMV risk matrix, and VOR governance adhering to Edward Tufte Data-Ink principles.
+- **Technologies**: Microsoft Fabric, Direct Lake, DAX, Earned Value Management (EVM), Edward Tufte Data-Ink UI.
+- **Business Impact**: Delivers real-time cost and schedule visibility, EAC/ETC forecasting, and proactive risk governance for major engineering programs.
+- **GitHub Repository**: [PMO EVM Analytics in Microsoft Fabric Repo](https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric)  
+- **Live Demo**: [PMO EVM Analytics Demo](https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/)
+
 ## Housing Price Predictor
 - **Description**: A machine learning model that predicts housing prices based on various features such as location, size, and amenities.
 - **Technologies**: Python, scikit-learn, pandas.

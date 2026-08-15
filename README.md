@@ -43,30 +43,35 @@ With a background in **Finance & Business Administration**, I specialize in the 
 
 ## 📌 Featured Projects & Repositories
 
-### 1. [North Sea Oil Platform Drill Tower Construction](https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/)
+### 1. [PMO EVM Analytics in Microsoft Fabric](https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/)
+- **Focus**: Microsoft Fabric (Direct Lake), Project Controlling, EVM, S-Curves, Risk & VOR Governance
+- **Description**: Enterprise PMO and Earned Value Management platform built on Microsoft Fabric Lakehouse for naval defense construction (Skjold-Class Stealth Patrol Boats). Features triple S-Curves, CPI/SPI indices, WBS Gantt scheduling, EMV risk matrix, and VOR governance adhering to Edward Tufte Data-Ink principles.
+- **Repository**: [PMO-EVM-Analytics-in-Microsoft-Fabric](https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric)
+
+### 2. [North Sea Oil Platform Drill Tower Construction](https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/)
 - **Focus**: Project Controlling, Earned Value Management (EVM), S-Curves, Schedule Variance
 - **Description**: Interactive EVM and Gantt control system for industrial offshore construction. Analyzes cost variance (CV), schedule variance (SV), and earned schedule (ES) with high data-ink efficiency.
 - **Repository**: [North-Sea-Oil-Platform-Drill-Tower-Construction](https://github.com/Frank-Ellingsen/North-Sea-Oil-Platform-Drill-Tower-Construction)
 
-### 2. [3-Layer Agentic AI Topic Researcher](https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/)
+### 3. [3-Layer Agentic AI Topic Researcher](https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/)
 - **Focus**: Multi-Agent Systems, Autonomous Research, Decision Intelligence
 - **Description**: Autonomous 3-tier AI research architecture (Planner &rarr; Researcher &rarr; Synthesizer) aggregating multi-source evidence and generating structured executive intelligence dossiers.
 - **Repository**: [3-Layer-Agentic-AI-Topic-Researcher](https://github.com/Frank-Ellingsen/3-Layer-Agentic-AI-Topic-Researcher)
 
-### 3. [Project Finance AI & EVM Dashboard](https://frank-ellingsen.github.io/Project-Mangagement/)
+### 4. [Project Finance AI & EVM Dashboard](https://frank-ellingsen.github.io/Project-Mangagement/)
 - **Focus**: Financial Control, CPI/SPI Tracking, EAC/ETC Forecasting
 - **Description**: Interactive financial management interface tracking budget burn rates, cost indices (CPI/SPI), and projecting estimate at completion (EAC).
 - **Repository**: [Project-Mangagement](https://github.com/Frank-Ellingsen/Project-Mangagement)
 
-### 4. [Car Rental Analytics Platform](https://mavenshowcase.com/project/55578)
+### 5. [Car Rental Analytics Platform](https://mavenshowcase.com/project/55578)
 - **Focus**: Microsoft Stack, Power BI, Predictive Demand Modeling
 - **Description**: Full-stack BI solution transforming car rental fleet operations through utilization tracking, pricing strategy evaluation, and predictive modeling.
 
-### 5. [Norwegian Electricity Price Analysis (2021–2026)](https://frank-ellingsen.github.io/norwegian-electricity-analysis/)
+### 6. [Norwegian Electricity Price Analysis (2021–2026)](https://frank-ellingsen.github.io/norwegian-electricity-analysis/)
 - **Focus**: Python, Pandas, Power BI, Time Series
 - **Description**: Longitudinal econometric analysis of electricity spot prices across Norway's five bidding zones (NO1–NO5), evaluating transmission constraints and regional price divergences.
 
-### 6. [Housing Price Valuation Predictor](https://frank-ellingsen.github.io/datafrank.github.io/housing_details.html)
+### 7. [Housing Price Valuation Predictor](https://frank-ellingsen.github.io/datafrank.github.io/housing_details.html)
 - **Focus**: Python, scikit-learn, Regression Modeling
 - **Description**: Supervised regression pipeline modeling residential property valuations based on square footage, location indicators, and property attributes.
 
