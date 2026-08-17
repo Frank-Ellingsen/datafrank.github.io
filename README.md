@@ -43,7 +43,12 @@ With a background in **Finance & Business Administration**, I specialize in the 
 
 ## 📌 Featured Projects & Repositories
 
-### 1. [PMO EVM Analytics in Microsoft Fabric](https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/)
+### 1. [AI AGENTIC PMO — Skjold-Class MTB Governance Portal](https://frank-ellingsen.github.io/AI-AGENTIC-PMO/)
+- **Focus**: Autonomous Project Controlling, Defense & Maritime, EVM S-Curves, IFRS 15 / IAS 37 Compliance, 19 WP Gantt, 5x5 Risk & VOR Governance
+- **Description**: Autonomous PMO and Project Controlling platform engineered for naval defense lifetime extension programs (Skjold-Class Stealth Fast Patrol Boats at Umoe Mandal). Integrates full-lifecycle executive governance, interactive triple S-Curve EVM forecasting (BAC 766M NOK, CPI/SPI indices), 19 Work Package milestone Gantt scheduling, drydock execution tracking, IFRS 15 / IAS 37 accounting compliance, and Variation Order Request (VOR) governance.
+- **Repository**: [AI-AGENTIC-PMO](https://github.com/Frank-Ellingsen/AI-AGENTIC-PMO)
+
+### 2. [PMO EVM Analytics in Microsoft Fabric](https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/)
 - **Focus**: Microsoft Fabric (Direct Lake), Project Controlling, EVM, S-Curves, Risk & VOR Governance
 - **Description**: Enterprise PMO and Earned Value Management platform built on Microsoft Fabric Lakehouse for naval defense construction (Skjold-Class Stealth Patrol Boats). Features triple S-Curves, CPI/SPI indices, WBS Gantt scheduling, EMV risk matrix, and VOR governance adhering to Edward Tufte Data-Ink principles.
 - **Repository**: [PMO-EVM-Analytics-in-Microsoft-Fabric](https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric)

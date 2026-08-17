@@ -719,6 +719,230 @@
       transform: scale(1.02);
     }
 
+    .media-live-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      z-index: 10;
+    }
+
+    .media-live-badge .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #22c55e;
+      box-shadow: 0 0 6px #22c55e;
+    }
+
+    /* Link Content Preview Widget (Tufte High Data-Ink) */
+    .preview-summary-box {
+      background: var(--bg-surface-alt);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      margin: 1.1rem 0 1.35rem;
+    }
+
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-light);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .preview-title-badge {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--navy-900);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .preview-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.55rem;
+      border-radius: var(--radius-pill);
+      background: #eff6ff;
+      color: var(--cyan-700);
+      border: 1px solid #bfdbfe;
+    }
+
+    .preview-kpi-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .preview-kpi-cell {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 0.4rem 0.55rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preview-kpi-cell .label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.15rem;
+    }
+
+    .preview-kpi-cell .val {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .preview-kpi-cell .val small {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .preview-modules-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .preview-module-tag {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      line-height: 1.35;
+    }
+
+    .preview-module-tag strong {
+      color: var(--navy-900);
+      font-weight: 600;
+    }
+
+    /* Interactive Preview Modal */
+    .preview-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(9, 19, 29, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .preview-modal-overlay.active {
+      display: flex;
+    }
+
+    .preview-modal-window {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      width: 100%;
+      max-width: 1240px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .preview-modal-header {
+      padding: 0.85rem 1.25rem;
+      background: var(--navy-900);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--navy-800);
+    }
+
+    .preview-modal-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .preview-modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .preview-modal-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: var(--bg-canvas);
+    }
+
+    .preview-modal-close {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 0.35rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .preview-modal-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    @media (max-width: 860px) {
+      .preview-kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .preview-modal-window {
+        height: 96vh;
+      }
+    }
+
     /* ==========================================================================
        EXTERNAL SHOWCASE & QUICK LINKS
        ========================================================================== */
@@ -1090,7 +1314,7 @@
 
       <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
       <div class="filter-bar" role="tablist" aria-label="Project Categories">
-        <button class="filter-btn active" data-filter="all">All Projects (11)</button>
+        <button class="filter-btn active" data-filter="all">All Projects (12)</button>
         <button class="filter-btn" data-filter="controlling">Project Controlling &amp; EVM</button>
         <button class="filter-btn" data-filter="bi">BI &amp; Analytics</button>
         <button class="filter-btn" data-filter="ai">AI &amp; Automation</button>
@@ -1098,7 +1322,101 @@
 
       <div class="projects-list" id="projectsContainer">
 
-        <!-- 1. PMO EVM Analytics in Microsoft Fabric -->
+        <!-- 1. AI AGENTIC PMO — Skjold-Class MTB Governance Portal -->
+        <article class="project-card featured-flagship" data-category="controlling ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">Flagship Project Controlling &amp; AI PMO</div>
+              <h3 class="project-title">AI AGENTIC PMO — Skjold-Class MTB Governance Portal</h3>
+              
+              <div class="tag-list">
+                <span class="tag-badge primary">AI Agentic PMO</span>
+                <span class="tag-badge primary">Defense &amp; Maritime</span>
+                <span class="tag-badge primary">Earned Value Management (EVM)</span>
+                <span class="tag-badge">IFRS 15 / IAS 37 Compliance</span>
+                <span class="tag-badge">19 WP Milestone Gantt</span>
+                <span class="tag-badge">5x5 Risk &amp; VOR Governance</span>
+                <span class="tag-badge">DuckDB Data Engine</span>
+              </div>
+
+              <p class="project-description">
+                Autonomous PMO and Project Controlling platform engineered for naval defense lifetime extension programs (Skjold-Class Stealth Fast Patrol Boats at Umoe Mandal). Integrates full-lifecycle executive governance, interactive triple S-Curve EVM forecasting, 19 Work Package milestone Gantt scheduling, physical drydock site execution tracking, IFRS 15 / IAS 37 revenue recognition &amp; onerous contract provisions, 5x5 quantitative EMV risk matrix, and Variation Order Request (VOR) governance.
+              </p>
+
+              <!-- Live Link Content Preview Widget -->
+              <div class="preview-summary-box">
+                <div class="preview-header">
+                  <span class="preview-title-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    Live Portal Content Preview &bull; Skjold MTB (<span style="font-family:var(--font-mono); font-weight:600;">PRJ-SKJOLD-LEP-2025</span>)
+                  </span>
+                  <span class="preview-status-pill">Month 18/24 &bull; Active Controls</span>
+                </div>
+
+                <!-- EVM Metric Strip -->
+                <div class="preview-kpi-row">
+                  <div class="preview-kpi-cell">
+                    <span class="label">Budget (BAC)</span>
+                    <span class="val">766.00M <small>NOK</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Earned (EV)</span>
+                    <span class="val" style="color:var(--accent-blue);">639.27M <small>(83.5%)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Actuals (AC)</span>
+                    <span class="val">672.27M <small>(87.8%)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Cost Index (CPI)</span>
+                    <span class="val" style="color:var(--accent-amber);">0.951 <small>(-33M)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Schedule (SPI)</span>
+                    <span class="val" style="color:var(--accent-amber);">0.963 <small>(-25.7M)</small></span>
+                  </div>
+                </div>
+
+                <!-- Core Portal Governance Modules -->
+                <div class="preview-modules-list">
+                  <span class="preview-module-tag"><strong>0. Charter &amp; Brief:</strong> Scope &amp; Org Hierarchy</span>
+                  <span class="preview-module-tag"><strong>1. Director &amp; PBI:</strong> Executive KPIs &amp; Alerts</span>
+                  <span class="preview-module-tag"><strong>2. PMO &amp; EVM:</strong> Triple S-Curves &amp; EAC/ETC</span>
+                  <span class="preview-module-tag"><strong>3. Gantt:</strong> 19 Work Packages &amp; Subsystems</span>
+                  <span class="preview-module-tag"><strong>4. Drydock:</strong> Site Execution &amp; Punchlists</span>
+                  <span class="preview-module-tag"><strong>5. Cost &amp; VOR:</strong> Variation Orders &amp; Claims</span>
+                  <span class="preview-module-tag"><strong>6. CAMs:</strong> Subcontractor Accountability</span>
+                  <span class="preview-module-tag"><strong>7. Risk 5x5:</strong> EMV Exposure &amp; Mitigations</span>
+                  <span class="preview-module-tag"><strong>8. Governance:</strong> IFRS 15 / IAS 37 Provisions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" target="_blank" rel="noopener" class="btn-action-primary">
+                Open Live PMO Portal &rarr;
+              </a>
+              <button type="button" class="btn-action-secondary preview-modal-trigger" data-preview-url="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" title="Interactive live modal preview">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                Interactive Quick Preview
+              </button>
+              <a href="https://github.com/Frank-Ellingsen/AI-AGENTIC-PMO" target="_blank" rel="noopener" class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" target="_blank" rel="noopener" title="Click to open live interactive portal">
+              <div class="media-live-badge">
+                <span class="live-dot"></span> LIVE PORTAL
+              </div>
+              <img src="images/pmo_agentic.png" alt="AI Agentic PMO Skjold-Class MTB Project Controls Portal" loading="lazy">
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. PMO EVM Analytics in Microsoft Fabric -->
         <article class="project-card featured-flagship" data-category="controlling">
           <div class="project-body">
             <div>
@@ -1570,7 +1888,30 @@
   </footer>
 
   <!-- ========================================================================
-       INTERACTIVE JAVASCRIPT (Category Filter & Mobile Navigation)
+       LIVE INTERACTIVE PREVIEW MODAL
+       ======================================================================== -->
+  <div class="preview-modal-overlay" id="previewModal" role="dialog" aria-modal="true" aria-label="Interactive Project Preview">
+    <div class="preview-modal-window">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title">
+          <span>⚓</span>
+          <span>AI AGENTIC PMO — Live Portal Preview</span>
+        </div>
+        <div class="preview-modal-actions">
+          <a href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" target="_blank" rel="noopener" class="btn-action-primary" style="padding: 0.25rem 0.75rem; font-size: 0.78rem;">
+            Open in New Window ↗
+          </a>
+          <button type="button" class="preview-modal-close" id="closePreviewModal" aria-label="Close modal preview">
+            &times; Close
+          </button>
+        </div>
+      </div>
+      <iframe class="preview-modal-frame" id="previewFrame" src="" title="Live Project Preview" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       INTERACTIVE JAVASCRIPT (Category Filter, Modal Preview & Mobile Nav)
        ======================================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -1583,7 +1924,7 @@
         });
       }
 
-      // 2. Project Category Filtering
+      // 2. Project Category Filtering (supports multiple space-separated categories)
       const filterBtns = document.querySelectorAll('.filter-btn');
       const projectCards = document.querySelectorAll('.project-card');
 
@@ -1596,14 +1937,59 @@
           const filterValue = btn.getAttribute('data-filter');
 
           projectCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            if (filterValue === 'all' || cardCategory === filterValue) {
+            const cardCategory = card.getAttribute('data-category') || '';
+            const categories = cardCategory.split(' ');
+            if (filterValue === 'all' || categories.includes(filterValue)) {
               card.style.display = 'grid';
             } else {
               card.style.display = 'none';
             }
           });
         });
+      });
+
+      // 3. Interactive Modal Preview Handlers
+      const previewModal = document.getElementById('previewModal');
+      const previewFrame = document.getElementById('previewFrame');
+      const closePreviewModalBtn = document.getElementById('closePreviewModal');
+      const previewTriggers = document.querySelectorAll('.preview-modal-trigger');
+
+      previewTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const url = trigger.getAttribute('data-preview-url');
+          if (url && previewFrame && previewModal) {
+            previewFrame.src = url;
+            previewModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      function closePreview() {
+        if (previewModal) {
+          previewModal.classList.remove('active');
+          if (previewFrame) previewFrame.src = '';
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closePreviewModalBtn) {
+        closePreviewModalBtn.addEventListener('click', closePreview);
+      }
+
+      if (previewModal) {
+        previewModal.addEventListener('click', (e) => {
+          if (e.target === previewModal) {
+            closePreview();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && previewModal && previewModal.classList.contains('active')) {
+          closePreview();
+        }
       });
     });
   </script>

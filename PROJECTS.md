@@ -1,5 +1,12 @@
 # Portfolio Projects Documentation
 
+## AI AGENTIC PMO — Skjold-Class MTB Governance Portal
+- **Description**: Autonomous PMO and Project Controlling platform engineered for naval defense lifetime extension programs (Skjold-Class Stealth Fast Patrol Boats at Umoe Mandal). Integrates full-lifecycle executive governance, interactive triple S-Curve EVM forecasting (BAC 766M NOK, CPI/SPI indices), 19 Work Package milestone Gantt scheduling, drydock execution tracking, IFRS 15 / IAS 37 accounting compliance, and Variation Order Request (VOR) governance.
+- **Technologies**: Autonomous PMO Architecture, Earned Value Management (EVM), IFRS 15 / IAS 37, DuckDB / Analytical SQL, Interactive SVG Charts, Edward Tufte Data-Ink UI.
+- **Business Impact**: Provides project directors, CAMs, and shipyard controllers with single-pane-of-glass variance control, EAC/ETC forecasting, and milestone risk tracking.
+- **GitHub Repository**: [AI AGENTIC PMO Repo](https://github.com/Frank-Ellingsen/AI-AGENTIC-PMO)  
+- **Live Demo**: [AI AGENTIC PMO Portal Demo](https://frank-ellingsen.github.io/AI-AGENTIC-PMO/)
+
 ## PMO EVM Analytics in Microsoft Fabric
 - **Description**: Enterprise PMO and Earned Value Management platform built on Microsoft Fabric Lakehouse (Direct Lake) for naval defense construction (Skjold-Class Stealth Fast Patrol Boats). Features triple S-Curves, CPI/SPI indices, WBS Gantt scheduling, EMV risk matrix, and VOR governance adhering to Edward Tufte Data-Ink principles.
 - **Technologies**: Microsoft Fabric, Direct Lake, DAX, Earned Value Management (EVM), Edward Tufte Data-Ink UI.
