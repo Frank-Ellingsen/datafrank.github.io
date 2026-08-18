@@ -1,2591 +1,2408 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-5DSMFK94');
-    </script>
-    <!-- End Google Tag Manager -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Frank Ellingsen | Project Controller & BI Analytics Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio of Frank Ellingsen – Project Controller, Business Intelligence & Financial Analyst specializing in EVM, EAC/ETC forecasting, Power BI, SQL, DuckDB, and AI orchestration."
-    />
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5DSMFK94');
+  </script>
+  <!-- End Google Tag Manager -->
 
-    <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frank Ellingsen | Project Controller & BI Analytics Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Frank Ellingsen – Project Controller, Business Intelligence & Financial Analyst specializing in EVM, EAC/ETC forecasting, Power BI, SQL, DuckDB, and AI orchestration." />
 
-    <style>
-      /* ==========================================================================
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
        DESIGN SYSTEM & CSS TOKENS (Tufte Data-Ink & High Legibility)
        ========================================================================== */
-      :root {
-        --font-body:
-          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-          sans-serif;
-        --font-heading:
-          'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        --font-mono: 'JetBrains Mono', monospace;
+    :root {
+      --font-body:
+        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        sans-serif;
+      --font-heading:
+        'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
 
-        /* Primary Palette: Industrial Navy & Deep Slate (Engineering/Maritime) */
-        --navy-950: #09131d;
-        --navy-900: #0f1f2e;
-        --navy-800: #172d42;
-        --navy-700: #1e3c58;
-        --cyan-600: #0284c7;
-        --cyan-700: #0369a1;
-        --cyan-50: #f0f9ff;
-        --cyan-100: #e0f2fe;
+      /* Primary Palette: Industrial Navy & Deep Slate (Engineering/Maritime) */
+      --navy-950: #09131d;
+      --navy-900: #0f1f2e;
+      --navy-800: #172d42;
+      --navy-700: #1e3c58;
+      --cyan-600: #0284c7;
+      --cyan-700: #0369a1;
+      --cyan-50: #f0f9ff;
+      --cyan-100: #e0f2fe;
 
-        /* Neutrals & Surfaces */
-        --bg-canvas: #f8fafc;
-        --bg-surface: #ffffff;
-        --bg-surface-alt: #f1f5f9;
-        --bg-subtle: #f8f9fa;
-        --border-light: #e2e8f0;
-        --border-subtle: #edf2f7;
+      /* Neutrals & Surfaces */
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-alt: #f1f5f9;
+      --bg-subtle: #f8f9fa;
+      --border-light: #e2e8f0;
+      --border-subtle: #edf2f7;
 
-        /* Text */
-        --text-main: #1e293b;
-        --text-muted: #475569;
-        --text-subtle: #64748b;
-        --text-inverse: #ffffff;
+      /* Text */
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --text-inverse: #ffffff;
 
-        /* Accents & Status (Used strictly for high-information signal) */
-        --accent-teal: #0d9488;
-        --accent-amber: #d97706;
-        --accent-blue: #2563eb;
+      /* Accents & Status (Used strictly for high-information signal) */
+      --accent-teal: #0d9488;
+      --accent-amber: #d97706;
+      --accent-blue: #2563eb;
 
-        /* Layout & Spacing */
-        --container-max: 1180px;
-        --radius-sm: 6px;
-        --radius-md: 10px;
-        --radius-lg: 14px;
-        --radius-pill: 9999px;
+      /* Layout & Spacing */
+      --container-max: 1180px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-pill: 9999px;
 
-        /* Shadows (Minimal Tufte: flat elevation with crisp containment) */
-        --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-        --shadow-card:
-          0 1px 3px 0 rgba(15, 23, 42, 0.06),
-          0 1px 2px -1px rgba(15, 23, 42, 0.04);
-        --shadow-hover:
-          0 10px 25px -5px rgba(15, 23, 42, 0.08),
-          0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      /* Shadows (Minimal Tufte: flat elevation with crisp containment) */
+      --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+      --shadow-card:
+        0 1px 3px 0 rgba(15, 23, 42, 0.06),
+        0 1px 2px -1px rgba(15, 23, 42, 0.04);
+      --shadow-hover:
+        0 10px 25px -5px rgba(15, 23, 42, 0.08),
+        0 8px 10px -6px rgba(15, 23, 42, 0.04);
 
-        --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+      --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-      /* Reset & Base Setup */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+    /* Reset & Base Setup */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      html {
-        scroll-behavior: smooth;
-        font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-      body {
-        font-family: var(--font-body);
-        color: var(--text-main);
-        background-color: var(--bg-canvas);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-main);
+      background-color: var(--bg-canvas);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-      a {
-        color: var(--cyan-700);
-        text-decoration: none;
-        transition: var(--transition);
-      }
+    a {
+      color: var(--cyan-700);
+      text-decoration: none;
+      transition: var(--transition);
+    }
 
-      a:hover {
-        color: var(--cyan-600);
-      }
+    a:hover {
+      color: var(--cyan-600);
+    }
 
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-      .container {
-        width: 100%;
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 0 1.5rem;
-      }
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
 
-      /* ==========================================================================
+    /* ==========================================================================
        HEADER & NAVIGATION
        ========================================================================== */
-      #site-header {
-        background-color: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border-light);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+    #site-header {
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-      .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 68px;
-      }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
 
-      .brand-logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-family: var(--font-heading);
-        font-weight: 700;
-        font-size: 1.25rem;
-        color: var(--navy-900);
-        letter-spacing: -0.02em;
-      }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+    }
 
-      .brand-logo span.dot {
-        color: var(--cyan-600);
-      }
+    .brand-logo span.dot {
+      color: var(--cyan-600);
+    }
 
-      .brand-badge {
-        font-family: var(--font-mono);
-        font-size: 0.72rem;
-        font-weight: 600;
-        background: var(--bg-surface-alt);
-        color: var(--text-muted);
-        padding: 0.2rem 0.55rem;
-        border-radius: var(--radius-sm);
-        border: 1px solid var(--border-light);
-        margin-left: 0.25rem;
-      }
+    .brand-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--bg-surface-alt);
+      color: var(--text-muted);
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      margin-left: 0.25rem;
+    }
 
-      .site-nav {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-      .nav-link {
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: var(--text-muted);
-        padding: 0.5rem 0.85rem;
-        border-radius: var(--radius-sm);
-        transition: var(--transition);
-      }
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
 
-      .nav-link:hover {
-        color: var(--navy-900);
-        background-color: var(--bg-surface-alt);
-      }
+    .nav-link:hover {
+      color: var(--navy-900);
+      background-color: var(--bg-surface-alt);
+    }
 
-      .nav-link.active {
-        color: var(--navy-900);
-        background-color: var(--bg-surface-alt);
-        font-weight: 600;
-      }
+    .nav-link.active {
+      color: var(--navy-900);
+      background-color: var(--bg-surface-alt);
+      font-weight: 600;
+    }
 
-      .nav-link-login {
-        color: var(--cyan-700);
-        border: 1px solid var(--border-light);
-        margin-left: 0.5rem;
-      }
+    .nav-link-login {
+      color: var(--cyan-700);
+      border: 1px solid var(--border-light);
+      margin-left: 0.5rem;
+    }
 
-      .nav-link-login:hover {
-        background: var(--cyan-50);
-        border-color: var(--cyan-100);
-        color: var(--cyan-700);
-      }
+    .nav-link-login:hover {
+      background: var(--cyan-50);
+      border-color: var(--cyan-100);
+      color: var(--cyan-700);
+    }
 
-      /* Mobile Menu Toggle */
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: 1px solid var(--border-light);
-        padding: 0.5rem;
-        border-radius: var(--radius-sm);
-        cursor: pointer;
-        color: var(--text-main);
-      }
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-light);
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      color: var(--text-main);
+    }
 
-      /* ==========================================================================
+    /* ==========================================================================
        HERO / EXECUTIVE BANNER SECTION
        ========================================================================== */
-      .hero-section {
-        background: linear-gradient(
-          135deg,
+    .hero-section {
+      background: linear-gradient(135deg,
           var(--navy-950) 0%,
           var(--navy-900) 55%,
-          var(--navy-800) 100%
-        );
-        color: var(--text-inverse);
-        padding: 4.5rem 0 4rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-      }
+          var(--navy-800) 100%);
+      color: var(--text-inverse);
+      padding: 4.5rem 0 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
 
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 3rem;
-        align-items: center;
-      }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
 
-      .hero-content {
-        max-width: 720px;
-      }
+    .hero-content {
+      max-width: 720px;
+    }
 
-      .hero-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        padding: 0.35rem 0.85rem;
-        border-radius: var(--radius-pill);
-        font-size: 0.8rem;
-        font-weight: 500;
-        color: #bae6fd;
-        letter-spacing: 0.02em;
-        margin-bottom: 1.25rem;
-      }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #bae6fd;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+    }
 
-      .hero-pill .signal-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background-color: #38bdf8;
-        box-shadow: 0 0 8px #38bdf8;
-      }
+    .hero-pill .signal-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
 
-      .hero-title {
-        font-family: var(--font-heading);
-        font-size: clamp(2rem, 4.2vw, 3.1rem);
-        font-weight: 800;
-        line-height: 1.15;
-        letter-spacing: -0.03em;
-        color: #ffffff;
-        margin-bottom: 1rem;
-      }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4.2vw, 3.1rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
 
-      .hero-lead {
-        font-size: 1.12rem;
-        line-height: 1.65;
-        color: #cbd5e1;
-        margin-bottom: 1.75rem;
-        font-weight: 400;
-      }
+    .hero-lead {
+      font-size: 1.12rem;
+      line-height: 1.65;
+      color: #cbd5e1;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
 
-      .hero-lead strong {
-        color: #ffffff;
-        font-weight: 600;
-      }
+    .hero-lead strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
 
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        align-items: center;
-      }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        font-weight: 600;
-        padding: 0.65rem 1.25rem;
-        border-radius: var(--radius-md);
-        transition: var(--transition);
-        cursor: pointer;
-        border: 1px solid transparent;
-        text-decoration: none;
-      }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
 
-      .btn-primary {
-        background-color: var(--cyan-600);
-        color: #ffffff;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-      }
+    .btn-primary {
+      background-color: var(--cyan-600);
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
 
-      .btn-primary:hover {
-        background-color: #0369a1;
-        color: #ffffff;
-        transform: translateY(-1px);
-      }
+    .btn-primary:hover {
+      background-color: #0369a1;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
 
-      .btn-outline-light {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-      }
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
 
-      .btn-outline-light:hover {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.35);
-        color: #ffffff;
-      }
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+    }
 
-      /* Executive Metrics Strip */
-      .metrics-bar {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.25rem;
-        margin-top: 2.75rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
+    /* Executive Metrics Strip */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.75rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-      .metric-item {
-        display: flex;
-        flex-direction: column;
-      }
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
 
-      .metric-label {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: #94a3b8;
-        font-weight: 600;
-        margin-bottom: 0.2rem;
-      }
+    .metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
 
-      .metric-value {
-        font-family: var(--font-heading);
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #f8fafc;
-      }
+    .metric-value {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
 
-      /* ==========================================================================
+    /* ==========================================================================
        EXECUTIVE SUMMARY & BIO SECTION
        ========================================================================== */
-      .executive-section {
-        padding: 3.5rem 0 3rem;
-        background-color: var(--bg-surface);
-        border-bottom: 1px solid var(--border-light);
-      }
+    .executive-section {
+      padding: 3.5rem 0 3rem;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+    }
 
-      .exec-grid {
-        display: grid;
-        grid-template-columns: 1.35fr 1fr;
-        gap: 2.5rem;
-        align-items: stretch;
-      }
+    .exec-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2.5rem;
+      align-items: stretch;
+    }
 
-      .profile-card {
-        background: var(--bg-canvas);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-lg);
-        padding: 1.75rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1.5rem;
-      }
+    .profile-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
 
-      .profile-header {
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-      }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
 
-      .profile-avatar {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--bg-surface);
-        box-shadow: var(--shadow-sm);
-        flex-shrink: 0;
-      }
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
 
-      .profile-info h3 {
-        font-family: var(--font-heading);
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: var(--navy-900);
-        line-height: 1.2;
-        margin-bottom: 0.25rem;
-      }
+    .profile-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
 
-      .profile-role {
-        font-size: 0.88rem;
-        color: var(--cyan-700);
-        font-weight: 600;
-        margin-bottom: 0.2rem;
-      }
+    .profile-role {
+      font-size: 0.88rem;
+      color: var(--cyan-700);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
 
-      .profile-degree {
-        font-size: 0.82rem;
-        color: var(--text-muted);
-      }
+    .profile-degree {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
 
-      .profile-contact-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-        padding-top: 1rem;
-        border-top: 1px solid var(--border-light);
-      }
+    .profile-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+    }
 
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        font-size: 0.85rem;
-        color: var(--text-muted);
-      }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
 
-      .contact-item svg {
-        width: 16px;
-        height: 16px;
-        color: var(--cyan-700);
-        flex-shrink: 0;
-      }
+    .contact-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--cyan-700);
+      flex-shrink: 0;
+    }
 
-      .competencies-block h2 {
-        font-family: var(--font-heading);
-        font-size: 1.45rem;
-        font-weight: 700;
-        color: var(--navy-900);
-        margin-bottom: 1rem;
-        letter-spacing: -0.02em;
-      }
+    .competencies-block h2 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
 
-      .competencies-block p {
-        font-size: 0.96rem;
-        color: var(--text-muted);
-        margin-bottom: 1.25rem;
-        line-height: 1.7;
-      }
+    .competencies-block p {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
 
-      .skill-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.85rem;
-        margin-top: 1rem;
-      }
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
 
-      .skill-card {
-        background: var(--bg-canvas);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-md);
-        padding: 0.85rem 1rem;
-      }
+    .skill-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+    }
 
-      .skill-card h4 {
-        font-family: var(--font-heading);
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: var(--navy-900);
-        margin-bottom: 0.35rem;
-      }
+    .skill-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 0.35rem;
+    }
 
-      .skill-card p {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin-bottom: 0;
-        line-height: 1.45;
-      }
+    .skill-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.45;
+    }
 
-      /* ==========================================================================
+    /* ==========================================================================
        FEATURED PROJECTS SECTION & FILTERING
        ========================================================================== */
-      .projects-section {
-        padding: 4rem 0 5rem;
-      }
+    .projects-section {
+      padding: 4rem 0 5rem;
+    }
 
-      .section-header {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-      }
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
 
-      .section-title {
-        font-family: var(--font-heading);
-        font-size: 1.85rem;
-        font-weight: 800;
-        color: var(--navy-900);
-        letter-spacing: -0.03em;
-      }
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -0.03em;
+    }
 
-      .section-subtitle {
-        font-size: 1rem;
-        color: var(--text-muted);
-      }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
 
-      /* Filter Tabs */
-      .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 2.25rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-light);
-      }
+    /* Filter Tabs */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
 
-      .filter-btn {
-        background: var(--bg-surface);
-        border: 1px solid var(--border-light);
-        color: var(--text-muted);
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        border-radius: var(--radius-pill);
-        cursor: pointer;
-        transition: var(--transition);
-      }
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--transition);
+    }
 
-      .filter-btn:hover {
-        background: var(--bg-surface-alt);
-        color: var(--navy-900);
-        border-color: #cbd5e1;
-      }
+    .filter-btn:hover {
+      background: var(--bg-surface-alt);
+      color: var(--navy-900);
+      border-color: #cbd5e1;
+    }
 
-      .filter-btn.active {
-        background: var(--navy-900);
-        color: #ffffff;
-        border-color: var(--navy-900);
-      }
+    .filter-btn.active {
+      background: var(--navy-900);
+      color: #ffffff;
+      border-color: var(--navy-900);
+    }
 
-      /* Project Cards Container */
-      .projects-list {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
+    /* Project Cards Container */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
-      /* Project Card */
-      .project-card {
-        background: var(--bg-surface);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-lg);
-        overflow: hidden;
-        box-shadow: var(--shadow-card);
-        transition: var(--transition);
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        align-items: stretch;
-      }
+    /* Project Card */
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: stretch;
+    }
 
-      .project-card:hover {
-        border-color: #cbd5e1;
-        box-shadow: var(--shadow-hover);
-        transform: translateY(-2px);
-      }
+    .project-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
 
-      .project-card.featured-flagship {
-        border-left: 4px solid var(--cyan-600);
-      }
+    .project-card.featured-flagship {
+      border-left: 4px solid var(--cyan-600);
+    }
 
-      .project-body {
-        padding: 2.25rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+    .project-body {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-      .project-category {
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--cyan-700);
-        margin-bottom: 0.5rem;
-      }
+    .project-category {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--cyan-700);
+      margin-bottom: 0.5rem;
+    }
 
-      .project-title {
-        font-family: var(--font-heading);
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: var(--navy-900);
-        line-height: 1.3;
-        margin-bottom: 0.75rem;
-      }
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
 
-      .project-description {
-        font-size: 0.93rem;
-        color: var(--text-muted);
-        line-height: 1.65;
-        margin-bottom: 1.25rem;
-      }
+    .project-description {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
 
-      /* Tags */
-      .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-bottom: 1.5rem;
-      }
+    /* Tags */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
 
-      .tag-badge {
-        font-family: var(--font-mono);
-        font-size: 0.74rem;
-        font-weight: 500;
-        background: var(--bg-surface-alt);
-        color: var(--text-muted);
-        padding: 0.22rem 0.6rem;
-        border-radius: var(--radius-sm);
-        border: 1px solid var(--border-light);
-      }
+    .tag-badge {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 500;
+      background: var(--bg-surface-alt);
+      color: var(--text-muted);
+      padding: 0.22rem 0.6rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
 
-      .tag-badge.primary {
-        background: var(--cyan-50);
-        color: var(--cyan-700);
-        border-color: var(--cyan-100);
-        font-weight: 600;
-      }
+    .tag-badge.primary {
+      background: var(--cyan-50);
+      color: var(--cyan-700);
+      border-color: var(--cyan-100);
+      font-weight: 600;
+    }
 
-      /* Project Action Links */
-      .project-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        align-items: center;
-        margin-top: auto;
-      }
+    /* Project Action Links */
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: auto;
+    }
 
-      .btn-action-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #ffffff;
-        background-color: var(--navy-900);
-        padding: 0.55rem 1.1rem;
-        border-radius: var(--radius-md);
-        transition: var(--transition);
-      }
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: var(--navy-900);
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
 
-      .btn-action-primary:hover {
-        background-color: var(--cyan-700);
-        color: #ffffff;
-      }
+    .btn-action-primary:hover {
+      background-color: var(--cyan-700);
+      color: #ffffff;
+    }
 
-      .btn-action-secondary {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--text-main);
-        background-color: var(--bg-surface);
-        border: 1px solid var(--border-light);
-        padding: 0.55rem 1rem;
-        border-radius: var(--radius-md);
-        transition: var(--transition);
-      }
+    .btn-action-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
 
-      .btn-action-secondary:hover {
-        background-color: var(--bg-surface-alt);
-        border-color: #cbd5e1;
-        color: var(--navy-900);
-      }
+    .btn-action-secondary:hover {
+      background-color: var(--bg-surface-alt);
+      border-color: #cbd5e1;
+      color: var(--navy-900);
+    }
 
-      /* Project Visual / Image */
-      .project-media {
-        background: var(--bg-surface-alt);
-        border-left: 1px solid var(--border-light);
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 240px;
-      }
+    /* Project Visual / Image */
+    .project-media {
+      background: var(--bg-surface-alt);
+      border-left: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 240px;
+    }
 
-      .project-media a {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
+    .project-media a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
-      .project-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        transition: transform 0.35s ease;
-      }
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.35s ease;
+    }
 
-      .project-card:hover .project-media img {
-        transform: scale(1.02);
-      }
+    .project-card:hover .project-media img {
+      transform: scale(1.02);
+    }
 
-      .media-live-badge {
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        background: rgba(15, 23, 42, 0.88);
-        backdrop-filter: blur(6px);
-        color: #ffffff;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        padding: 0.25rem 0.6rem;
-        border-radius: var(--radius-sm);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        z-index: 10;
-      }
+    .media-live-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      z-index: 10;
+    }
 
-      .media-live-badge .live-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: #22c55e;
-        box-shadow: 0 0 6px #22c55e;
-      }
+    .media-live-badge .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #22c55e;
+      box-shadow: 0 0 6px #22c55e;
+    }
 
-      /* Link Content Preview Widget (Tufte High Data-Ink) */
-      .preview-summary-box {
-        background: var(--bg-surface-alt);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-md);
-        padding: 1rem 1.15rem;
-        margin: 1.1rem 0 1.35rem;
-      }
+    /* Link Content Preview Widget (Tufte High Data-Ink) */
+    .preview-summary-box {
+      background: var(--bg-surface-alt);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      margin: 1.1rem 0 1.35rem;
+    }
 
-      .preview-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid var(--border-light);
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-light);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-      .preview-title-badge {
-        font-family: var(--font-mono);
-        font-size: 0.73rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: var(--navy-900);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
+    .preview-title-badge {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--navy-900);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
 
-      .preview-status-pill {
-        font-family: var(--font-mono);
-        font-size: 0.7rem;
-        font-weight: 600;
-        padding: 0.15rem 0.55rem;
-        border-radius: var(--radius-pill);
-        background: #eff6ff;
-        color: var(--cyan-700);
-        border: 1px solid #bfdbfe;
-      }
+    .preview-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.55rem;
+      border-radius: var(--radius-pill);
+      background: #eff6ff;
+      color: var(--cyan-700);
+      border: 1px solid #bfdbfe;
+    }
 
+    .preview-kpi-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .preview-kpi-cell {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 0.4rem 0.55rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preview-kpi-cell .label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.15rem;
+    }
+
+    .preview-kpi-cell .val {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .preview-kpi-cell .val small {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .preview-modules-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .preview-module-tag {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      line-height: 1.35;
+    }
+
+    .preview-module-tag strong {
+      color: var(--navy-900);
+      font-weight: 600;
+    }
+
+    /* Interactive Preview Modal */
+    .preview-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(9, 19, 29, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .preview-modal-overlay.active {
+      display: flex;
+    }
+
+    .preview-modal-window {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      width: 100%;
+      max-width: 1240px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .preview-modal-header {
+      padding: 0.85rem 1.25rem;
+      background: var(--navy-900);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--navy-800);
+    }
+
+    .preview-modal-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .preview-modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .preview-modal-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: var(--bg-canvas);
+    }
+
+    .preview-modal-close {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 0.35rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .preview-modal-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    @media (max-width: 860px) {
       .preview-kpi-row {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.5rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .preview-kpi-cell {
-        background: var(--bg-surface);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-sm);
-        padding: 0.4rem 0.55rem;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .preview-kpi-cell .label {
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        color: var(--text-subtle);
-        font-weight: 600;
-        letter-spacing: 0.03em;
-        margin-bottom: 0.15rem;
-      }
-
-      .preview-kpi-cell .val {
-        font-family: var(--font-heading);
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: var(--navy-900);
-        font-variant-numeric: tabular-nums;
-      }
-
-      .preview-kpi-cell .val small {
-        font-size: 0.72rem;
-        font-weight: 500;
-        color: var(--text-muted);
-      }
-
-      .preview-modules-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.35rem;
-      }
-
-      .preview-module-tag {
-        font-size: 0.72rem;
-        color: var(--text-muted);
-        background: var(--bg-surface);
-        border: 1px solid var(--border-subtle);
-        padding: 0.2rem 0.5rem;
-        border-radius: var(--radius-sm);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-        line-height: 1.35;
-      }
-
-      .preview-module-tag strong {
-        color: var(--navy-900);
-        font-weight: 600;
-      }
-
-      /* Interactive Preview Modal */
-      .preview-modal-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(9, 19, 29, 0.75);
-        backdrop-filter: blur(6px);
-        z-index: 2000;
-        justify-content: center;
-        align-items: center;
-        padding: 1.5rem;
-      }
-
-      .preview-modal-overlay.active {
-        display: flex;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .preview-modal-window {
-        background: var(--bg-surface);
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--border-light);
-        width: 100%;
-        max-width: 1240px;
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        height: 96vh;
       }
+    }
 
-      .preview-modal-header {
-        padding: 0.85rem 1.25rem;
-        background: var(--navy-900);
-        color: #ffffff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid var(--navy-800);
-      }
-
-      .preview-modal-title {
-        font-family: var(--font-heading);
-        font-size: 0.95rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .preview-modal-actions {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      .preview-modal-frame {
-        width: 100%;
-        height: 100%;
-        border: none;
-        background: var(--bg-canvas);
-      }
-
-      .preview-modal-close {
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        color: #ffffff;
-        border-radius: var(--radius-sm);
-        padding: 0.35rem 0.75rem;
-        cursor: pointer;
-        font-size: 0.85rem;
-        font-weight: 600;
-        transition: var(--transition);
-      }
-
-      .preview-modal-close:hover {
-        background: rgba(255, 255, 255, 0.25);
-      }
-
-      @media (max-width: 860px) {
-        .preview-kpi-row {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .preview-modal-window {
-          height: 96vh;
-        }
-      }
-
-      /* ==========================================================================
+    /* ==========================================================================
        EXTERNAL SHOWCASE & QUICK LINKS
        ========================================================================== */
-      .showcase-grid-section {
-        background-color: var(--bg-surface);
-        border-top: 1px solid var(--border-light);
-        border-bottom: 1px solid var(--border-light);
-        padding: 3.5rem 0;
-      }
+    .showcase-grid-section {
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 3.5rem 0;
+    }
 
-      .quick-links-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-        gap: 1.25rem;
-        margin-top: 1.5rem;
-      }
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
 
-      .quick-link-card {
-        background: var(--bg-canvas);
-        border: 1px solid var(--border-light);
-        border-radius: var(--radius-md);
-        padding: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        transition: var(--transition);
-      }
+    .quick-link-card {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
 
-      .quick-link-card:hover {
-        border-color: var(--cyan-600);
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-sm);
-      }
+    .quick-link-card:hover {
+      border-color: var(--cyan-600);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
 
-      .quick-link-card h4 {
-        font-family: var(--font-heading);
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: var(--navy-900);
-      }
+    .quick-link-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
 
-      .quick-link-card p {
-        font-size: 0.82rem;
-        color: var(--text-muted);
-        margin: 0;
-      }
+    .quick-link-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
 
-      .quick-link-anchor {
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: var(--cyan-700);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        margin-top: 0.5rem;
-      }
+    .quick-link-anchor {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--cyan-700);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
 
-      /* ==========================================================================
+    /* ==========================================================================
        FOOTER
        ========================================================================== */
-      #site-footer {
-        background-color: var(--navy-950);
-        color: #94a3b8;
-        padding: 3.5rem 0 2.5rem;
-        font-size: 0.88rem;
-      }
+    #site-footer {
+      background-color: var(--navy-950);
+      color: #94a3b8;
+      padding: 3.5rem 0 2.5rem;
+      font-size: 0.88rem;
+    }
 
-      .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+      line-height: 1.6;
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      font-size: 0.8rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
         gap: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
-      .footer-brand h4 {
-        font-family: var(--font-heading);
-        color: #ffffff;
-        font-size: 1.15rem;
-        margin-bottom: 0.5rem;
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
       }
 
-      .footer-brand p {
-        max-width: 400px;
-        line-height: 1.6;
-        font-size: 0.85rem;
+      .exec-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-media {
+        border-left: none;
+        border-top: 1px solid var(--border-light);
+        min-height: 220px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        height: 60px;
+      }
+
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: var(--shadow-card);
+      }
+
+      .site-nav.mobile-active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero-section {
+        padding: 3rem 0;
+      }
+
+      .project-body {
+        padding: 1.5rem;
       }
 
       .footer-links {
-        display: flex;
-        gap: 2.5rem;
-      }
-
-      .footer-col h5 {
-        color: #ffffff;
-        font-size: 0.82rem;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        margin-bottom: 0.85rem;
-      }
-
-      .footer-col ul {
-        list-style: none;
-        display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .footer-col a {
-        color: #94a3b8;
-        font-size: 0.85rem;
-      }
-
-      .footer-col a:hover {
-        color: #ffffff;
+        gap: 1.5rem;
       }
 
       .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 2rem;
-        font-size: 0.8rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
       }
+    }
+  </style>
+</head>
 
-      /* ==========================================================================
-       RESPONSIVE BREAKPOINTS
-       ========================================================================== */
-      @media (max-width: 992px) {
-        .hero-grid {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-        .metrics-bar {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-        }
-        .exec-grid {
-          grid-template-columns: 1fr;
-        }
-        .project-card {
-          grid-template-columns: 1fr;
-        }
-        .project-media {
-          border-left: none;
-          border-top: 1px solid var(--border-light);
-          min-height: 220px;
-        }
-      }
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DSMFK94" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-      @media (max-width: 768px) {
-        .header-inner {
-          height: 60px;
-        }
-        .site-nav {
-          display: none;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          right: 0;
-          background: #ffffff;
-          flex-direction: column;
-          align-items: stretch;
-          padding: 1rem;
-          border-bottom: 1px solid var(--border-light);
-          box-shadow: var(--shadow-card);
-        }
-        .site-nav.mobile-active {
-          display: flex;
-        }
-        .mobile-menu-btn {
-          display: block;
-        }
-        .hero-section {
-          padding: 3rem 0;
-        }
-        .project-body {
-          padding: 1.5rem;
-        }
-        .footer-links {
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-        .footer-bottom {
-          flex-direction: column;
-          gap: 1rem;
-          text-align: center;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5DSMFK94"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- ========================================================================
+  <!-- ========================================================================
        SITE HEADER & NAVIGATION
        ======================================================================== -->
-    <header id="site-header">
-      <div class="container">
-        <div class="header-inner">
-          <a href="index.html" class="brand-logo">
-            data_frank<span class="dot">.</span>
-            <span class="brand-badge">PORTFOLIO</span>
-          </a>
-
-          <button
-            class="mobile-menu-btn"
-            id="menuToggle"
-            aria-label="Toggle navigation menu"
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-
-          <nav class="site-nav" id="siteNav">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="p1.html" class="nav-link">MS Fabric</a>
-            <a href="p2.html" class="nav-link">Power BI</a>
-            <a href="p3.html" class="nav-link">Exploratory Dashboard</a>
-            <a href="p4.html" class="nav-link">Excel Data Model</a>
-            <a href="login.html" class="nav-link nav-link-login">Login</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <!-- ========================================================================
-       HERO SECTION (High Data-Ink & Clear Value Proposition)
-       ======================================================================== -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="hero-pill">
-              <span class="signal-dot"></span>
-              Project Controller &amp; Financial BI Specialist
-            </div>
-
-            <h1 class="hero-title">
-              Storytelling with Data.<br />
-              Precision in Project Decisions.
-            </h1>
-
-            <p class="hero-lead">
-              I am <strong>Frank Ellingsen</strong>, bridging financial
-              administration, engineering project control, and modern business
-              intelligence. Transforming operational data into reliable
-              <strong>EVM forecasts, cost/schedule risk tracking</strong>, and
-              executive analytics.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#featured-projects" class="btn btn-primary">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <polyline points="19 12 12 19 5 12"></polyline>
-                </svg>
-                View Projects
-              </a>
-              <a
-                href="https://www.linkedin.com/in/frankellingsen/"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-outline-light"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                  />
-                </svg>
-                LinkedIn Profile
-              </a>
-              <a
-                href="https://github.com/Frank-Ellingsen"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-outline-light"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Key Focus Strip -->
-        <div class="metrics-bar">
-          <div class="metric-item">
-            <span class="metric-label">Primary Domain</span>
-            <span class="metric-value">Project Controlling &amp; EVM</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-label">Analytics Stack</span>
-            <span class="metric-value">Power BI, DAX &amp; Excel</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-label">Data Engineering</span>
-            <span class="metric-value">SQL, DuckDB &amp; Python</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-label">AI &amp; Automation</span>
-            <span class="metric-value">Agentic Systems &amp; APIs</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-       EXECUTIVE SUMMARY & PROFILE
-       ======================================================================== -->
-    <section class="executive-section">
-      <div class="container">
-        <div class="exec-grid">
-          <!-- Left: Value Proposition & Skills -->
-          <div class="competencies-block">
-            <h2>Professional Profile</h2>
-            <p>
-              With a formal background in
-              <strong>Finance &amp; Business Administration</strong>, I
-              specialize in the intersection of financial governance,
-              engineering project tracking, and modern data architecture. My
-              focus is delivering high data-ink reporting—eliminating visual
-              noise and surfacing critical variances before they impact the
-              bottom line.
-            </p>
-
-            <div class="skill-grid">
-              <div class="skill-card">
-                <h4>Project Controlling &amp; EVM</h4>
-                <p>
-                  Earned Value Management (CPI, SPI, EAC, ETC), cost variance
-                  analysis, and Gantt milestone tracking.
-                </p>
-              </div>
-              <div class="skill-card">
-                <h4>Business Intelligence</h4>
-                <p>
-                  End-to-end data modeling, DAX measure engineering, Power BI
-                  dashboards, and Power Query ETL.
-                </p>
-              </div>
-              <div class="skill-card">
-                <h4>Data Architecture</h4>
-                <p>
-                  Analytical workloads in DuckDB &amp; SQL, local transactional
-                  tables, and automated Python pipelines.
-                </p>
-              </div>
-              <div class="skill-card">
-                <h4>Applied AI &amp; Agents</h4>
-                <p>
-                  Multi-agent topic research, automated report synthesis, and
-                  local-first LLM orchestration.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Profile Card -->
-          <div class="profile-card">
-            <div>
-              <div class="profile-header">
-                <img
-                  src="images/profil.jpg"
-                  alt="Frank Ellingsen"
-                  class="profile-avatar"
-                />
-                <div class="profile-info">
-                  <h3>Frank Ellingsen</h3>
-                  <div class="profile-role">
-                    Financial &amp; Project Controller
-                  </div>
-                  <div class="profile-degree">
-                    BSc in Finance &amp; Business Administration
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="profile-contact-list">
-              <div class="contact-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  ></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <a href="mailto:frankellingsen@hotmail.com"
-                  >frankellingsen@hotmail.com</a
-                >
-              </div>
-              <div class="contact-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  ></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                <a
-                  href="https://www.linkedin.com/in/frankellingsen9117/"
-                  target="_blank"
-                  rel="noopener"
-                  >linkedin.com/in/frankellingsen9117</a
-                >
-              </div>
-              <div class="contact-item">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path>
-                </svg>
-                <a
-                  href="https://github.com/Frank-Ellingsen"
-                  target="_blank"
-                  rel="noopener"
-                  >github.com/Frank-Ellingsen</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-       FEATURED PROJECTS SECTION
-       ======================================================================== -->
-    <section class="projects-section" id="featured-projects">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Featured Projects &amp; Case Studies</h2>
-          <p class="section-subtitle">
-            Real-world implementations across project controlling, earned value
-            management, business intelligence, and AI systems.
-          </p>
-        </div>
-
-        <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
-        <div class="filter-bar" role="tablist" aria-label="Project Categories">
-          <button class="filter-btn active" data-filter="all">
-            All Projects (12)
-          </button>
-          <button class="filter-btn" data-filter="controlling">
-            Project Controlling &amp; EVM
-          </button>
-          <button class="filter-btn" data-filter="bi">
-            BI &amp; Analytics
-          </button>
-          <button class="filter-btn" data-filter="ai">
-            AI &amp; Automation
-          </button>
-        </div>
-
-        <div class="projects-list" id="projectsContainer">
-          <!-- 1. AI AGENTIC PMO — Skjold-Class MTB Governance Portal -->
-          <article
-            class="project-card featured-flagship"
-            data-category="controlling ai"
-          >
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Flagship Project Controlling &amp; AI PMO
-                </div>
-                <h3 class="project-title">
-                  AI AGENTIC PMO — Skjold-Class MTB Governance Portal
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">AI Agentic PMO</span>
-                  <span class="tag-badge primary">Defense &amp; Maritime</span>
-                  <span class="tag-badge primary"
-                    >Earned Value Management (EVM)</span
-                  >
-                  <span class="tag-badge">IFRS 15 / IAS 37 Compliance</span>
-                  <span class="tag-badge">19 WP Milestone Gantt</span>
-                  <span class="tag-badge">5x5 Risk &amp; VOR Governance</span>
-                  <span class="tag-badge">DuckDB Data Engine</span>
-                </div>
-
-                <p class="project-description">
-                  Autonomous PMO and Project Controlling platform engineered for
-                  naval defense lifetime extension programs (Skjold-Class
-                  Stealth Fast Patrol Boats at Umoe Mandal). Integrates
-                  full-lifecycle executive governance, interactive triple
-                  S-Curve EVM forecasting, 19 Work Package milestone Gantt
-                  scheduling, physical drydock site execution tracking, IFRS 15
-                  / IAS 37 revenue recognition &amp; onerous contract
-                  provisions, 5x5 quantitative EMV risk matrix, and Variation
-                  Order Request (VOR) governance.
-                </p>
-
-                <!-- Live Link Content Preview Widget -->
-                <div class="preview-summary-box">
-                  <div class="preview-header">
-                    <span class="preview-title-badge">
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                        <polyline points="2 12 12 17 22 12"></polyline>
-                      </svg>
-                      Live Portal Content Preview &bull; Skjold MTB (<span
-                        style="font-family: var(--font-mono); font-weight: 600"
-                        >PRJ-SKJOLD-LEP-2025</span
-                      >)
-                    </span>
-                    <span class="preview-status-pill"
-                      >Month 18/24 &bull; Active Controls</span
-                    >
-                  </div>
-
-                  <!-- EVM Metric Strip -->
-                  <div class="preview-kpi-row">
-                    <div class="preview-kpi-cell">
-                      <span class="label">Budget (BAC)</span>
-                      <span class="val">766.00M <small>NOK</small></span>
-                    </div>
-                    <div class="preview-kpi-cell">
-                      <span class="label">Earned (EV)</span>
-                      <span class="val" style="color: var(--accent-blue)"
-                        >639.27M <small>(83.5%)</small></span
-                      >
-                    </div>
-                    <div class="preview-kpi-cell">
-                      <span class="label">Actuals (AC)</span>
-                      <span class="val">672.27M <small>(87.8%)</small></span>
-                    </div>
-                    <div class="preview-kpi-cell">
-                      <span class="label">Cost Index (CPI)</span>
-                      <span class="val" style="color: var(--accent-amber)"
-                        >0.951 <small>(-33M)</small></span
-                      >
-                    </div>
-                    <div class="preview-kpi-cell">
-                      <span class="label">Schedule (SPI)</span>
-                      <span class="val" style="color: var(--accent-amber)"
-                        >0.963 <small>(-25.7M)</small></span
-                      >
-                    </div>
-                  </div>
-
-                  <!-- Core Portal Governance Modules -->
-                  <div class="preview-modules-list">
-                    <span class="preview-module-tag"
-                      ><strong>0. Charter &amp; Brief:</strong> Scope &amp; Org
-                      Hierarchy</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>1. Director &amp; PBI:</strong> Executive KPIs
-                      &amp; Alerts</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>2. PMO &amp; EVM:</strong> Triple S-Curves &amp;
-                      EAC/ETC</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>3. Gantt:</strong> 19 Work Packages &amp;
-                      Subsystems</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>4. Drydock:</strong> Site Execution &amp;
-                      Punchlists</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>5. Cost &amp; VOR:</strong> Variation Orders
-                      &amp; Claims</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>6. CAMs:</strong> Subcontractor
-                      Accountability</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>7. Risk 5x5:</strong> EMV Exposure &amp;
-                      Mitigations</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>8. Governance:</strong> IFRS 15 / IAS 37
-                      Provisions</span
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Open Live PMO Portal &rarr;
-                </a>
-                <button
-                  type="button"
-                  class="btn-action-secondary preview-modal-trigger"
-                  data-preview-url="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/"
-                  title="Interactive live modal preview"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-                    ></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                  Interactive Quick Preview
-                </button>
-                <a
-                  href="https://github.com/Frank-Ellingsen/AI-AGENTIC-PMO"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-secondary"
-                >
-                  GitHub Repository ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/"
-                target="_blank"
-                rel="noopener"
-                title="Click to open live interactive portal"
-              >
-                <div class="media-live-badge">
-                  <span class="live-dot"></span> LIVE PORTAL
-                </div>
-                <img
-                  src="images/pmo_agentic.png"
-                  alt="AI Agentic PMO Skjold-Class MTB Project Controls Portal"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 2. PMO EVM Analytics in Microsoft Fabric -->
-          <article
-            class="project-card featured-flagship"
-            data-category="controlling"
-          >
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Flagship Project Controlling &amp; MS Fabric
-                </div>
-                <h3 class="project-title">
-                  PMO EVM Analytics in Microsoft Fabric
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Microsoft Fabric</span>
-                  <span class="tag-badge primary">Project Controlling</span>
-                  <span class="tag-badge primary"
-                    >Earned Value Management (EVM)</span
-                  >
-                  <span class="tag-badge">S-Curve &amp; EAC/ETC</span>
-                  <span class="tag-badge">Risk &amp; VOR Governance</span>
-                  <span class="tag-badge">Data-Ink Ratio</span>
-                </div>
-
-                <p class="project-description">
-                  Enterprise PMO and Earned Value Management platform built on
-                  Microsoft Fabric Lakehouse (Direct Lake) for naval defense
-                  construction (Skjold-Class Stealth Fast Patrol Boats).
-                  Features dynamic triple S-Curve trajectory modeling, cost
-                  &amp; schedule variance tracking (CPI/SPI/EAC/ETC),
-                  interactive WBS Gantt scheduling, EMV risk matrix heatmaps,
-                  and Variation Order Request (VOR) governance strictly adhering
-                  to Edward Tufte's Data-Ink Ratio principles.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Live Interactive Dashboard &rarr;
-                </a>
-                <a
-                  href="https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-secondary"
-                >
-                  GitHub Repository ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/pmo_evm_fabric.png"
-                  alt="PMO EVM Analytics in Microsoft Fabric Dashboard"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 2. North Sea Oil Platform Drill Tower Construction -->
-          <article
-            class="project-card featured-flagship"
-            data-category="controlling"
-          >
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Flagship Project Controlling &amp; EVM
-                </div>
-                <h3 class="project-title">
-                  North Sea Oil Platform Drill Tower Construction
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Project Controlling</span>
-                  <span class="tag-badge primary"
-                    >Earned Value Management (EVM)</span
-                  >
-                  <span class="tag-badge">Gantt &amp; Scheduling</span>
-                  <span class="tag-badge">Cost &amp; Schedule Risk</span>
-                  <span class="tag-badge">Data-Ink Ratio</span>
-                </div>
-
-                <p class="project-description">
-                  An interactive Earned Value Management (EVM) and Gantt control
-                  system designed for industrial offshore construction. Features
-                  real-time cost variance (CV), schedule variance (SV), and
-                  earned schedule (ES) analytics with direct S-curve labeling
-                  and strict Edward Tufte visual design principles.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Live Interactive Dashboard &rarr;
-                </a>
-                <a
-                  href="https://github.com/Frank-Ellingsen/North-Sea-Oil-Platform-Drill-Tower-Construction"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-secondary"
-                >
-                  GitHub Repository ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/drill_tower.png"
-                  alt="North Sea Oil Platform Drill Tower Construction EVM Dashboard"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 3. 3-Layer Agentic AI Topic Researcher -->
-          <article class="project-card" data-category="ai">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  AI Architecture &amp; Decision Intelligence
-                </div>
-                <h3 class="project-title">
-                  3-Layer Agentic AI Topic Researcher
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Agentic AI</span>
-                  <span class="tag-badge primary">Multi-Agent Workflow</span>
-                  <span class="tag-badge">Autonomous Research</span>
-                  <span class="tag-badge">Report Synthesis</span>
-                </div>
-
-                <p class="project-description">
-                  An autonomous multi-layer AI architecture (Planner &rarr;
-                  Researcher &rarr; Synthesizer) that conducts in-depth topic
-                  investigations, aggregates multi-source evidence, evaluates
-                  source credibility, and generates structured executive
-                  intelligence dossiers.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Explore AI System &rarr;
-                </a>
-                <a
-                  href="https://github.com/Frank-Ellingsen/3-Layer-Agentic-AI-Topic-Researcher"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-secondary"
-                >
-                  GitHub Repository ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/agentic_ai_preview.jpg"
-                  alt="3-Layer Agentic AI Topic Researcher Architecture"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 4. Project Finance AI / EVM Management -->
-          <article class="project-card" data-category="controlling">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Financial Control &amp; Forecasting
-                </div>
-                <h3 class="project-title">
-                  Project Finance AI &amp; EVM Performance Dashboard
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">EVM Dashboard</span>
-                  <span class="tag-badge primary">CPI &amp; SPI Indices</span>
-                  <span class="tag-badge">Budget vs. Actuals</span>
-                  <span class="tag-badge">Forecasting (EAC/ETC)</span>
-                </div>
-
-                <p class="project-description">
-                  An interactive financial management interface monitoring
-                  project lifecycle budgets, burn rates, and variance metrics.
-                  Utilizes cost performance indicators (CPI) and schedule
-                  performance indicators (SPI) to project Estimate at Completion
-                  (EAC) and Estimate to Complete (ETC).
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/Project-Mangagement/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Live EVM Dashboard &rarr;
-                </a>
-                <a
-                  href="https://github.com/Frank-Ellingsen/Project-Mangagement"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-secondary"
-                >
-                  GitHub Repository ↗
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/Project-Mangagement/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/pc_report.png"
-                  alt="Project Finance AI Dashboard"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 5. Car Rental Analytics Platform -->
-          <article class="project-card" data-category="bi">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Enterprise Business Intelligence
-                </div>
-                <h3 class="project-title">Car Rental Analytics Platform</h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Microsoft Stack</span>
-                  <span class="tag-badge primary">Power BI</span>
-                  <span class="tag-badge">Predictive Modeling</span>
-                  <span class="tag-badge">Revenue Optimization</span>
-                </div>
-
-                <p class="project-description">
-                  A full-stack business intelligence solution transforming car
-                  rental fleet operations through advanced analytics,
-                  utilization tracking, pricing strategy evaluation, and
-                  predictive demand modeling.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://mavenshowcase.com/project/55578"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Maven Showcase &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://mavenshowcase.com/project/55578"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/CarRental.png"
-                  alt="Car Rental Analytics Platform"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 6. Norwegian Electricity Spot Price Analysis -->
-          <article class="project-card" data-category="bi">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Market Analysis &amp; Time Series
-                </div>
-                <h3 class="project-title">
-                  Norwegian Electricity Price Analysis (2021–2026)
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Python &amp; Pandas</span>
-                  <span class="tag-badge primary">Power BI</span>
-                  <span class="tag-badge">Time Series</span>
-                  <span class="tag-badge">Regional Divergence</span>
-                </div>
-
-                <p class="project-description">
-                  Longitudinal econometric analysis of spot electricity prices
-                  across Norway's five bidding zones (NO1–NO5). Investigates
-                  seasonal fluctuations, grid transmission constraints, and
-                  structural price disparities between southern and northern
-                  regions.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/norwegian-electricity-analysis/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  View Price Analysis &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/norwegian-electricity-analysis/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/el_analysis.png"
-                  alt="Norwegian Electricity Analysis"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 7. Flights Tracker Norway -->
-          <article class="project-card" data-category="ai">
-            <div class="project-body">
-              <div>
-                <div class="project-category">Real-Time Data Application</div>
-                <h3 class="project-title">Flights Tracker Norway</h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">React</span>
-                  <span class="tag-badge primary">Aviation API</span>
-                  <span class="tag-badge">Live Schedules</span>
-                  <span class="tag-badge">Web Application</span>
-                </div>
-
-                <p class="project-description">
-                  Live flight monitoring web application tracking international
-                  and domestic departures, arrivals, terminal statuses, and
-                  real-time scheduling across Norwegian airports.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://flight-app-sandy-one.vercel.app/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Open Live Application &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://flight-app-sandy-one.vercel.app/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/flight_tracker.png"
-                  alt="Flights Tracker Norway Application"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 8. Housing Price Regression Predictor -->
-          <article class="project-card" data-category="ai">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Machine Learning &amp; Valuation
-                </div>
-                <h3 class="project-title">Housing Price Valuation Predictor</h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Python</span>
-                  <span class="tag-badge primary">scikit-learn</span>
-                  <span class="tag-badge">Regression</span>
-                  <span class="tag-badge">Feature Engineering</span>
-                </div>
-
-                <p class="project-description">
-                  Supervised regression pipeline modeling property valuations
-                  based on geographic indicators, square footage, historical
-                  sales, and property features to assist data-driven pricing
-                  assessments.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a href="housing_details.html" class="btn-action-primary">
-                  Technical Case Study &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a href="housing_details.html">
-                <img
-                  src="images/house_price.png"
-                  alt="Housing Price Regression Model"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 9. Global Countries Demographic & Economic Report -->
-          <article class="project-card" data-category="bi">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Macroeconomic Data Visualization
-                </div>
-                <h3 class="project-title">
-                  Global Countries Macroeconomic Report
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Tableau</span>
-                  <span class="tag-badge">Macroeconomics</span>
-                  <span class="tag-badge">Demographics</span>
-                  <span class="tag-badge">Global Trends</span>
-                </div>
-
-                <p class="project-description">
-                  Cross-country exploratory data dashboard evaluating global
-                  demographic, GDP, healthcare, and educational indicators with
-                  interactive geographical breakdowns.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/Global_Countries_Report/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Open Tableau Report &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/Global_Countries_Report/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/globe.png"
-                  alt="Global Countries Report"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 10. Automated Weather Data Pipeline -->
-          <article class="project-card" data-category="ai">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  ETL Pipeline &amp; Automation
-                </div>
-                <h3 class="project-title">
-                  Automated Weather Reporting Pipeline
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Python</span>
-                  <span class="tag-badge primary">REST API</span>
-                  <span class="tag-badge">Scheduled Pipeline</span>
-                  <span class="tag-badge">Automation</span>
-                </div>
-
-                <p class="project-description">
-                  Automated weather ingestion pipeline querying meteorological
-                  APIs, transforming observational feeds, and delivering
-                  structured operational forecasts.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://frank-ellingsen.github.io/weather-project/"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  Open Weather Dashboard &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://frank-ellingsen.github.io/weather-project/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/weather.png"
-                  alt="Automated Weather Reporting"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-
-          <!-- 11. World Cup 2026 Schedule & Model -->
-          <article class="project-card" data-category="bi">
-            <div class="project-body">
-              <div>
-                <div class="project-category">
-                  Financial Modeling &amp; Spreadsheets
-                </div>
-                <h3 class="project-title">
-                  World Cup 2026 Analytical Schedule Model
-                </h3>
-
-                <div class="tag-list">
-                  <span class="tag-badge primary">Excel / Power Query</span>
-                  <span class="tag-badge">Data Modeling</span>
-                  <span class="tag-badge">Sports Analytics</span>
-                  <span class="tag-badge">Tournament Logic</span>
-                </div>
-
-                <p class="project-description">
-                  Structured tournament schedule and simulation matrix built in
-                  Excel featuring automated match-pathing, venue schedules, and
-                  dynamic group stage tracking.
-                </p>
-              </div>
-
-              <div class="project-actions">
-                <a
-                  href="https://1drv.ms/x/c/54f658c2284aac0e/IQCQXBIr8-gTQ6AVag90f6paARp2AxslK-PmbqLS99vNzf4?e=vGANMK"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-action-primary"
-                >
-                  View Excel Model (OneDrive) &rarr;
-                </a>
-              </div>
-            </div>
-
-            <div class="project-media">
-              <a
-                href="https://1drv.ms/x/c/54f658c2284aac0e/IQCQXBIr8-gTQ6AVag90f6paARp2AxslK-PmbqLS99vNzf4?e=vGANMK"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="images/wc_road_final1.png"
-                  alt="World Cup 2026 Analytical Schedule"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-       ADDITIONAL TOOLS & SHOWCASES
-       ======================================================================== -->
-    <section class="showcase-grid-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Additional Tools &amp; Profiles</h2>
-          <p class="section-subtitle">
-            Quick access to external repositories, specialized interactive
-            tools, and showcase profiles.
-          </p>
-        </div>
-
-        <div class="quick-links-grid">
-          <div class="quick-link-card">
-            <h4>Maven Analytics Showcase</h4>
-            <p>
-              Portfolio of verified business intelligence projects and community
-              challenges.
-            </p>
-            <a
-              href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826"
-              target="_blank"
-              rel="noopener"
-              class="quick-link-anchor"
-            >
-              Open Maven Profile &rarr;
-            </a>
-          </div>
-
-          <div class="quick-link-card">
-            <h4>GitHub Main Profile</h4>
-            <p>
-              Source code repositories, automated pipelines, notebooks, and
-              models.
-            </p>
-            <a
-              href="https://github.com/Frank-Ellingsen"
-              target="_blank"
-              rel="noopener"
-              class="quick-link-anchor"
-            >
-              github.com/Frank-Ellingsen &rarr;
-            </a>
-          </div>
-
-          <div class="quick-link-card">
-            <h4>Interactive Calculator App</h4>
-            <p>
-              Lightweight JavaScript application demonstrating clean DOM state
-              management.
-            </p>
-            <a
-              href="https://frank-ellingsen.github.io/Calculator-app/"
-              target="_blank"
-              rel="noopener"
-              class="quick-link-anchor"
-            >
-              Open Calculator App &rarr;
-            </a>
-          </div>
-
-          <div class="quick-link-card">
-            <h4>Plotly Analytical Sandbox</h4>
-            <p>
-              Experimental web dashboard exploring interactive charts and data
-              visualizations.
-            </p>
-            <a
-              href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/"
-              target="_blank"
-              rel="noopener"
-              class="quick-link-anchor"
-            >
-              Open Plotly App &rarr;
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-       FOOTER
-       ======================================================================== -->
-    <footer id="site-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <h4>data_frank</h4>
-            <p>
-              Project Controlling, Business Intelligence &amp; Applied AI.
-              Adhering to Edward Tufte's Data-Ink principles to deliver
-              actionable business clarity.
-            </p>
-          </div>
-
-          <div class="footer-links">
-            <div class="footer-col">
-              <h5>Navigation</h5>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="p1.html">MS Fabric</a></li>
-                <li><a href="p2.html">Power BI</a></li>
-                <li><a href="p3.html">Exploratory Dashboard</a></li>
-                <li><a href="p4.html">Excel Data Model</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-col">
-              <h5>Connect</h5>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/frankellingsen/"
-                    target="_blank"
-                    rel="noopener"
-                    >LinkedIn</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/Frank-Ellingsen"
-                    target="_blank"
-                    rel="noopener"
-                    >GitHub</a
-                  >
-                </li>
-                <li><a href="mailto:frankellingsen@hotmail.com">Email</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div>&copy; 2026 Frank Ellingsen. All rights reserved.</div>
-          <div>Designed with high Data-Ink Ratio principles.</div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- ========================================================================
-       LIVE INTERACTIVE PREVIEW MODAL
-       ======================================================================== -->
-    <div
-      class="preview-modal-overlay"
-      id="previewModal"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Interactive Project Preview"
-    >
-      <div class="preview-modal-window">
-        <div class="preview-modal-header">
-          <div class="preview-modal-title">
-            <span>⚓</span>
-            <span>AI AGENTIC PMO — Live Portal Preview</span>
-          </div>
-          <div class="preview-modal-actions">
-            <a
-              href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/"
-              target="_blank"
-              rel="noopener"
-              class="btn-action-primary"
-              style="padding: 0.25rem 0.75rem; font-size: 0.78rem"
-            >
-              Open in New Window ↗
-            </a>
-            <button
-              type="button"
-              class="preview-modal-close"
-              id="closePreviewModal"
-              aria-label="Close modal preview"
-            >
-              &times; Close
-            </button>
-          </div>
-        </div>
-        <iframe
-          class="preview-modal-frame"
-          id="previewFrame"
-          src=""
-          title="Live Project Preview"
-          loading="lazy"
-        ></iframe>
+  <header id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo">
+          data_frank<span class="dot">.</span>
+          <span class="brand-badge">PORTFOLIO</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="p1.html" class="nav-link">MS Fabric</a>
+          <a href="p2.html" class="nav-link">Power BI</a>
+          <a href="p3.html" class="nav-link">Exploratory Dashboard</a>
+          <a href="p4.html" class="nav-link">Excel Data Model</a>
+          <a href="login.html" class="nav-link nav-link-login">Login</a>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <!-- ========================================================================
+  <!-- ========================================================================
+       HERO SECTION (High Data-Ink & Clear Value Proposition)
+       ======================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="signal-dot"></span>
+            Project Controller &amp; Financial BI Specialist
+          </div>
+
+          <h1 class="hero-title">
+            Storytelling with Data.<br />
+            Precision in Project Decisions.
+          </h1>
+
+          <p class="hero-lead">
+            I am <strong>Frank Ellingsen</strong>, bridging financial
+            administration, engineering project control, and modern business
+            intelligence. Transforming operational data into reliable
+            <strong>EVM forecasts, cost/schedule risk tracking</strong>, and
+            executive analytics.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#featured-projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+              View Projects
+            </a>
+            <a href="https://www.linkedin.com/in/frankellingsen/" target="_blank" rel="noopener"
+              class="btn btn-outline-light">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              LinkedIn Profile
+            </a>
+            <a href="https://github.com/Frank-Ellingsen" target="_blank" rel="noopener" class="btn btn-outline-light">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Focus Strip -->
+      <div class="metrics-bar">
+        <div class="metric-item">
+          <span class="metric-label">Primary Domain</span>
+          <span class="metric-value">Project Controlling &amp; EVM</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Analytics Stack</span>
+          <span class="metric-value">Power BI, DAX &amp; Excel</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">Data Engineering</span>
+          <span class="metric-value">SQL, DuckDB &amp; Python</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-label">AI &amp; Automation</span>
+          <span class="metric-value">Agentic Systems &amp; APIs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EXECUTIVE SUMMARY & PROFILE
+       ======================================================================== -->
+  <section class="executive-section">
+    <div class="container">
+      <div class="exec-grid">
+        <!-- Left: Value Proposition & Skills -->
+        <div class="competencies-block">
+          <h2>Professional Profile</h2>
+          <p>
+            With a formal background in
+            <strong>Finance &amp; Business Administration</strong>, I
+            specialize in the intersection of financial governance,
+            engineering project tracking, and modern data architecture. My
+            focus is delivering high data-ink reporting—eliminating visual
+            noise and surfacing critical variances before they impact the
+            bottom line.
+          </p>
+
+          <div class="skill-grid">
+            <div class="skill-card">
+              <h4>Project Controlling &amp; EVM</h4>
+              <p>
+                Earned Value Management (CPI, SPI, EAC, ETC), cost variance
+                analysis, and Gantt milestone tracking.
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>Business Intelligence</h4>
+              <p>
+                End-to-end data modeling, DAX measure engineering, Power BI
+                dashboards, and Power Query ETL.
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>Data Architecture</h4>
+              <p>
+                Analytical workloads in DuckDB &amp; SQL, local transactional
+                tables, and automated Python pipelines.
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>Applied AI &amp; Agents</h4>
+              <p>
+                Multi-agent topic research, automated report synthesis, and
+                local-first LLM orchestration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Profile Card -->
+        <div class="profile-card">
+          <div>
+            <div class="profile-header">
+              <img src="images/profil.jpg" alt="Frank Ellingsen" class="profile-avatar" />
+              <div class="profile-info">
+                <h3>Frank Ellingsen</h3>
+                <div class="profile-role">
+                  Financial &amp; Project Controller
+                </div>
+                <div class="profile-degree">
+                  BSc in Finance &amp; Business Administration
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-contact-list">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:frankellingsen@hotmail.com">frankellingsen@hotmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <a href="https://www.linkedin.com/in/frankellingsen/" target="_blank"
+                rel="noopener">linkedin.com/in/frankellingsen9117</a>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <a href="https://github.com/Frank-Ellingsen" target="_blank" rel="noopener">github.com/Frank-Ellingsen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURED PROJECTS SECTION
+       ======================================================================== -->
+  <section class="projects-section" id="featured-projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects &amp; Case Studies</h2>
+        <p class="section-subtitle">
+          Real-world implementations across project controlling, earned value
+          management, business intelligence, and AI systems.
+        </p>
+      </div>
+
+      <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
+      <div class="filter-bar" role="tablist" aria-label="Project Categories">
+        <button class="filter-btn active" data-filter="all">
+          All Projects (13)
+        </button>
+        <button class="filter-btn" data-filter="controlling">
+          Project Controlling &amp; EVM
+        </button>
+        <button class="filter-btn" data-filter="bi">
+          BI &amp; Analytics
+        </button>
+        <button class="filter-btn" data-filter="ai">
+          AI &amp; Automation
+        </button>
+      </div>
+
+      <div class="projects-list" id="projectsContainer">
+        <!-- 1. Power Market Back Office & Data Platform (Skagerak Kraft) -->
+        <article class="project-card featured-flagship" data-category="controlling bi ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Flagship Project Controlling &amp; Energy Market Analytics
+              </div>
+              <h3 class="project-title">
+                Power Market Back Office &amp; Data Platform (Skagerak Kraft)
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Project Controlling &amp; EVM</span>
+                <span class="tag-badge primary">Energy Market Back Office</span>
+                <span class="tag-badge primary">52 Hydropower Plants</span>
+                <span class="tag-badge">Isolation Forest ML</span>
+                <span class="tag-badge">DuckDB &amp; SQLite Engine</span>
+                <span class="tag-badge">Tufte Data-Ink Standard</span>
+                <span class="tag-badge">Nord Pool Settlement</span>
+              </div>
+
+              <p class="project-description">
+                Full-scale Power Market Back Office and Project Controller platform engineered for portfolio anomaly
+                detection, hydropower generation monitoring (52 plants across NO1, NO2, and NO5 price zones), and
+                physical power imbalance settlement. Features dynamic EVM-style imbalance risk simulation
+                (BAC/AC/ETC/EAC), interactive S-Curves with direct labeling, an Isolation Forest machine learning
+                anomaly detection engine for SCADA telemetry faults, and an in-browser DuckDB/SQLite analytical SQL
+                studio.
+              </p>
+
+              <!-- Live Link Content Preview Widget -->
+              <div class="preview-summary-box">
+                <div class="preview-header">
+                  <span class="preview-title-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    Live Platform Content Preview &bull; Skagerak Kraft Hub (<span
+                      style="font-family: var(--font-mono); font-weight: 600">PORTFOLIO-NO-2026</span>)
+                  </span>
+                  <span class="preview-status-pill">52 Hydro Plants &bull; Active In-Memory Engine</span>
+                </div>
+
+                <!-- EVM Metric Strip -->
+                <div class="preview-kpi-row">
+                  <div class="preview-kpi-cell">
+                    <span class="label">Budget (BAC)</span>
+                    <span class="val">&euro;3,500 <small>EUR</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Actuals (AC)</span>
+                    <span class="val" style="color: var(--accent-amber)">&euro;5,816 <small>(Day 20)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Forecast (ETC)</span>
+                    <span class="val">&euro;2,908 <small>Rem.</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">EAC Forecast</span>
+                    <span class="val" style="color: #dc2626">&euro;8,724 <small>(Overrun)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Volume</span>
+                    <span class="val" style="color: var(--accent-blue)">96.76k <small>MWh</small></span>
+                  </div>
+                </div>
+
+                <!-- Core Portal Governance Modules -->
+                <div class="preview-modules-list">
+                  <span class="preview-module-tag"><strong>1. CFO &amp; Controller:</strong> EVM Simulation &amp;
+                    Dynamic S-Curve</span>
+                  <span class="preview-module-tag"><strong>2. Plants Portfolio:</strong> 52 Hydropower Assets &amp;
+                    Basins</span>
+                  <span class="preview-module-tag"><strong>3. AI Anomaly Center:</strong> Isolation Forest &amp; Root
+                    Cause Z-Scores</span>
+                  <span class="preview-module-tag"><strong>4. Energy Trading:</strong> Imbalance Settlement &amp; Spot
+                    Prices</span>
+                  <span class="preview-module-tag"><strong>5. SQL Data Studio:</strong> In-Browser DuckDB/SQLite
+                    Engine</span>
+                  <span class="preview-module-tag"><strong>6. Lakehouse Architecture:</strong> Medallion Data
+                    Pipeline</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/Power-Market-Back-Office/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Open Live Back Office &rarr;
+              </a>
+              <button type="button" class="btn-action-secondary preview-modal-trigger"
+                data-preview-url="https://frank-ellingsen.github.io/Power-Market-Back-Office/"
+                data-preview-title="Power Market Back Office &amp; Data Platform" data-preview-icon="⚡"
+                title="Interactive live modal preview">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Interactive Quick Preview
+              </button>
+              <a href="https://github.com/Frank-Ellingsen/Power-Market-Back-Office" target="_blank" rel="noopener"
+                class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/Power-Market-Back-Office/" target="_blank" rel="noopener"
+              title="Click to open live interactive back office platform">
+              <div class="media-live-badge">
+                <span class="live-dot"></span> LIVE PLATFORM
+              </div>
+              <img src="images/power_market_backoffice.png"
+                alt="Power Market Back Office & Data Platform for Skagerak Kraft" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. Norwegian Electricity Spot Price Analysis (2021–2026) -->
+        <article class="project-card" data-category="bi">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Energy Market Analysis &amp; Time Series Econometrics
+              </div>
+              <h3 class="project-title">
+                Norwegian Electricity Price Analysis (2021–2026)
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Python &amp; Pandas</span>
+                <span class="tag-badge primary">Power BI Modeling</span>
+                <span class="tag-badge primary">NO1–NO5 Bidding Zones</span>
+                <span class="tag-badge">Time Series Econometrics</span>
+                <span class="tag-badge">Regional Divergence</span>
+                <span class="tag-badge">Grid Transmission Constraints</span>
+              </div>
+
+              <p class="project-description">
+                Longitudinal econometric analysis of spot electricity prices
+                across Norway's five bidding zones (NO1–NO5). Investigates
+                seasonal fluctuations, grid transmission constraints, hydrological reservoir variance, and
+                structural price disparities between southern and northern
+                price zones.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/norwegian-electricity-analysis/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                View Price Analysis &rarr;
+              </a>
+              <button type="button" class="btn-action-secondary preview-modal-trigger"
+                data-preview-url="https://frank-ellingsen.github.io/norwegian-electricity-analysis/"
+                data-preview-title="Norwegian Electricity Spot Price Analysis (2021–2026)" data-preview-icon="⚡"
+                title="Interactive live modal preview">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Interactive Quick Preview
+              </button>
+              <a href="https://github.com/Frank-Ellingsen/norwegian-electricity-analysis" target="_blank" rel="noopener"
+                class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/norwegian-electricity-analysis/" target="_blank" rel="noopener"
+              title="Click to open live electricity price analysis report">
+              <div class="media-live-badge">
+                <span class="live-dot"></span> LIVE REPORT
+              </div>
+              <img src="images/el_analysis.png" alt="Norwegian Electricity Price Analysis (2021–2026)" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. AI AGENTIC PMO — Skjold-Class MTB Governance Portal -->
+        <article class="project-card featured-flagship" data-category="controlling ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Flagship Project Controlling &amp; AI PMO
+              </div>
+              <h3 class="project-title">
+                AI AGENTIC PMO — Skjold-Class MTB Governance Portal
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">AI Agentic PMO</span>
+                <span class="tag-badge primary">Defense &amp; Maritime</span>
+                <span class="tag-badge primary">Earned Value Management (EVM)</span>
+                <span class="tag-badge">IFRS 15 / IAS 37 Compliance</span>
+                <span class="tag-badge">19 WP Milestone Gantt</span>
+                <span class="tag-badge">5x5 Risk &amp; VOR Governance</span>
+                <span class="tag-badge">DuckDB Data Engine</span>
+              </div>
+
+              <p class="project-description">
+                Autonomous PMO and Project Controlling platform engineered for
+                naval defense lifetime extension programs (Skjold-Class
+                Stealth Fast Patrol Boats at Umoe Mandal). Integrates
+                full-lifecycle executive governance, interactive triple
+                S-Curve EVM forecasting, 19 Work Package milestone Gantt
+                scheduling, physical drydock site execution tracking, IFRS 15
+                / IAS 37 revenue recognition &amp; onerous contract
+                provisions, 5x5 quantitative EMV risk matrix, and Variation
+                Order Request (VOR) governance.
+              </p>
+
+              <!-- Live Link Content Preview Widget -->
+              <div class="preview-summary-box">
+                <div class="preview-header">
+                  <span class="preview-title-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                    Live Portal Content Preview &bull; Skjold MTB (<span
+                      style="font-family: var(--font-mono); font-weight: 600">PRJ-SKJOLD-LEP-2025</span>)
+                  </span>
+                  <span class="preview-status-pill">Month 18/24 &bull; Active Controls</span>
+                </div>
+
+                <!-- EVM Metric Strip -->
+                <div class="preview-kpi-row">
+                  <div class="preview-kpi-cell">
+                    <span class="label">Budget (BAC)</span>
+                    <span class="val">766.00M <small>NOK</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Earned (EV)</span>
+                    <span class="val" style="color: var(--accent-blue)">639.27M <small>(83.5%)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Actuals (AC)</span>
+                    <span class="val">672.27M <small>(87.8%)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Cost Index (CPI)</span>
+                    <span class="val" style="color: var(--accent-amber)">0.951 <small>(-33M)</small></span>
+                  </div>
+                  <div class="preview-kpi-cell">
+                    <span class="label">Schedule (SPI)</span>
+                    <span class="val" style="color: var(--accent-amber)">0.963 <small>(-25.7M)</small></span>
+                  </div>
+                </div>
+
+                <!-- Core Portal Governance Modules -->
+                <div class="preview-modules-list">
+                  <span class="preview-module-tag"><strong>0. Charter &amp; Brief:</strong> Scope &amp; Org
+                    Hierarchy</span>
+                  <span class="preview-module-tag"><strong>1. Director &amp; PBI:</strong> Executive KPIs
+                    &amp; Alerts</span>
+                  <span class="preview-module-tag"><strong>2. PMO &amp; EVM:</strong> Triple S-Curves &amp;
+                    EAC/ETC</span>
+                  <span class="preview-module-tag"><strong>3. Gantt:</strong> 19 Work Packages &amp;
+                    Subsystems</span>
+                  <span class="preview-module-tag"><strong>4. Drydock:</strong> Site Execution &amp;
+                    Punchlists</span>
+                  <span class="preview-module-tag"><strong>5. Cost &amp; VOR:</strong> Variation Orders
+                    &amp; Claims</span>
+                  <span class="preview-module-tag"><strong>6. CAMs:</strong> Subcontractor
+                    Accountability</span>
+                  <span class="preview-module-tag"><strong>7. Risk 5x5:</strong> EMV Exposure &amp;
+                    Mitigations</span>
+                  <span class="preview-module-tag"><strong>8. Governance:</strong> IFRS 15 / IAS 37
+                    Provisions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Open Live PMO Portal &rarr;
+              </a>
+              <button type="button" class="btn-action-secondary preview-modal-trigger"
+                data-preview-url="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/"
+                data-preview-title="AI AGENTIC PMO — Skjold-Class MTB Governance Portal" data-preview-icon="⚓"
+                title="Interactive live modal preview">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                Interactive Quick Preview
+              </button>
+              <a href="https://github.com/Frank-Ellingsen/AI-AGENTIC-PMO" target="_blank" rel="noopener"
+                class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/AI-AGENTIC-PMO/" target="_blank" rel="noopener"
+              title="Click to open live interactive portal">
+              <div class="media-live-badge">
+                <span class="live-dot"></span> LIVE PORTAL
+              </div>
+              <img src="images/pmo_agentic.png" alt="AI Agentic PMO Skjold-Class MTB Project Controls Portal"
+                loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. PMO EVM Analytics in Microsoft Fabric -->
+        <article class="project-card featured-flagship" data-category="controlling">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Flagship Project Controlling &amp; MS Fabric
+              </div>
+              <h3 class="project-title">
+                PMO EVM Analytics in Microsoft Fabric
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Microsoft Fabric</span>
+                <span class="tag-badge primary">Project Controlling</span>
+                <span class="tag-badge primary">Earned Value Management (EVM)</span>
+                <span class="tag-badge">S-Curve &amp; EAC/ETC</span>
+                <span class="tag-badge">Risk &amp; VOR Governance</span>
+                <span class="tag-badge">Data-Ink Ratio</span>
+              </div>
+
+              <p class="project-description">
+                Enterprise PMO and Earned Value Management platform built on
+                Microsoft Fabric Lakehouse (Direct Lake) for naval defense
+                construction (Skjold-Class Stealth Fast Patrol Boats).
+                Features dynamic triple S-Curve trajectory modeling, cost
+                &amp; schedule variance tracking (CPI/SPI/EAC/ETC),
+                interactive WBS Gantt scheduling, EMV risk matrix heatmaps,
+                and Variation Order Request (VOR) governance strictly adhering
+                to Edward Tufte's Data-Ink Ratio principles.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/" target="_blank"
+                rel="noopener" class="btn-action-primary">
+                Live Interactive Dashboard &rarr;
+              </a>
+              <a href="https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric" target="_blank"
+                rel="noopener" class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/" target="_blank"
+              rel="noopener">
+              <img src="images/pmo_evm_fabric.png" alt="PMO EVM Analytics in Microsoft Fabric Dashboard"
+                loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. North Sea Oil Platform Drill Tower Construction -->
+        <article class="project-card featured-flagship" data-category="controlling">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Flagship Project Controlling &amp; EVM
+              </div>
+              <h3 class="project-title">
+                North Sea Oil Platform Drill Tower Construction
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Project Controlling</span>
+                <span class="tag-badge primary">Earned Value Management (EVM)</span>
+                <span class="tag-badge">Gantt &amp; Scheduling</span>
+                <span class="tag-badge">Cost &amp; Schedule Risk</span>
+                <span class="tag-badge">Data-Ink Ratio</span>
+              </div>
+
+              <p class="project-description">
+                An interactive Earned Value Management (EVM) and Gantt control
+                system designed for industrial offshore construction. Features
+                real-time cost variance (CV), schedule variance (SV), and
+                earned schedule (ES) analytics with direct S-curve labeling
+                and strict Edward Tufte visual design principles.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/"
+                target="_blank" rel="noopener" class="btn-action-primary">
+                Live Interactive Dashboard &rarr;
+              </a>
+              <a href="https://github.com/Frank-Ellingsen/North-Sea-Oil-Platform-Drill-Tower-Construction"
+                target="_blank" rel="noopener" class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/" target="_blank"
+              rel="noopener">
+              <img src="images/drill_tower.png" alt="North Sea Oil Platform Drill Tower Construction EVM Dashboard"
+                loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. 3-Layer Agentic AI Topic Researcher -->
+        <article class="project-card" data-category="ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                AI Architecture &amp; Decision Intelligence
+              </div>
+              <h3 class="project-title">
+                3-Layer Agentic AI Topic Researcher
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Agentic AI</span>
+                <span class="tag-badge primary">Multi-Agent Workflow</span>
+                <span class="tag-badge">Autonomous Research</span>
+                <span class="tag-badge">Report Synthesis</span>
+              </div>
+
+              <p class="project-description">
+                An autonomous multi-layer AI architecture (Planner &rarr;
+                Researcher &rarr; Synthesizer) that conducts in-depth topic
+                investigations, aggregates multi-source evidence, evaluates
+                source credibility, and generates structured executive
+                intelligence dossiers.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/" target="_blank"
+                rel="noopener" class="btn-action-primary">
+                Explore AI System &rarr;
+              </a>
+              <a href="https://github.com/Frank-Ellingsen/3-Layer-Agentic-AI-Topic-Researcher" target="_blank"
+                rel="noopener" class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/" target="_blank"
+              rel="noopener">
+              <img src="images/agentic_ai_preview.jpg" alt="3-Layer Agentic AI Topic Researcher Architecture"
+                loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. Project Finance AI / EVM Management -->
+        <article class="project-card" data-category="controlling">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Financial Control &amp; Forecasting
+              </div>
+              <h3 class="project-title">
+                Project Finance AI &amp; EVM Performance Dashboard
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">EVM Dashboard</span>
+                <span class="tag-badge primary">CPI &amp; SPI Indices</span>
+                <span class="tag-badge">Budget vs. Actuals</span>
+                <span class="tag-badge">Forecasting (EAC/ETC)</span>
+              </div>
+
+              <p class="project-description">
+                An interactive financial management interface monitoring
+                project lifecycle budgets, burn rates, and variance metrics.
+                Utilizes cost performance indicators (CPI) and schedule
+                performance indicators (SPI) to project Estimate at Completion
+                (EAC) and Estimate to Complete (ETC).
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/Project-Mangagement/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Live EVM Dashboard &rarr;
+              </a>
+              <a href="https://github.com/Frank-Ellingsen/Project-Mangagement" target="_blank" rel="noopener"
+                class="btn-action-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/Project-Mangagement/" target="_blank" rel="noopener">
+              <img src="images/pc_report.png" alt="Project Finance AI Dashboard" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. Car Rental Analytics Platform -->
+        <article class="project-card" data-category="bi">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Enterprise Business Intelligence
+              </div>
+              <h3 class="project-title">Car Rental Analytics Platform</h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Microsoft Stack</span>
+                <span class="tag-badge primary">Power BI</span>
+                <span class="tag-badge">Predictive Modeling</span>
+                <span class="tag-badge">Revenue Optimization</span>
+              </div>
+
+              <p class="project-description">
+                A full-stack business intelligence solution transforming car
+                rental fleet operations through advanced analytics,
+                utilization tracking, pricing strategy evaluation, and
+                predictive demand modeling.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://mavenshowcase.com/project/55578" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Maven Showcase &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://mavenshowcase.com/project/55578" target="_blank" rel="noopener">
+              <img src="images/CarRental.png" alt="Car Rental Analytics Platform" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- Flights Tracker Norway -->
+        <article class="project-card" data-category="ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">Real-Time Data Application</div>
+              <h3 class="project-title">Flights Tracker Norway</h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">React</span>
+                <span class="tag-badge primary">Aviation API</span>
+                <span class="tag-badge">Live Schedules</span>
+                <span class="tag-badge">Web Application</span>
+              </div>
+
+              <p class="project-description">
+                Live flight monitoring web application tracking international
+                and domestic departures, arrivals, terminal statuses, and
+                real-time scheduling across Norwegian airports.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://flight-app-sandy-one.vercel.app/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Open Live Application &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://flight-app-sandy-one.vercel.app/" target="_blank" rel="noopener">
+              <img src="images/flight_tracker.png" alt="Flights Tracker Norway Application" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. Housing Price Regression Predictor -->
+        <article class="project-card" data-category="ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Machine Learning &amp; Valuation
+              </div>
+              <h3 class="project-title">Housing Price Valuation Predictor</h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Python</span>
+                <span class="tag-badge primary">scikit-learn</span>
+                <span class="tag-badge">Regression</span>
+                <span class="tag-badge">Feature Engineering</span>
+              </div>
+
+              <p class="project-description">
+                Supervised regression pipeline modeling property valuations
+                based on geographic indicators, square footage, historical
+                sales, and property features to assist data-driven pricing
+                assessments.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="housing_details.html" class="btn-action-primary">
+                Technical Case Study &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="housing_details.html">
+              <img src="images/house_price.png" alt="Housing Price Regression Model" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 9. Global Countries Demographic & Economic Report -->
+        <article class="project-card" data-category="bi">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Macroeconomic Data Visualization
+              </div>
+              <h3 class="project-title">
+                Global Countries Macroeconomic Report
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Tableau</span>
+                <span class="tag-badge">Macroeconomics</span>
+                <span class="tag-badge">Demographics</span>
+                <span class="tag-badge">Global Trends</span>
+              </div>
+
+              <p class="project-description">
+                Cross-country exploratory data dashboard evaluating global
+                demographic, GDP, healthcare, and educational indicators with
+                interactive geographical breakdowns.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/Global_Countries_Report/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Open Tableau Report &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/Global_Countries_Report/" target="_blank" rel="noopener">
+              <img src="images/globe.png" alt="Global Countries Report" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 10. Automated Weather Data Pipeline -->
+        <article class="project-card" data-category="ai">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                ETL Pipeline &amp; Automation
+              </div>
+              <h3 class="project-title">
+                Automated Weather Reporting Pipeline
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Python</span>
+                <span class="tag-badge primary">REST API</span>
+                <span class="tag-badge">Scheduled Pipeline</span>
+                <span class="tag-badge">Automation</span>
+              </div>
+
+              <p class="project-description">
+                Automated weather ingestion pipeline querying meteorological
+                APIs, transforming observational feeds, and delivering
+                structured operational forecasts.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://frank-ellingsen.github.io/weather-project/" target="_blank" rel="noopener"
+                class="btn-action-primary">
+                Open Weather Dashboard &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://frank-ellingsen.github.io/weather-project/" target="_blank" rel="noopener">
+              <img src="images/weather.png" alt="Automated Weather Reporting" loading="lazy" />
+            </a>
+          </div>
+        </article>
+
+        <!-- 11. World Cup 2026 Schedule & Model -->
+        <article class="project-card" data-category="bi">
+          <div class="project-body">
+            <div>
+              <div class="project-category">
+                Financial Modeling &amp; Spreadsheets
+              </div>
+              <h3 class="project-title">
+                World Cup 2026 Analytical Schedule Model
+              </h3>
+
+              <div class="tag-list">
+                <span class="tag-badge primary">Excel / Power Query</span>
+                <span class="tag-badge">Data Modeling</span>
+                <span class="tag-badge">Sports Analytics</span>
+                <span class="tag-badge">Tournament Logic</span>
+              </div>
+
+              <p class="project-description">
+                Structured tournament schedule and simulation matrix built in
+                Excel featuring automated match-pathing, venue schedules, and
+                dynamic group stage tracking.
+              </p>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://1drv.ms/x/c/54f658c2284aac0e/IQCQXBIr8-gTQ6AVag90f6paARp2AxslK-PmbqLS99vNzf4?e=vGANMK"
+                target="_blank" rel="noopener" class="btn-action-primary">
+                View Excel Model (OneDrive) &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <a href="https://1drv.ms/x/c/54f658c2284aac0e/IQCQXBIr8-gTQ6AVag90f6paARp2AxslK-PmbqLS99vNzf4?e=vGANMK"
+              target="_blank" rel="noopener">
+              <img src="images/wc_road_final1.png" alt="World Cup 2026 Analytical Schedule" loading="lazy" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ADDITIONAL TOOLS & SHOWCASES
+       ======================================================================== -->
+  <section class="showcase-grid-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Additional Tools &amp; Profiles</h2>
+        <p class="section-subtitle">
+          Quick access to external repositories, specialized interactive
+          tools, and showcase profiles.
+        </p>
+      </div>
+
+      <div class="quick-links-grid">
+        <div class="quick-link-card">
+          <h4>Maven Analytics Showcase</h4>
+          <p>
+            Portfolio of verified business intelligence projects and community
+            challenges.
+          </p>
+          <a href="https://mavenshowcase.com/profile/983173e0-a031-703c-17f4-1735934f6826" target="_blank"
+            rel="noopener" class="quick-link-anchor">
+            Open Maven Profile &rarr;
+          </a>
+        </div>
+
+        <div class="quick-link-card">
+          <h4>GitHub Main Profile</h4>
+          <p>
+            Source code repositories, automated pipelines, notebooks, and
+            models.
+          </p>
+          <a href="https://github.com/Frank-Ellingsen" target="_blank" rel="noopener" class="quick-link-anchor">
+            github.com/Frank-Ellingsen &rarr;
+          </a>
+        </div>
+
+        <div class="quick-link-card">
+          <h4>Interactive Calculator App</h4>
+          <p>
+            Lightweight JavaScript application demonstrating clean DOM state
+            management.
+          </p>
+          <a href="https://frank-ellingsen.github.io/Calculator-app/" target="_blank" rel="noopener"
+            class="quick-link-anchor">
+            Open Calculator App &rarr;
+          </a>
+        </div>
+
+        <div class="quick-link-card">
+          <h4>Plotly Analytical Sandbox</h4>
+          <p>
+            Experimental web dashboard exploring interactive charts and data
+            visualizations.
+          </p>
+          <a href="https://ebf6c25b-dcad-4b2f-8c69-612fa749a71f.plotly.app/" target="_blank" rel="noopener"
+            class="quick-link-anchor">
+            Open Plotly App &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>data_frank</h4>
+          <p>
+            Project Controlling, Business Intelligence &amp; Applied AI.
+            Adhering to Edward Tufte's Data-Ink principles to deliver
+            actionable business clarity.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="p1.html">MS Fabric</a></li>
+              <li><a href="p2.html">Power BI</a></li>
+              <li><a href="p3.html">Exploratory Dashboard</a></li>
+              <li><a href="p4.html">Excel Data Model</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/in/frankellingsen/" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://github.com/Frank-Ellingsen" target="_blank" rel="noopener">GitHub</a>
+              </li>
+              <li><a href="mailto:frankellingsen@hotmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Frank Ellingsen. All rights reserved.</div>
+        <div>Designed with high Data-Ink Ratio principles.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LIVE INTERACTIVE PREVIEW MODAL
+       ======================================================================== -->
+  <div class="preview-modal-overlay" id="previewModal" role="dialog" aria-modal="true"
+    aria-label="Interactive Project Preview">
+    <div class="preview-modal-window">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title" id="previewModalTitle">
+          <span id="previewModalIcon">⚡</span>
+          <span id="previewModalTitleText">Power Market Back Office — Live Platform Preview</span>
+        </div>
+        <div class="preview-modal-actions">
+          <a id="previewModalDirectLink" href="https://frank-ellingsen.github.io/Power-Market-Back-Office/"
+            target="_blank" rel="noopener" class="btn-action-primary"
+            style="padding: 0.25rem 0.75rem; font-size: 0.78rem">
+            Open in New Window ↗
+          </a>
+          <button type="button" class="preview-modal-close" id="closePreviewModal" aria-label="Close modal preview">
+            &times; Close
+          </button>
+        </div>
+      </div>
+      <iframe class="preview-modal-frame" id="previewFrame" src="" title="Live Project Preview" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- ========================================================================
        INTERACTIVE JAVASCRIPT (Category Filter, Modal Preview & Mobile Nav)
        ======================================================================== -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // 1. Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuToggle');
-        const siteNav = document.getElementById('siteNav');
-        if (menuBtn && siteNav) {
-          menuBtn.addEventListener('click', () => {
-            siteNav.classList.toggle('mobile-active');
-          });
-        }
-
-        // 2. Project Category Filtering (supports multiple space-separated categories)
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            // Update active button
-            filterBtns.forEach((b) => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            projectCards.forEach((card) => {
-              const cardCategory = card.getAttribute('data-category') || '';
-              const categories = cardCategory.split(' ');
-              if (filterValue === 'all' || categories.includes(filterValue)) {
-                card.style.display = 'grid';
-              } else {
-                card.style.display = 'none';
-              }
-            });
-          });
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Menu Toggle
+      const menuBtn = document.getElementById('menuToggle');
+      const siteNav = document.getElementById('siteNav');
+      if (menuBtn && siteNav) {
+        menuBtn.addEventListener('click', () => {
+          siteNav.classList.toggle('mobile-active');
         });
+      }
 
-        // 3. Interactive Modal Preview Handlers
-        const previewModal = document.getElementById('previewModal');
-        const previewFrame = document.getElementById('previewFrame');
-        const closePreviewModalBtn =
-          document.getElementById('closePreviewModal');
-        const previewTriggers = document.querySelectorAll(
-          '.preview-modal-trigger'
-        );
+      // 2. Project Category Filtering (supports multiple space-separated categories)
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
 
-        previewTriggers.forEach((trigger) => {
-          trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            const url = trigger.getAttribute('data-preview-url');
-            if (url && previewFrame && previewModal) {
-              previewFrame.src = url;
-              previewModal.classList.add('active');
-              document.body.style.overflow = 'hidden';
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          // Update active button
+          filterBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          projectCards.forEach((card) => {
+            const cardCategory = card.getAttribute('data-category') || '';
+            const categories = cardCategory.split(' ');
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+              card.style.display = 'grid';
+            } else {
+              card.style.display = 'none';
             }
           });
         });
+      });
 
-        function closePreview() {
-          if (previewModal) {
-            previewModal.classList.remove('active');
-            if (previewFrame) previewFrame.src = '';
-            document.body.style.overflow = '';
-          }
-        }
+      // 3. Interactive Modal Preview Handlers
+      const previewModal = document.getElementById('previewModal');
+      const previewFrame = document.getElementById('previewFrame');
+      const previewModalTitleText = document.getElementById('previewModalTitleText');
+      const previewModalIcon = document.getElementById('previewModalIcon');
+      const previewModalDirectLink = document.getElementById('previewModalDirectLink');
+      const closePreviewModalBtn =
+        document.getElementById('closePreviewModal');
+      const previewTriggers = document.querySelectorAll(
+        '.preview-modal-trigger'
+      );
 
-        if (closePreviewModalBtn) {
-          closePreviewModalBtn.addEventListener('click', closePreview);
-        }
-
-        if (previewModal) {
-          previewModal.addEventListener('click', (e) => {
-            if (e.target === previewModal) {
-              closePreview();
-            }
-          });
-        }
-
-        document.addEventListener('keydown', (e) => {
-          if (
-            e.key === 'Escape' &&
-            previewModal &&
-            previewModal.classList.contains('active')
-          ) {
-            closePreview();
+      previewTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const url = trigger.getAttribute('data-preview-url');
+          const title = trigger.getAttribute('data-preview-title') || 'Live Project Preview';
+          const icon = trigger.getAttribute('data-preview-icon') || '⚡';
+          if (url && previewFrame && previewModal) {
+            previewFrame.src = url;
+            if (previewModalTitleText) previewModalTitleText.textContent = title;
+            if (previewModalIcon) previewModalIcon.textContent = icon;
+            if (previewModalDirectLink) previewModalDirectLink.href = url;
+            previewModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
           }
         });
       });
-    </script>
-  </body>
+
+      function closePreview() {
+        if (previewModal) {
+          previewModal.classList.remove('active');
+          if (previewFrame) previewFrame.src = '';
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closePreviewModalBtn) {
+        closePreviewModalBtn.addEventListener('click', closePreview);
+      }
+
+      if (previewModal) {
+        previewModal.addEventListener('click', (e) => {
+          if (e.target === previewModal) {
+            closePreview();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (
+          e.key === 'Escape' &&
+          previewModal &&
+          previewModal.classList.contains('active')
+        ) {
+          closePreview();
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>

@@ -1,5 +1,19 @@
 # Portfolio Projects Documentation
 
+## Power Market Back Office & Data Platform (Skagerak Kraft)
+- **Description**: Full-scale Power Market Back Office and Project Controller platform engineered for portfolio anomaly detection, hydropower generation monitoring (52 plants across NO1, NO2, and NO5 price zones), and physical power imbalance settlement. Features dynamic EVM-style imbalance risk simulation (BAC/AC/ETC/EAC), interactive S-Curves with direct labeling, an Isolation Forest machine learning anomaly detection engine for SCADA telemetry faults, and an in-browser DuckDB/SQLite analytical SQL studio.
+- **Technologies**: Project Controlling & EVM, Isolation Forest (Machine Learning), DuckDB (OLAP) & SQLite (OLTP), Edward Tufte Data-Ink UI, Interactive SVG S-Curves, Nord Pool / Statnett Settlement.
+- **Business Impact**: Provides power plant operators, energy traders, and project controllers with automated telemetry fault detection, imbalance risk mitigation, capture price analysis, and real-time EAC forecasting.
+- **GitHub Repository**: [Power Market Back Office Repo](https://github.com/Frank-Ellingsen/Power-Market-Back-Office)  
+- **Live Demo**: [Power Market Back Office Demo](https://frank-ellingsen.github.io/Power-Market-Back-Office/)
+
+## Norwegian Electricity Price Analysis (2021–2026)
+- **Description**: Longitudinal econometric analysis of spot electricity prices across Norway's five bidding zones (NO1–NO5). Investigates seasonal fluctuations, grid transmission constraints, hydrological reservoir variance, and structural price disparities between southern and northern regions.
+- **Technologies**: Python, Pandas, Power BI Modeling, Time Series Econometrics, NO1–NO5 Spot Pricing.
+- **Business Impact**: Provides energy market analysts and power portfolio controllers with deep visibility into price volatility, transmission bottlenecks, and regional risk exposure.
+- **GitHub Repository**: [Norwegian Electricity Price Analysis Repo](https://github.com/Frank-Ellingsen/norwegian-electricity-analysis)  
+- **Live Demo**: [Norwegian Electricity Price Analysis Report](https://frank-ellingsen.github.io/norwegian-electricity-analysis/)
+
 ## AI AGENTIC PMO — Skjold-Class MTB Governance Portal
 - **Description**: Autonomous PMO and Project Controlling platform engineered for naval defense lifetime extension programs (Skjold-Class Stealth Fast Patrol Boats at Umoe Mandal). Integrates full-lifecycle executive governance, interactive triple S-Curve EVM forecasting (BAC 766M NOK, CPI/SPI indices), 19 Work Package milestone Gantt scheduling, drydock execution tracking, IFRS 15 / IAS 37 accounting compliance, and Variation Order Request (VOR) governance.
 - **Technologies**: Autonomous PMO Architecture, Earned Value Management (EVM), IFRS 15 / IAS 37, DuckDB / Analytical SQL, Interactive SVG Charts, Edward Tufte Data-Ink UI.
