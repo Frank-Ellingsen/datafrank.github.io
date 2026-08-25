@@ -746,6 +746,47 @@
         transform: scale(1.02);
       }
 
+      .video-preview-media {
+        background: var(--navy-950);
+      }
+
+      .video-preview-media a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .video-preview-media img {
+        opacity: 0.88;
+      }
+
+      .video-play-button {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 48px;
+        border-radius: 12px;
+        background: #ff0000;
+        color: #ffffff;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+        transition: var(--transition);
+      }
+
+      .video-play-button svg {
+        width: 25px;
+        height: 25px;
+        margin-left: 3px;
+        fill: currentColor;
+      }
+
+      .project-card:hover .video-play-button {
+        transform: scale(1.08);
+        background: #cc0000;
+      }
+
       .media-live-badge {
         position: absolute;
         top: 12px;
@@ -1491,7 +1532,7 @@
         <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
         <div class="filter-bar" role="tablist" aria-label="Project Categories">
           <button class="filter-btn active" data-filter="all">
-            All Projects (15)
+            All Projects (16)
           </button>
           <button class="filter-btn" data-filter="controlling">
             Project Controlling &amp; EVM
@@ -1505,6 +1546,64 @@
         </div>
 
         <div class="projects-list" id="projectsContainer">
+          <!-- 0. AI in Business Strategy Video -->
+          <article class="project-card featured-flagship" data-category="ai">
+            <div class="project-body">
+              <div>
+                <div class="project-category">
+                  AI Education &amp; Business Strategy
+                </div>
+                <h3 class="project-title">AI in Business Strategy</h3>
+
+                <div class="tag-list">
+                  <span class="tag-badge primary">Artificial Intelligence</span>
+                  <span class="tag-badge primary">Business Strategy</span>
+                  <span class="tag-badge">Digital Transformation</span>
+                  <span class="tag-badge">Leadership &amp; Innovation</span>
+                </div>
+
+                <p class="project-description">
+                  A featured video exploring how artificial intelligence is
+                  reshaping business strategy, decision-making, and competitive
+                  advantage.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://www.youtube.com/watch?v=Eo1HK0InVc4"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-primary"
+                >
+                  Watch Video on YouTube &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="project-media video-preview-media">
+              <a
+                href="https://www.youtube.com/watch?v=Eo1HK0InVc4"
+                target="_blank"
+                rel="noopener"
+                title="Watch AI in Business Strategy on YouTube"
+              >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> VIDEO FEATURE
+                </div>
+                <img
+                  src="https://img.youtube.com/vi/Eo1HK0InVc4/maxresdefault.jpg"
+                  alt="Preview thumbnail for AI in Business Strategy video"
+                />
+                <span class="video-play-button" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </article>
+
           <!-- 1. Power Market Back Office & Data Platform (Skagerak Kraft) -->
           <article
             class="project-card featured-flagship"
