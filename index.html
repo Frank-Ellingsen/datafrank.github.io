@@ -751,6 +751,69 @@
         transform: scale(1.02);
       }
 
+      .controller-dashboard-preview {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.25rem;
+        background: linear-gradient(145deg, #0f172a 0%, #172554 100%);
+        color: #ffffff;
+        font-family: var(--font-mono);
+      }
+
+      .controller-dashboard-preview .dashboard-topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        color: #bfdbfe;
+        font-size: 0.62rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .controller-dashboard-preview .dashboard-heading {
+        margin: 1.25rem 0 0.8rem;
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .controller-dashboard-preview .dashboard-kpis {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.55rem;
+      }
+
+      .controller-dashboard-preview .dashboard-kpi {
+        padding: 0.65rem;
+        border: 1px solid rgba(191, 219, 254, 0.22);
+        border-radius: var(--radius-sm);
+        background: rgba(15, 23, 42, 0.45);
+      }
+
+      .controller-dashboard-preview .dashboard-kpi-label {
+        display: block;
+        color: #93c5fd;
+        font-size: 0.58rem;
+        text-transform: uppercase;
+      }
+
+      .controller-dashboard-preview .dashboard-kpi-value {
+        display: block;
+        margin-top: 0.25rem;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      .controller-dashboard-preview .dashboard-footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        color: #bfdbfe;
+        font-size: 0.62rem;
+      }
+
       .video-preview-media {
         background: var(--navy-950);
       }
@@ -1297,8 +1360,8 @@
 
             <p class="hero-lead">
               I am <strong>Frank Ellingsen</strong>, bridging financial
-              administration, engineering project control, and modern business
-              intelligence. Transforming operational data into reliable
+              administration, financial engineering, project control, and modern
+              business intelligence. Transforming operational data into reliable
               <strong>EVM forecasts, cost/schedule risk tracking</strong>, and
               executive analytics.
             </p>
@@ -1578,7 +1641,7 @@
         <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
         <div class="filter-bar" role="tablist" aria-label="Project Categories">
           <button class="filter-btn active" data-filter="all">
-            All Projects (17)
+            All Projects (18)
           </button>
           <button class="filter-btn" data-filter="controlling">
             Project Controlling &amp; EVM
@@ -1592,7 +1655,219 @@
         </div>
 
         <div class="projects-list" id="projectsContainer">
-          <!-- 1. TOP FEATURED PROJECT: Project Finance AI — Controller Cockpit & Workflow Monitor -->
+          <!-- 1. TOP FEATURED PROJECT: Statlig Utdanningsinstitusjon Controller & Forecast Portal -->
+          <article
+            class="project-card featured-flagship"
+            data-category="controlling bi"
+          >
+            <div class="project-body">
+              <div>
+                <div class="project-category">
+                  <span
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      color: var(--accent-amber);
+                      font-weight: 700;
+                    "
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    TOP FEATURED FLAGSHIP
+                  </span>
+                  &bull; Public Sector Controller &amp; Forecasting
+                </div>
+                <h3 class="project-title">
+                  Statlig Utdanningsinstitusjon &mdash; Controller &amp;
+                  Forecast Portal
+                </h3>
+
+                <div class="tag-list">
+                  <span class="tag-badge primary"
+                    >Microsoft Fabric &amp; Power BI</span
+                  >
+                  <span class="tag-badge primary">DFØ SRS R-102</span>
+                  <span class="tag-badge primary">13 Dashboards</span>
+                  <span class="tag-badge">DAX &amp; TMDL</span>
+                  <span class="tag-badge">EAC / ETC / EVM</span>
+                  <span class="tag-badge">QA 43/43</span>
+                </div>
+
+                <p class="project-description">
+                  A production-ready Power BI / Fabric PBIP solution for
+                  holistic financial governance in a public educational
+                  institution. It connects DFØ SRS accounting, budget, rolling
+                  forecasts, staffing, study activity, BOA project controlling,
+                  and action tracking in one auditable controller portal.
+                </p>
+
+                <div class="preview-summary-box">
+                  <div class="preview-header">
+                    <span class="preview-title-badge">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                        ></path>
+                      </svg>
+                      Live Content Preview &bull; Controller Portal
+                    </span>
+                    <span class="preview-status-pill"
+                      >13 dashboards &bull; QA verified</span
+                    >
+                  </div>
+                  <div class="preview-kpi-row">
+                    <div class="preview-kpi-cell">
+                      <span class="label">Regnskap YTD</span
+                      ><span class="val">10.62M <small>NOK</small></span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Forecast LE</span
+                      ><span class="val">36.79M <small>NOK</small></span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Forecastavvik</span
+                      ><span class="val" style="color: #dc2626">+26.05M</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Årsverk</span
+                      ><span class="val">1,285.9</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Tiltak</span
+                      ><span class="val" style="color: var(--accent-blue)"
+                        >16 <small>actions</small></span
+                      >
+                    </div>
+                  </div>
+                  <div class="preview-modules-list">
+                    <span class="preview-module-tag"
+                      ><strong>01</strong> Instituttleder</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>02</strong> Dekan &amp; fakultet</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>03</strong> Universitetsdirektør</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>07</strong> Action Tracker</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>08</strong> Controller Cockpit</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-primary"
+                >
+                  Open Live Controller Portal &rarr;
+                </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                  data-preview-title="Statlig Utdanningsinstitusjon — Controller &amp; Forecast Portal"
+                  data-preview-icon="📊"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
+                <a
+                  href="https://github.com/Frank-Ellingsen/pbi_statlig_regnskapsstandarder"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-secondary"
+                >
+                  GitHub Repository ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="project-media controller-dashboard-preview">
+              <a
+                href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                target="_blank"
+                rel="noopener"
+                title="Click to open the live Controller & Forecast Portal"
+              >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> LIVE PORTAL
+                </div>
+                <div class="dashboard-topline">
+                  <span>Power BI / PBIP</span><span>DFØ SRS R-102</span>
+                </div>
+                <div class="dashboard-heading">
+                  Instituttleder<br />Operativ styring
+                </div>
+                <div class="dashboard-kpis">
+                  <div class="dashboard-kpi">
+                    <span class="dashboard-kpi-label">Regnskap YTD</span
+                    ><span class="dashboard-kpi-value">10.62M</span>
+                  </div>
+                  <div class="dashboard-kpi">
+                    <span class="dashboard-kpi-label">Forecast LE</span
+                    ><span class="dashboard-kpi-value">36.79M</span>
+                  </div>
+                  <div class="dashboard-kpi">
+                    <span class="dashboard-kpi-label">Avvik YTD</span
+                    ><span class="dashboard-kpi-value" style="color: #86efac"
+                      >-130K</span
+                    >
+                  </div>
+                  <div class="dashboard-kpi">
+                    <span class="dashboard-kpi-label">Forecastavvik</span
+                    ><span class="dashboard-kpi-value" style="color: #fca5a5"
+                      >+26.05M</span
+                    >
+                  </div>
+                </div>
+                <div class="dashboard-footer">
+                  <span>13 dashboards</span><span>43/43 QA tests</span>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. FEATURED PROJECT: Project Finance AI — Controller Cockpit & Workflow Monitor -->
           <article
             class="project-card featured-flagship"
             data-category="controlling bi ai"
@@ -1600,14 +1875,32 @@
             <div class="project-body">
               <div>
                 <div class="project-category">
-                  <span style="display: inline-flex; align-items: center; gap: 4px; color: var(--accent-amber); font-weight: 700;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      color: var(--accent-amber);
+                      font-weight: 700;
+                    "
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
                     TOP FEATURED FLAGSHIP
                   </span>
                   &bull; Project Controlling &amp; AI Financial Intelligence
                 </div>
                 <h3 class="project-title">
-                  Project Finance AI &mdash; Controller Cockpit &amp; Workflow Monitor
+                  Project Finance AI &mdash; Controller Cockpit &amp; Workflow
+                  Monitor
                 </h3>
 
                 <div class="tag-list">
@@ -1617,24 +1910,26 @@
                   <span class="tag-badge primary"
                     >Deterministic Variance &amp; EAC</span
                   >
-                  <span class="tag-badge primary"
-                    >SQLite Database Engine</span
+                  <span class="tag-badge primary">SQLite Database Engine</span>
+                  <span class="tag-badge"
+                    >Scikit-Learn ML Forecast (90% Band)</span
                   >
-                  <span class="tag-badge">Scikit-Learn ML Forecast (90% Band)</span>
                   <span class="tag-badge">CrewAI Multi-Agent Workflow</span>
                   <span class="tag-badge">MLflow Experiment Tracking</span>
                   <span class="tag-badge">Tufte Data-Ink Standard</span>
                 </div>
 
                 <p class="project-description">
-                  Python-based finance analytics and forecasting platform combining
-                  deterministic financial calculations, a local SQLite repository,
-                  scikit-learn ML forecasting, and CrewAI-style workflow
-                  orchestration with optional MLflow experiment tracking. Engineered for
-                  project-controlling and financial-analysis scenarios to explain
-                  budget variance, forecast project cost behavior with a 90% confidence
-                  envelope, track policy-driven escalation thresholds (POL-FIN-2026-01),
-                  and produce a consistent, auditable analysis narrative from structured domain data.
+                  Python-based finance analytics and forecasting platform
+                  combining deterministic financial calculations, a local SQLite
+                  repository, scikit-learn ML forecasting, and CrewAI-style
+                  workflow orchestration with optional MLflow experiment
+                  tracking. Engineered for project-controlling and
+                  financial-analysis scenarios to explain budget variance,
+                  forecast project cost behavior with a 90% confidence envelope,
+                  track policy-driven escalation thresholds (POL-FIN-2026-01),
+                  and produce a consistent, auditable analysis narrative from
+                  structured domain data.
                 </p>
 
                 <!-- Live Link Content Preview Widget -->
@@ -1655,7 +1950,11 @@
                           d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
                         ></path>
                       </svg>
-                      Live Platform Content Preview &bull; Controller Cockpit (<span style="font-family: var(--font-mono); font-weight: 600;">PROJECT-VESSEL-2026</span>)
+                      Live Platform Content Preview &bull; Controller Cockpit
+                      (<span
+                        style="font-family: var(--font-mono); font-weight: 600"
+                        >PROJECT-VESSEL-2026</span
+                      >)
                     </span>
                     <span class="preview-status-pill"
                       >SQLite Engine &bull; Predict-to-Prescribe Active</span
@@ -1695,20 +1994,24 @@
                   <!-- Core Architecture & Governance Modules (from README) -->
                   <div class="preview-modules-list">
                     <span class="preview-module-tag"
-                      ><strong>1. Deterministic Flow &amp; Integrity:</strong> SQLite
-                      Schema Validation, Typed Contracts &amp; Seed Data</span
+                      ><strong>1. Deterministic Flow &amp; Integrity:</strong>
+                      SQLite Schema Validation, Typed Contracts &amp; Seed
+                      Data</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>2. Variance &amp; EAC Monitoring:</strong> Mathematical
-                      Cost Variance, VAC &amp; Escalation Thresholds</span
+                      ><strong>2. Variance &amp; EAC Monitoring:</strong>
+                      Mathematical Cost Variance, VAC &amp; Escalation
+                      Thresholds</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>3. Evidence &amp; Audit Trail:</strong> Transaction
-                      Tracing, Change Log &amp; Source Provenance</span
+                      ><strong>3. Evidence &amp; Audit Trail:</strong>
+                      Transaction Tracing, Change Log &amp; Source
+                      Provenance</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>4. ML Forecasting Engine:</strong> Scikit-Learn Model
-                      Training, Joblib Serialization &amp; 90% Confidence Band</span
+                      ><strong>4. ML Forecasting Engine:</strong> Scikit-Learn
+                      Model Training, Joblib Serialization &amp; 90% Confidence
+                      Band</span
                     >
                     <span class="preview-module-tag"
                       ><strong>5. Prescriptive AI &amp; Agents:</strong> CrewAI
@@ -2032,7 +2335,6 @@
               </a>
             </div>
           </article>
-
 
           <!-- 3. Norwegian Electricity Spot Price Analysis (2021–2026) -->
           <article class="project-card" data-category="bi">
