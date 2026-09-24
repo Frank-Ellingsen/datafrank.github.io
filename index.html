@@ -615,6 +615,18 @@
         border-left: 4px solid var(--cyan-600);
       }
 
+      .project-card.featured-flagship.ui-left-illustration {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-media {
+        order: 0;
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-body {
+        order: 1;
+      }
+
       .project-body {
         padding: 2.25rem;
         display: flex;
@@ -1716,9 +1728,24 @@
         <div class="projects-list" id="projectsContainer">
           <!-- 1. TOP FEATURED PROJECT: Statlig Utdanningsinstitusjon Controller & Forecast Portal -->
           <article
-            class="project-card featured-flagship"
+            class="project-card featured-flagship ui-left-illustration"
             data-category="controlling bi"
           >
+            <div class="project-media controller-dashboard-preview">
+              <a
+                href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                target="_blank"
+                rel="noopener"
+                title="Click to open the live Controller & Forecast Portal"
+              >
+                <img
+                  src="images/UIA.png"
+                  alt="Statlig Utdanningsinstitusjon — Controller & Forecast Portal illustration"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
             <div class="project-body">
               <div>
                 <div class="project-category">
@@ -1879,50 +1906,6 @@
                   GitHub Repository ↗
                 </a>
               </div>
-            </div>
-
-            <div class="project-media controller-dashboard-preview">
-              <a
-                href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
-                target="_blank"
-                rel="noopener"
-                title="Click to open the live Controller & Forecast Portal"
-              >
-                <div class="media-live-badge">
-                  <span class="live-dot"></span> LIVE PORTAL
-                </div>
-                <div class="dashboard-topline">
-                  <span>Power BI / PBIP</span><span>DFØ SRS R-102</span>
-                </div>
-                <div class="dashboard-heading">
-                  Instituttleder<br />Operativ styring
-                </div>
-                <div class="dashboard-kpis">
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Regnskap YTD</span
-                    ><span class="dashboard-kpi-value">10.62M</span>
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Forecast LE</span
-                    ><span class="dashboard-kpi-value">36.79M</span>
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Avvik YTD</span
-                    ><span class="dashboard-kpi-value" style="color: #86efac"
-                      >-130K</span
-                    >
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Forecastavvik</span
-                    ><span class="dashboard-kpi-value" style="color: #fca5a5"
-                      >+26.05M</span
-                    >
-                  </div>
-                </div>
-                <div class="dashboard-footer">
-                  <span>13 dashboards</span><span>43/43 QA tests</span>
-                </div>
-              </a>
             </div>
           </article>
 
