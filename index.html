@@ -814,6 +814,65 @@
         font-size: 0.62rem;
       }
 
+      .multi-agent-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.35rem;
+        background: linear-gradient(145deg, #0b1220 0%, #172554 100%);
+        color: #ffffff;
+        font-family: var(--font-mono);
+      }
+
+      .multi-agent-preview .preview-topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        color: #a5f3fc;
+        font-size: 0.62rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .multi-agent-preview h4 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .multi-agent-preview .phase-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.45rem;
+      }
+
+      .multi-agent-preview .phase-item {
+        padding: 0.55rem;
+        border: 1px solid rgba(165, 243, 252, 0.2);
+        border-radius: var(--radius-sm);
+        background: rgba(15, 23, 42, 0.48);
+        color: #e0f2fe;
+        font-size: 0.62rem;
+        line-height: 1.35;
+      }
+
+      .multi-agent-preview .phase-item strong {
+        display: block;
+        color: #67e8f9;
+        font-size: 0.56rem;
+        text-transform: uppercase;
+      }
+
+      .multi-agent-preview .preview-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding-top: 0.25rem;
+        color: #bae6fd;
+        font-size: 0.62rem;
+      }
+
       .video-preview-media {
         background: var(--navy-950);
       }
@@ -1641,7 +1700,7 @@
         <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
         <div class="filter-bar" role="tablist" aria-label="Project Categories">
           <button class="filter-btn active" data-filter="all">
-            All Projects (18)
+            All Projects (19)
           </button>
           <button class="filter-btn" data-filter="controlling">
             Project Controlling &amp; EVM
@@ -2890,6 +2949,167 @@
                   alt="3-Layer Agentic AI Topic Researcher Architecture"
                   loading="lazy"
                 />
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Multi-Agent Architectures for Autonomous Data Analytics -->
+          <article
+            class="project-card featured-flagship"
+            data-category="ai bi controlling"
+          >
+            <div class="project-body">
+              <div>
+                <div class="project-category">
+                  Flagship AI &amp; Autonomous Data Analytics
+                </div>
+                <h3 class="project-title">
+                  Multi-Agent Architectures for Autonomous Data Analytics
+                </h3>
+
+                <div class="tag-list">
+                  <span class="tag-badge primary">Multi-Agent AI</span>
+                  <span class="tag-badge primary">Financial Analytics</span>
+                  <span class="tag-badge primary">30 Modular Skills</span>
+                  <span class="tag-badge">DuckDB &amp; SQLite</span>
+                  <span class="tag-badge">Forecasting &amp; Monte Carlo</span>
+                  <span class="tag-badge">Tufte Data-Ink UI</span>
+                </div>
+
+                <p class="project-description">
+                  A production-ready framework that transforms enterprise data
+                  into decision-ready executive intelligence through six
+                  autonomous phases: ingestion, modeling, diagnostics,
+                  prognostics, prescriptions, and storytelling. Includes a web
+                  Analytics Studio, deterministic governance, and multi-provider
+                  LLM integration.
+                </p>
+
+                <div class="preview-summary-box">
+                  <div class="preview-header">
+                    <span class="preview-title-badge">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                          d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.7 1.7-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V20h-2.4v-.2a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-1.7-1.7.06-.06A1.7 1.7 0 0 0 8.4 15a1.7 1.7 0 0 0-1.56-1.03H6v-2.4h.2A1.7 1.7 0 0 0 7.76 10a1.7 1.7 0 0 0-.34-1.88l-.06-.06 1.7-1.7.06.06A1.7 1.7 0 0 0 11 6.08V6h2.4v.08a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.7 1.7-.06.06A1.7 1.7 0 0 0 17.6 10a1.7 1.7 0 0 0 1.56 1.03h.2v2.4h-.2A1.7 1.7 0 0 0 17.6 15z"
+                        ></path>
+                      </svg>
+                      Analytics Studio Preview
+                    </span>
+                    <span class="preview-status-pill"
+                      >30 skills &bull; 6 phases</span
+                    >
+                  </div>
+                  <div class="preview-kpi-row">
+                    <div class="preview-kpi-cell">
+                      <span class="label">ERP Tables</span
+                      ><span class="val">15</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Rows Analyzed</span
+                      ><span class="val">127K</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Relationships</span
+                      ><span class="val">22</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Integrity</span
+                      ><span class="val" style="color: var(--accent-teal)"
+                        >100%</span
+                      >
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Engine</span
+                      ><span class="val">DuckDB</span>
+                    </div>
+                  </div>
+                  <div class="preview-modules-list">
+                    <span class="preview-module-tag"
+                      ><strong>I</strong> Ingest &amp; inspect</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>II</strong> Model &amp; validate</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>III</strong> Diagnose &amp; measure</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>IV</strong> Forecast &amp; simulate</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>V–VI</strong> Prescribe &amp; publish</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://frank-ellingsen.github.io/Multi-Agent-Architectures-for-Autonomous-Data-Analytics/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-primary"
+                >
+                  Open Analytics Studio &rarr;
+                </a>
+                <a
+                  href="https://github.com/Frank-Ellingsen/Multi-Agent-Architectures-for-Autonomous-Data-Analytics"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-secondary"
+                >
+                  GitHub Repository ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="project-media multi-agent-preview">
+              <a
+                href="https://frank-ellingsen.github.io/Multi-Agent-Architectures-for-Autonomous-Data-Analytics/"
+                target="_blank"
+                rel="noopener"
+                title="Open the Multi-Agent Analytics Studio"
+              >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> LIVE STUDIO
+                </div>
+                <div class="preview-topline">
+                  <span>Autonomous AI</span><span>Decision Intelligence</span>
+                </div>
+                <h4>Analytics Studio</h4>
+                <div class="phase-list">
+                  <div class="phase-item">
+                    <strong>Phase I</strong>Ingest &amp; inspect
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase II</strong>Schema &amp; modeling
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase III</strong>Diagnostics &amp; KPIs
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase IV</strong>Prognostics &amp; simulation
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase V</strong>Prescriptions &amp; optimization
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase VI</strong>Storytelling &amp; publishing
+                  </div>
+                </div>
+                <div class="preview-footer">
+                  <span>15-table demo ERP</span><span>RAG governance</span>
+                </div>
               </a>
             </div>
           </article>
