@@ -7,6 +7,13 @@
 - **GitHub Repository**: [Power Market Back Office Repo](https://github.com/Frank-Ellingsen/Power-Market-Back-Office)  
 - **Live Demo**: [Power Market Back Office Demo](https://frank-ellingsen.github.io/Power-Market-Back-Office/)
 
+## Project Finance AI — Controller Cockpit & Workflow Monitor
+- **Description**: Python-based finance analytics and forecasting platform combining deterministic financial calculations, a local SQLite repository, scikit-learn machine learning forecasting, and CrewAI-style workflow orchestration with optional MLflow experiment tracking. Designed for project-controlling and financial-analysis scenarios to explain budget variances, forecast project cost behavior with a 90% confidence envelope, track policy-driven escalation thresholds (POL-FIN-2026-01), and produce a consistent analysis narrative from structured domain data.
+- **Technologies**: Project Controlling & EVM, Deterministic Variance & EAC, SQLite Database Engine, Scikit-Learn ML Forecasting, CrewAI Multi-Agent Workflow, MLflow Tracking, Edward Tufte Data-Ink UI.
+- **Business Impact**: Equips project controllers, financial analysts, and project managers with automated budget-to-actual variance explanations, ML-driven cost projections, escalation alerts, and auditable transaction evidence.
+- **GitHub Repository**: [Project Finance AI Repo](https://github.com/Frank-Ellingsen/ml_pred_to_ai_prescript)  
+- **Live Demo**: [Project Finance AI Controller Cockpit](https://frank-ellingsen.github.io/ml_pred_to_ai_prescript/)
+
 ## Norwegian Electricity Price Analysis (2021–2026)
 - **Description**: Longitudinal econometric analysis of spot electricity prices across Norway's five bidding zones (NO1–NO5). Investigates seasonal fluctuations, grid transmission constraints, hydrological reservoir variance, and structural price disparities between southern and northern regions.
 - **Technologies**: Python, Pandas, Power BI Modeling, Time Series Econometrics, NO1–NO5 Spot Pricing.
