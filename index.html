@@ -621,6 +621,12 @@
 
       .project-card.featured-flagship.ui-left-illustration .project-media {
         order: 0;
+        border-left: none;
+        border-right: 1px solid var(--border-light);
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-media img {
+        object-position: left top;
       }
 
       .project-card.featured-flagship.ui-left-illustration .project-body {
@@ -1731,16 +1737,19 @@
             class="project-card featured-flagship ui-left-illustration"
             data-category="controlling bi"
           >
-            <div class="project-media controller-dashboard-preview">
+            <div class="project-media">
               <a
                 href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
                 target="_blank"
                 rel="noopener"
-                title="Click to open the live Controller & Forecast Portal"
+                title="Click to open live interactive Controller &amp; Forecast Portal"
               >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> LIVE PORTAL
+                </div>
                 <img
                   src="images/UIA.png"
-                  alt="Statlig Utdanningsinstitusjon — Controller & Forecast Portal illustration"
+                  alt="Statlig Utdanningsinstitusjon — Controller &amp; Forecast Portal (Årsrapport &amp; EVM)"
                   loading="lazy"
                 />
               </a>
@@ -1779,21 +1788,21 @@
 
                 <div class="tag-list">
                   <span class="tag-badge primary"
-                    >Microsoft Fabric &amp; Power BI</span
+                    >Microsoft Fabric &amp; PBIP</span
                   >
                   <span class="tag-badge primary">DFØ SRS R-102</span>
-                  <span class="tag-badge primary">13 Dashboards</span>
-                  <span class="tag-badge">DAX &amp; TMDL</span>
-                  <span class="tag-badge">EAC / ETC / EVM</span>
-                  <span class="tag-badge">QA 43/43</span>
+                  <span class="tag-badge primary">17 Dashboards</span>
+                  <span class="tag-badge">EVM &bull; CPI 0.95 / SPI 0.92</span>
+                  <span class="tag-badge">12-Mnd Helårsavstemt</span>
+                  <span class="tag-badge">QA 61/61 Bestått</span>
                 </div>
 
                 <p class="project-description">
-                  A production-ready Power BI / Fabric PBIP solution for
-                  holistic financial governance in a public educational
-                  institution. It connects DFØ SRS accounting, budget, rolling
-                  forecasts, staffing, study activity, BOA project controlling,
-                  and action tracking in one auditable controller portal.
+                  Enterprise-grade Power BI &amp; Microsoft Fabric PBIP-løsning for helhetlig
+                  statlig virksomhets- og prosjektstyring. Kobler DFØ SRS-regnskap,
+                  100% helårsavstemt årsrapport (1 433M inntekt / 1 444M kostnad), rullende
+                  prognoser (EAC/ETC), Earned Value (EV)-analyse, BOA TDI-prosjektcontrolling,
+                  stillingskontroll og forpliktende tiltaksplan i én revisjonssikret portal.
                 </p>
 
                 <div class="preview-summary-box">
@@ -1813,42 +1822,43 @@
                           d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
                         ></path>
                       </svg>
-                      Live Content Preview &bull; Controller Portal
+                      Live Content Preview &bull; Årsrapport &amp; EVM Portal
                     </span>
                     <span class="preview-status-pill"
-                      >13 dashboards &bull; QA verified</span
+                      >17 dashboards &bull; 100% Avstemt</span
                     >
                   </div>
                   <div class="preview-kpi-row">
                     <div class="preview-kpi-cell">
-                      <span class="label">Regnskap YTD</span
-                      ><span class="val">10.62M <small>NOK</small></span>
+                      <span class="label">Total Inntekt (BAC)</span
+                      ><span class="val">1,433.0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Forecast LE</span
-                      ><span class="val">36.79M <small>NOK</small></span>
+                      <span class="label">Total Kostnad (EAC)</span
+                      ><span class="val">1,444.0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Forecastavvik</span
-                      ><span class="val" style="color: #dc2626">+26.05M</span>
+                      <span class="label">Kostnadsindeks (CPI)</span
+                      ><span class="val" style="color: #d97706">0.95</span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Årsverk</span
-                      ><span class="val">1,285.9</span>
+                      <span class="label">Fremdriftsindeks (SPI)</span
+                      ><span class="val" style="color: #d97706">0.92</span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Tiltak</span
-                      ><span class="val" style="color: var(--accent-blue)"
-                        >16 <small>actions</small></span
-                      >
+                      <span class="label">Årsresultat (Underskudd)</span
+                      ><span class="val" style="color: #dc2626">-11.0M <small>NOK</small></span>
                     </div>
                   </div>
                   <div class="preview-modules-list">
                     <span class="preview-module-tag"
+                      ><strong>00</strong> Årsrapport &amp; EVM</span
+                    >
+                    <span class="preview-module-tag"
                       ><strong>01</strong> Instituttleder</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>02</strong> Dekan &amp; fakultet</span
+                      ><strong>02</strong> Dekan &amp; Fakultet</span
                     >
                     <span class="preview-module-tag"
                       ><strong>03</strong> Universitetsdirektør</span
@@ -1858,6 +1868,12 @@
                     >
                     <span class="preview-module-tag"
                       ><strong>08</strong> Controller Cockpit</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>10</strong> AI Controller Hub</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>11</strong> Rapporteringsveileder</span
                     >
                   </div>
                 </div>
