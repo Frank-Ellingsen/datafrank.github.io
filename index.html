@@ -1034,6 +1034,7 @@
         font-weight: 700;
         color: var(--navy-900);
         font-variant-numeric: tabular-nums;
+        white-space: nowrap;
       }
 
       .preview-kpi-cell .val small {
@@ -1064,6 +1065,155 @@
       .preview-module-tag strong {
         color: var(--navy-900);
         font-weight: 600;
+      }
+
+      .media-caption-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.88);
+        backdrop-filter: blur(8px);
+        color: #f8fafc;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        padding: 0.4rem 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* In-card Rich Preview Visuals (UiA Executive & EVM) */
+      .preview-visuals-container {
+        display: grid;
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 0.65rem;
+        margin: 0.75rem 0;
+      }
+
+      @media (max-width: 900px) {
+        .preview-visuals-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .preview-visual-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+        padding: 0.65rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .preview-visual-title {
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--navy-900);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.45rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .preview-visual-title span.sub {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .scurve-chart-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* AI Scenario Bar Styles */
+      .scenario-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .scenario-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .scenario-row-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.66rem;
+        color: var(--text-muted);
+      }
+
+      .scenario-row-meta .label {
+        font-weight: 600;
+        color: var(--navy-900);
+      }
+
+      .scenario-row-meta .val {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .scenario-bar-track {
+        height: 5px;
+        background: var(--bg-surface-alt);
+        border-radius: var(--radius-pill);
+        overflow: hidden;
+        border: 1px solid var(--border-subtle);
+      }
+
+      .scenario-bar-fill {
+        height: 100%;
+        border-radius: var(--radius-pill);
+      }
+
+      .faculty-variance-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-top: 0.5rem;
+        padding-top: 0.45rem;
+        border-top: 1px solid var(--border-subtle);
+      }
+
+      .faculty-var-pill {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        padding: 0.12rem 0.35rem;
+        border-radius: var(--radius-sm);
+        background: var(--bg-surface-alt);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-muted);
+        line-height: 1.25;
+      }
+
+      .faculty-var-pill strong {
+        color: var(--navy-900);
+      }
+
+      .faculty-var-pill.negative {
+        color: #b91c1c;
+        border-color: #fecaca;
+        background: #fef2f2;
+      }
+
+      .faculty-var-pill.positive {
+        color: #15803d;
+        border-color: #bbf7d0;
+        background: #f0fdf4;
       }
 
       /* Interactive Preview Modal */
@@ -1732,26 +1882,30 @@
         </div>
 
         <div class="projects-list" id="projectsContainer">
-          <!-- 1. TOP FEATURED PROJECT: Statlig Utdanningsinstitusjon Controller & Forecast Portal -->
+          <!-- 1. TOP FEATURED PROJECT: Universitetet i Agder | Controller Executive Report & AI Action Engine -->
           <article
             class="project-card featured-flagship ui-left-illustration"
-            data-category="controlling bi"
+            data-category="controlling bi ai"
           >
             <div class="project-media">
               <a
-                href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                href="https://frank-ellingsen.github.io/university_controlling/"
                 target="_blank"
                 rel="noopener"
-                title="Click to open live interactive Controller &amp; Forecast Portal"
+                title="Click to open live interactive Universitetet i Agder Controller Executive Report &amp; AI Action Engine"
               >
                 <div class="media-live-badge">
-                  <span class="live-dot"></span> LIVE PORTAL
+                  <span class="live-dot"></span> LIVE REPORT &bull; AI ACTION ENGINE
                 </div>
                 <img
-                  src="images/UIA.png"
-                  alt="Statlig Utdanningsinstitusjon — Controller &amp; Forecast Portal (Årsrapport &amp; EVM)"
+                  src="images/uia_executive_dashboard.png"
+                  alt="Universitetet i Agder | Controller Executive Report &amp; AI Action Engine"
                   loading="lazy"
                 />
+                <div class="media-caption-overlay">
+                  <span>🏛️ UiA Executive Dashboard &bull; M01–M12</span>
+                  <span style="color: #38bdf8; font-weight: 600;">EVM &amp; Scenario Simulator ↗</span>
+                </div>
               </a>
             </div>
 
@@ -1779,38 +1933,48 @@
                     </svg>
                     TOP FEATURED FLAGSHIP
                   </span>
-                  &bull; Public Sector Controller &amp; Forecasting
+                  &bull; Higher Education &amp; Enterprise Project Controlling
                 </div>
                 <h3 class="project-title">
-                  Statlig Utdanningsinstitusjon &mdash; Controller &amp;
-                  Forecast Portal
+                  Universitetet i Agder &mdash; Controller Executive Report &amp;
+                  AI Action Engine
                 </h3>
 
                 <div class="tag-list">
                   <span class="tag-badge primary"
+                    >DuckDB Analytics (v1.5.3)</span
+                  >
+                  <span class="tag-badge primary"
                     >Microsoft Fabric &amp; PBIP</span
                   >
-                  <span class="tag-badge primary">DFØ SRS R-102</span>
-                  <span class="tag-badge primary">17 Dashboards</span>
+                  <span class="tag-badge primary"
+                    >AI Action Engine &amp; Co-Pilot</span
+                  >
+                  <span class="tag-badge">DFØ SRS 1, 9, 10 &amp; 17</span>
+                  <span class="tag-badge">KD 2025 Ny Modell (SPE60)</span>
                   <span class="tag-badge">EVM &bull; CPI 0.95 / SPI 0.92</span>
-                  <span class="tag-badge">12-Mnd Helårsavstemt</span>
-                  <span class="tag-badge">QA 61/61 Bestått</span>
+                  <span class="tag-badge">5% Avsetningsregel (k2080)</span>
+                  <span class="tag-badge">Tufte Data-Ink Standard</span>
                 </div>
 
                 <p class="project-description">
-                  Enterprise-grade Power BI &amp; Microsoft Fabric PBIP-løsning for helhetlig
-                  statlig virksomhets- og prosjektstyring. Kobler DFØ SRS-regnskap,
-                  100% helårsavstemt årsrapport (1 433M inntekt / 1 444M kostnad), rullende
-                  prognoser (EAC/ETC), Earned Value (EV)-analyse, BOA TDI-prosjektcontrolling,
-                  stillingskontroll og forpliktende tiltaksplan i én revisjonssikret portal.
+                  Enterprise-grade virksomhets- og prosjektcontrolling for
+                  <strong>Universitetet i Agder (UiA)</strong> for regnskapsåret 2026 YTD.
+                  Kobler versjonskontrollert Power BI (PBIP) og høyytelses DuckDB analytisk
+                  motor med en interaktiv AI Action Engine for preskriptiv beslutningsstøtte.
+                  Gir full oversikt over 1 433,0 MNOK rammetildeling og BOA-aktivitet,
+                  EAC-helårsprognose (1 444,0 MNOK), Earned Value (EV) analyse, fakultetsvise
+                  avvik (HEL, TEK, SV m.fl.), 5 %-regel for ubrukte midler (konto 2080 / Rundskriv
+                  F-05-20) og simulert lukking av -11,0 MNOK-gapet med forpliktende tiltakspakke.
                 </p>
 
+                <!-- Live Report Content Preview Widget (Tufte High Data-Ink) -->
                 <div class="preview-summary-box">
                   <div class="preview-header">
                     <span class="preview-title-badge">
                       <svg
-                        width="14"
-                        height="14"
+                        width="15"
+                        height="15"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -1818,62 +1982,173 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       >
-                        <path
-                          d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                        ></path>
+                        <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"></path>
                       </svg>
-                      Live Content Preview &bull; Årsrapport &amp; EVM Portal
+                      Live Report Preview &bull; UiA Executive Dashboard &amp; AI Action Engine
                     </span>
                     <span class="preview-status-pill"
-                      >17 dashboards &bull; 100% Avstemt</span
+                      >Helår 2026 YTD &bull; 1 433M BAC &bull; AI Action Engine Active</span
                     >
                   </div>
+
+                  <!-- Executive KPI Row -->
                   <div class="preview-kpi-row">
                     <div class="preview-kpi-cell">
-                      <span class="label">Total Inntekt (BAC)</span
-                      ><span class="val">1,433.0M <small>NOK</small></span>
+                      <span class="label">Total Inntekt (BAC)</span>
+                      <span class="val">1&nbsp;433,0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Total Kostnad (EAC)</span
-                      ><span class="val">1,444.0M <small>NOK</small></span>
+                      <span class="label">Total Kostnad (EAC)</span>
+                      <span class="val">1&nbsp;444,0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Kostnadsindeks (CPI)</span
-                      ><span class="val" style="color: #d97706">0.95</span>
+                      <span class="label">Kostnadsindeks (CPI)</span>
+                      <span class="val" style="color: #d97706"
+                        >0,95 <small>(+5% press)</small></span
+                      >
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Fremdriftsindeks (SPI)</span
-                      ><span class="val" style="color: #d97706">0.92</span>
+                      <span class="label">Fremdriftsindeks (SPI)</span>
+                      <span class="val" style="color: #d97706"
+                        >0,92 <small>(BOA)</small></span
+                      >
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Årsresultat (Underskudd)</span
-                      ><span class="val" style="color: #dc2626">-11.0M <small>NOK</small></span>
+                      <span class="label">Simulert m/ tiltak</span>
+                      <span class="val" style="color: #059669"
+                        >+1,2M <small>NOK</small></span
+                      >
                     </div>
                   </div>
+
+                  <!-- Rich Preview Visuals Container: EVM S-Curve + AI Action Scenario Engine -->
+                  <div class="preview-visuals-container">
+                    <!-- Visual 1: EVM S-Kurve SVG Visual -->
+                    <div class="preview-visual-card">
+                      <div class="preview-visual-title">
+                        <span>📈 EVM S-Kurve &amp; Kostnadsutvikling</span>
+                        <span class="sub">Tufte Direct-Labeling</span>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 400 150"
+                        class="scurve-chart-svg"
+                        role="img"
+                        aria-label="Earned Value Management S-Kurve med PV, EV, AC og EAC kurver"
+                      >
+                        <!-- Horizontal Grid Lines (Tufte: zero vertical lines) -->
+                        <line x1="30" y1="122" x2="330" y2="122" stroke="#e2e8f0" stroke-width="1" />
+                        <line x1="30" y1="87" x2="330" y2="87" stroke="#f1f5f9" stroke-width="1" />
+                        <line x1="30" y1="52" x2="330" y2="52" stroke="#f1f5f9" stroke-width="1" />
+                        <line x1="30" y1="20" x2="330" y2="20" stroke="#f1f5f9" stroke-width="1" />
+
+                        <!-- Y-axis subtle ticks -->
+                        <text x="24" y="125" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace" text-anchor="end">0M</text>
+                        <text x="24" y="90" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace" text-anchor="end">500M</text>
+                        <text x="24" y="55" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace" text-anchor="end">1000M</text>
+                        <text x="24" y="23" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace" text-anchor="end">1500M</text>
+
+                        <!-- X-axis Month labels -->
+                        <text x="30" y="138" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace">M01</text>
+                        <text x="105" y="138" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace">M03</text>
+                        <text x="180" y="138" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace">M06</text>
+                        <text x="255" y="138" fill="#0284c7" font-size="8" font-family="JetBrains Mono, monospace" font-weight="700">M09</text>
+                        <text x="330" y="138" fill="#94a3b8" font-size="8" font-family="JetBrains Mono, monospace" text-anchor="middle">M12</text>
+
+                        <!-- Status Checkpoint (M09 YTD) -->
+                        <line x1="255" y1="18" x2="255" y2="122" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2" />
+                        <text x="255" y="14" fill="#64748b" font-size="7.5" font-family="JetBrains Mono, monospace" text-anchor="middle">Status YTD (M09)</text>
+
+                        <!-- PV (Planlagt Verdi: 1 433M) Curve -->
+                        <path d="M 30 122 C 105 117, 180 79, 255 47 S 310 24, 330 23" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" />
+                        <text x="334" y="25" fill="#64748b" font-size="8.5" font-family="JetBrains Mono, monospace" font-weight="600">PV: 1 433M</text>
+
+                        <!-- EV (Opptjent Verdi: 1 318M) Curve -->
+                        <path d="M 30 122 C 105 119, 180 85, 255 53" fill="none" stroke="#0284c7" stroke-width="2" />
+                        <circle cx="255" cy="53" r="3" fill="#0284c7" />
+                        <text x="262" y="56" fill="#0284c7" font-size="8.5" font-family="JetBrains Mono, monospace" font-weight="600">EV: 1 318M (SPI 0.92)</text>
+
+                        <!-- AC (Faktisk Kostnad: 1 388M) Curve -->
+                        <path d="M 30 122 C 105 116, 180 77, 255 46" fill="none" stroke="#0f172a" stroke-width="2" />
+                        <circle cx="255" cy="46" r="3" fill="#0f172a" />
+                        <text x="262" y="42" fill="#0f172a" font-size="8.5" font-family="JetBrains Mono, monospace" font-weight="600">AC: 1 388M (CPI 0.95)</text>
+
+                        <!-- EAC (Helårsprognose: 1 444M) Extension -->
+                        <path d="M 255 46 Q 292 33, 330 21" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4 2" />
+                        <circle cx="330" cy="21" r="3" fill="#d97706" />
+                        <text x="334" y="16" fill="#d97706" font-size="9" font-family="JetBrains Mono, monospace" font-weight="700">EAC: 1 444M</text>
+                      </svg>
+                    </div>
+
+                    <!-- Visual 2: AI Action Engine Scenario Bars + Faculty Variance Matrix -->
+                    <div class="preview-visual-card">
+                      <div class="preview-visual-title">
+                        <span>🤖 AI Action Engine &bull; Gap-Lukking</span>
+                        <span class="sub">+12,2M Tiltakspakke</span>
+                      </div>
+                      <div class="scenario-bars">
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label">1. Grunnprognose (Før tiltak)</span>
+                            <span class="val" style="color: #dc2626">-11,0 MNOK</span>
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div class="scenario-bar-fill" style="width: 28%; background: #ef4444;"></div>
+                          </div>
+                        </div>
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label">2. Vedtatt omstilling (FactAction)</span>
+                            <span class="val" style="color: #0284c7">+12,2 MNOK</span>
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div class="scenario-bar-fill" style="width: 95%; background: #0284c7;"></div>
+                          </div>
+                        </div>
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label">3. Simulert sluttresultat</span>
+                            <span class="val" style="color: #059669">+1,2 MNOK (I balanse)</span>
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div class="scenario-bar-fill" style="width: 100%; background: #10b981;"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Faculty Variance Strip -->
+                      <div class="faculty-variance-strip">
+                        <span class="faculty-var-pill negative"><strong>HEL</strong> -4,8M</span>
+                        <span class="faculty-var-pill negative"><strong>TEK</strong> -3,2M</span>
+                        <span class="faculty-var-pill negative"><strong>SV</strong> -2,1M</span>
+                        <span class="faculty-var-pill negative"><strong>LER</strong> -1,6M</span>
+                        <span class="faculty-var-pill positive"><strong>ØKO</strong> +0,8M</span>
+                        <span class="faculty-var-pill"><strong>Felles</strong> -0,1M</span>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="preview-modules-list">
                     <span class="preview-module-tag"
-                      ><strong>00</strong> Årsrapport &amp; EVM</span
+                      ><strong>01</strong> EVM S-Kurve (PV/EV/AC/EAC)</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>01</strong> Instituttleder</span
+                      ><strong>02</strong> Fakultetsvis Netto Avvik</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>02</strong> Dekan &amp; Fakultet</span
+                      ><strong>03</strong> AI Action Engine Simulator</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>03</strong> Universitetsdirektør</span
+                      ><strong>04</strong> FactAction Tiltaksportefølje</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>07</strong> Action Tracker</span
+                      ><strong>05</strong> SRS 1/9/10/17 &amp; BOA TDI</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>08</strong> Controller Cockpit</span
+                      ><strong>06</strong> 5%-Regel for Avsetninger (k2080)</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>10</strong> AI Controller Hub</span
-                    >
-                    <span class="preview-module-tag"
-                      ><strong>11</strong> Rapporteringsveileder</span
+                      ><strong>07</strong> Styrenotat AI Co-Pilot</span
                     >
                   </div>
                 </div>
@@ -1881,19 +2156,19 @@
 
               <div class="project-actions">
                 <a
-                  href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                  href="https://frank-ellingsen.github.io/university_controlling/"
                   target="_blank"
                   rel="noopener"
                   class="btn-action-primary"
                 >
-                  Open Live Controller Portal &rarr;
+                  Open Live Executive Report &rarr;
                 </a>
                 <button
                   type="button"
                   class="btn-action-secondary preview-modal-trigger"
-                  data-preview-url="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
-                  data-preview-title="Statlig Utdanningsinstitusjon — Controller &amp; Forecast Portal"
-                  data-preview-icon="📊"
+                  data-preview-url="https://frank-ellingsen.github.io/university_controlling/"
+                  data-preview-title="Universitetet i Agder | Controller Executive Report &amp; AI Action Engine"
+                  data-preview-icon="🏛️"
                   title="Interactive live modal preview"
                 >
                   <svg
@@ -1914,7 +2189,7 @@
                   Interactive Quick Preview
                 </button>
                 <a
-                  href="https://github.com/Frank-Ellingsen/pbi_statlig_regnskapsstandarder"
+                  href="https://github.com/Frank-Ellingsen/university_controlling"
                   target="_blank"
                   rel="noopener"
                   class="btn-action-secondary"
