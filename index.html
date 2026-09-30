@@ -615,6 +615,24 @@
         border-left: 4px solid var(--cyan-600);
       }
 
+      .project-card.featured-flagship.ui-left-illustration {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-media {
+        order: 0;
+        border-left: none;
+        border-right: 1px solid var(--border-light);
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-media img {
+        object-position: left top;
+      }
+
+      .project-card.featured-flagship.ui-left-illustration .project-body {
+        order: 1;
+      }
+
       .project-body {
         padding: 2.25rem;
         display: flex;
@@ -814,6 +832,65 @@
         font-size: 0.62rem;
       }
 
+      .multi-agent-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.35rem;
+        background: linear-gradient(145deg, #0b1220 0%, #172554 100%);
+        color: #ffffff;
+        font-family: var(--font-mono);
+      }
+
+      .multi-agent-preview .preview-topline {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        color: #a5f3fc;
+        font-size: 0.62rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .multi-agent-preview h4 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .multi-agent-preview .phase-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.45rem;
+      }
+
+      .multi-agent-preview .phase-item {
+        padding: 0.55rem;
+        border: 1px solid rgba(165, 243, 252, 0.2);
+        border-radius: var(--radius-sm);
+        background: rgba(15, 23, 42, 0.48);
+        color: #e0f2fe;
+        font-size: 0.62rem;
+        line-height: 1.35;
+      }
+
+      .multi-agent-preview .phase-item strong {
+        display: block;
+        color: #67e8f9;
+        font-size: 0.56rem;
+        text-transform: uppercase;
+      }
+
+      .multi-agent-preview .preview-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding-top: 0.25rem;
+        color: #bae6fd;
+        font-size: 0.62rem;
+      }
+
       .video-preview-media {
         background: var(--navy-950);
       }
@@ -957,6 +1034,7 @@
         font-weight: 700;
         color: var(--navy-900);
         font-variant-numeric: tabular-nums;
+        white-space: nowrap;
       }
 
       .preview-kpi-cell .val small {
@@ -987,6 +1065,155 @@
       .preview-module-tag strong {
         color: var(--navy-900);
         font-weight: 600;
+      }
+
+      .media-caption-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.88);
+        backdrop-filter: blur(8px);
+        color: #f8fafc;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        padding: 0.4rem 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      /* In-card Rich Preview Visuals (University Executive & EVM) */
+      .preview-visuals-container {
+        display: grid;
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 0.65rem;
+        margin: 0.75rem 0;
+      }
+
+      @media (max-width: 900px) {
+        .preview-visuals-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .preview-visual-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+        padding: 0.65rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .preview-visual-title {
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--navy-900);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.45rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .preview-visual-title span.sub {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .scurve-chart-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* AI Scenario Bar Styles */
+      .scenario-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .scenario-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .scenario-row-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.66rem;
+        color: var(--text-muted);
+      }
+
+      .scenario-row-meta .label {
+        font-weight: 600;
+        color: var(--navy-900);
+      }
+
+      .scenario-row-meta .val {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .scenario-bar-track {
+        height: 5px;
+        background: var(--bg-surface-alt);
+        border-radius: var(--radius-pill);
+        overflow: hidden;
+        border: 1px solid var(--border-subtle);
+      }
+
+      .scenario-bar-fill {
+        height: 100%;
+        border-radius: var(--radius-pill);
+      }
+
+      .faculty-variance-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-top: 0.5rem;
+        padding-top: 0.45rem;
+        border-top: 1px solid var(--border-subtle);
+      }
+
+      .faculty-var-pill {
+        font-family: var(--font-mono);
+        font-size: 0.62rem;
+        padding: 0.12rem 0.35rem;
+        border-radius: var(--radius-sm);
+        background: var(--bg-surface-alt);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-muted);
+        line-height: 1.25;
+      }
+
+      .faculty-var-pill strong {
+        color: var(--navy-900);
+      }
+
+      .faculty-var-pill.negative {
+        color: #b91c1c;
+        border-color: #fecaca;
+        background: #fef2f2;
+      }
+
+      .faculty-var-pill.positive {
+        color: #15803d;
+        border-color: #bbf7d0;
+        background: #f0fdf4;
       }
 
       /* Interactive Preview Modal */
@@ -1655,11 +1882,36 @@
         </div>
 
         <div class="projects-list" id="projectsContainer">
-          <!-- 1. TOP FEATURED PROJECT: Statlig Utdanningsinstitusjon Controller & Forecast Portal -->
+          <!-- 1. TOP FEATURED PROJECT: University | Controller Executive Report & AI Action Engine -->
           <article
-            class="project-card featured-flagship"
-            data-category="controlling bi"
+            class="project-card featured-flagship ui-left-illustration"
+            data-category="controlling bi ai"
           >
+            <div class="project-media">
+              <a
+                href="https://frank-ellingsen.github.io/university_controlling/"
+                target="_blank"
+                rel="noopener"
+                title="Click to open live interactive University Controller Executive Report &amp; AI Action Engine"
+              >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> LIVE REPORT &bull; AI ACTION
+                  ENGINE
+                </div>
+                <img
+                  src="images/university_executive_dashboard.png"
+                  alt="University | Controller Executive Report &amp; AI Action Engine"
+                  loading="lazy"
+                />
+                <div class="media-caption-overlay">
+                  <span>🏛️ University Executive Dashboard &bull; M01–M12</span>
+                  <span style="color: #38bdf8; font-weight: 600"
+                    >EVM &amp; Scenario Simulator ↗</span
+                  >
+                </div>
+              </a>
+            </div>
+
             <div class="project-body">
               <div>
                 <div class="project-category">
@@ -1684,38 +1936,50 @@
                     </svg>
                     TOP FEATURED FLAGSHIP
                   </span>
-                  &bull; Public Sector Controller &amp; Forecasting
+                  &bull; Higher Education &amp; Enterprise Project Controlling
                 </div>
                 <h3 class="project-title">
-                  Statlig Utdanningsinstitusjon &mdash; Controller &amp;
-                  Forecast Portal
+                  University &mdash; Controller Executive Report &amp; AI Action
+                  Engine
                 </h3>
 
                 <div class="tag-list">
                   <span class="tag-badge primary"
-                    >Microsoft Fabric &amp; Power BI</span
+                    >DuckDB Analytics (v1.5.3)</span
                   >
-                  <span class="tag-badge primary">DFØ SRS R-102</span>
-                  <span class="tag-badge primary">13 Dashboards</span>
-                  <span class="tag-badge">DAX &amp; TMDL</span>
-                  <span class="tag-badge">EAC / ETC / EVM</span>
-                  <span class="tag-badge">QA 43/43</span>
+                  <span class="tag-badge primary"
+                    >Microsoft Fabric &amp; PBIP</span
+                  >
+                  <span class="tag-badge primary"
+                    >AI Action Engine &amp; Co-Pilot</span
+                  >
+                  <span class="tag-badge">DFØ SRS 1, 9, 10 &amp; 17</span>
+                  <span class="tag-badge">KD 2025 Ny Modell (SPE60)</span>
+                  <span class="tag-badge">EVM &bull; CPI 0.95 / SPI 0.92</span>
+                  <span class="tag-badge">5% Avsetningsregel (k2080)</span>
+                  <span class="tag-badge">Tufte Data-Ink Standard</span>
                 </div>
 
                 <p class="project-description">
-                  A production-ready Power BI / Fabric PBIP solution for
-                  holistic financial governance in a public educational
-                  institution. It connects DFØ SRS accounting, budget, rolling
-                  forecasts, staffing, study activity, BOA project controlling,
-                  and action tracking in one auditable controller portal.
+                  Enterprise-grade virksomhets- og prosjektcontrolling for
+                  <strong>University</strong> for regnskapsåret 2026 YTD. Kobler
+                  versjonskontrollert Power BI (PBIP) og høyytelses DuckDB
+                  analytisk motor med en interaktiv AI Action Engine for
+                  preskriptiv beslutningsstøtte. Gir full oversikt over 1 433,0
+                  MNOK rammetildeling og BOA-aktivitet, EAC-helårsprognose (1
+                  444,0 MNOK), Earned Value (EV) analyse, fakultetsvise avvik
+                  (HEL, TEK, SV m.fl.), 5 %-regel for ubrukte midler (konto 2080
+                  / Rundskriv F-05-20) og simulert lukking av -11,0 MNOK-gapet
+                  med forpliktende tiltakspakke.
                 </p>
 
+                <!-- Live Report Content Preview Widget (Tufte High Data-Ink) -->
                 <div class="preview-summary-box">
                   <div class="preview-header">
                     <span class="preview-title-badge">
                       <svg
-                        width="14"
-                        height="14"
+                        width="15"
+                        height="15"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -1724,54 +1988,389 @@
                         stroke-linejoin="round"
                       >
                         <path
-                          d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                          d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"
                         ></path>
                       </svg>
-                      Live Content Preview &bull; Controller Portal
+                      Live Report Preview &bull; University Executive Dashboard
+                      &amp; AI Action Engine
                     </span>
                     <span class="preview-status-pill"
-                      >13 dashboards &bull; QA verified</span
+                      >Helår 2026 YTD &bull; 1 433M BAC &bull; AI Action Engine
+                      Active</span
                     >
                   </div>
+
+                  <!-- Executive KPI Row -->
                   <div class="preview-kpi-row">
                     <div class="preview-kpi-cell">
-                      <span class="label">Regnskap YTD</span
-                      ><span class="val">10.62M <small>NOK</small></span>
+                      <span class="label">Total Inntekt (BAC)</span>
+                      <span class="val">1&nbsp;433,0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Forecast LE</span
-                      ><span class="val">36.79M <small>NOK</small></span>
+                      <span class="label">Total Kostnad (EAC)</span>
+                      <span class="val">1&nbsp;444,0M <small>NOK</small></span>
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Forecastavvik</span
-                      ><span class="val" style="color: #dc2626">+26.05M</span>
+                      <span class="label">Kostnadsindeks (CPI)</span>
+                      <span class="val" style="color: #d97706"
+                        >0,95 <small>(+5% press)</small></span
+                      >
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Årsverk</span
-                      ><span class="val">1,285.9</span>
+                      <span class="label">Fremdriftsindeks (SPI)</span>
+                      <span class="val" style="color: #d97706"
+                        >0,92 <small>(BOA)</small></span
+                      >
                     </div>
                     <div class="preview-kpi-cell">
-                      <span class="label">Tiltak</span
-                      ><span class="val" style="color: var(--accent-blue)"
-                        >16 <small>actions</small></span
+                      <span class="label">Simulert m/ tiltak</span>
+                      <span class="val" style="color: #059669"
+                        >+1,2M <small>NOK</small></span
                       >
                     </div>
                   </div>
+
+                  <!-- Rich Preview Visuals Container: EVM S-Curve + AI Action Scenario Engine -->
+                  <div class="preview-visuals-container">
+                    <!-- Visual 1: EVM S-Kurve SVG Visual -->
+                    <div class="preview-visual-card">
+                      <div class="preview-visual-title">
+                        <span>📈 EVM S-Kurve &amp; Kostnadsutvikling</span>
+                        <span class="sub">Tufte Direct-Labeling</span>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 400 150"
+                        class="scurve-chart-svg"
+                        role="img"
+                        aria-label="Earned Value Management S-Kurve med PV, EV, AC og EAC kurver"
+                      >
+                        <!-- Horizontal Grid Lines (Tufte: zero vertical lines) -->
+                        <line
+                          x1="30"
+                          y1="122"
+                          x2="330"
+                          y2="122"
+                          stroke="#e2e8f0"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="30"
+                          y1="87"
+                          x2="330"
+                          y2="87"
+                          stroke="#f1f5f9"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="30"
+                          y1="52"
+                          x2="330"
+                          y2="52"
+                          stroke="#f1f5f9"
+                          stroke-width="1"
+                        />
+                        <line
+                          x1="30"
+                          y1="20"
+                          x2="330"
+                          y2="20"
+                          stroke="#f1f5f9"
+                          stroke-width="1"
+                        />
+
+                        <!-- Y-axis subtle ticks -->
+                        <text
+                          x="24"
+                          y="125"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="end"
+                        >
+                          0M
+                        </text>
+                        <text
+                          x="24"
+                          y="90"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="end"
+                        >
+                          500M
+                        </text>
+                        <text
+                          x="24"
+                          y="55"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="end"
+                        >
+                          1000M
+                        </text>
+                        <text
+                          x="24"
+                          y="23"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="end"
+                        >
+                          1500M
+                        </text>
+
+                        <!-- X-axis Month labels -->
+                        <text
+                          x="30"
+                          y="138"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                        >
+                          M01
+                        </text>
+                        <text
+                          x="105"
+                          y="138"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                        >
+                          M03
+                        </text>
+                        <text
+                          x="180"
+                          y="138"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                        >
+                          M06
+                        </text>
+                        <text
+                          x="255"
+                          y="138"
+                          fill="#0284c7"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          font-weight="700"
+                        >
+                          M09
+                        </text>
+                        <text
+                          x="330"
+                          y="138"
+                          fill="#94a3b8"
+                          font-size="8"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="middle"
+                        >
+                          M12
+                        </text>
+
+                        <!-- Status Checkpoint (M09 YTD) -->
+                        <line
+                          x1="255"
+                          y1="18"
+                          x2="255"
+                          y2="122"
+                          stroke="#cbd5e1"
+                          stroke-width="1"
+                          stroke-dasharray="2 2"
+                        />
+                        <text
+                          x="255"
+                          y="14"
+                          fill="#64748b"
+                          font-size="7.5"
+                          font-family="JetBrains Mono, monospace"
+                          text-anchor="middle"
+                        >
+                          Status YTD (M09)
+                        </text>
+
+                        <!-- PV (Planlagt Verdi: 1 433M) Curve -->
+                        <path
+                          d="M 30 122 C 105 117, 180 79, 255 47 S 310 24, 330 23"
+                          fill="none"
+                          stroke="#94a3b8"
+                          stroke-width="1.5"
+                          stroke-dasharray="4 3"
+                        />
+                        <text
+                          x="334"
+                          y="25"
+                          fill="#64748b"
+                          font-size="8.5"
+                          font-family="JetBrains Mono, monospace"
+                          font-weight="600"
+                        >
+                          PV: 1 433M
+                        </text>
+
+                        <!-- EV (Opptjent Verdi: 1 318M) Curve -->
+                        <path
+                          d="M 30 122 C 105 119, 180 85, 255 53"
+                          fill="none"
+                          stroke="#0284c7"
+                          stroke-width="2"
+                        />
+                        <circle cx="255" cy="53" r="3" fill="#0284c7" />
+                        <text
+                          x="262"
+                          y="56"
+                          fill="#0284c7"
+                          font-size="8.5"
+                          font-family="JetBrains Mono, monospace"
+                          font-weight="600"
+                        >
+                          EV: 1 318M (SPI 0.92)
+                        </text>
+
+                        <!-- AC (Faktisk Kostnad: 1 388M) Curve -->
+                        <path
+                          d="M 30 122 C 105 116, 180 77, 255 46"
+                          fill="none"
+                          stroke="#0f172a"
+                          stroke-width="2"
+                        />
+                        <circle cx="255" cy="46" r="3" fill="#0f172a" />
+                        <text
+                          x="262"
+                          y="42"
+                          fill="#0f172a"
+                          font-size="8.5"
+                          font-family="JetBrains Mono, monospace"
+                          font-weight="600"
+                        >
+                          AC: 1 388M (CPI 0.95)
+                        </text>
+
+                        <!-- EAC (Helårsprognose: 1 444M) Extension -->
+                        <path
+                          d="M 255 46 Q 292 33, 330 21"
+                          fill="none"
+                          stroke="#d97706"
+                          stroke-width="2"
+                          stroke-dasharray="4 2"
+                        />
+                        <circle cx="330" cy="21" r="3" fill="#d97706" />
+                        <text
+                          x="334"
+                          y="16"
+                          fill="#d97706"
+                          font-size="9"
+                          font-family="JetBrains Mono, monospace"
+                          font-weight="700"
+                        >
+                          EAC: 1 444M
+                        </text>
+                      </svg>
+                    </div>
+
+                    <!-- Visual 2: AI Action Engine Scenario Bars + Faculty Variance Matrix -->
+                    <div class="preview-visual-card">
+                      <div class="preview-visual-title">
+                        <span>🤖 AI Action Engine &bull; Gap-Lukking</span>
+                        <span class="sub">+12,2M Tiltakspakke</span>
+                      </div>
+                      <div class="scenario-bars">
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label"
+                              >1. Grunnprognose (Før tiltak)</span
+                            >
+                            <span class="val" style="color: #dc2626"
+                              >-11,0 MNOK</span
+                            >
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div
+                              class="scenario-bar-fill"
+                              style="width: 28%; background: #ef4444"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label"
+                              >2. Vedtatt omstilling (FactAction)</span
+                            >
+                            <span class="val" style="color: #0284c7"
+                              >+12,2 MNOK</span
+                            >
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div
+                              class="scenario-bar-fill"
+                              style="width: 95%; background: #0284c7"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="scenario-row">
+                          <div class="scenario-row-meta">
+                            <span class="label">3. Simulert sluttresultat</span>
+                            <span class="val" style="color: #059669"
+                              >+1,2 MNOK (I balanse)</span
+                            >
+                          </div>
+                          <div class="scenario-bar-track">
+                            <div
+                              class="scenario-bar-fill"
+                              style="width: 100%; background: #10b981"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Faculty Variance Strip -->
+                      <div class="faculty-variance-strip">
+                        <span class="faculty-var-pill negative"
+                          ><strong>HEL</strong> -4,8M</span
+                        >
+                        <span class="faculty-var-pill negative"
+                          ><strong>TEK</strong> -3,2M</span
+                        >
+                        <span class="faculty-var-pill negative"
+                          ><strong>SV</strong> -2,1M</span
+                        >
+                        <span class="faculty-var-pill negative"
+                          ><strong>LER</strong> -1,6M</span
+                        >
+                        <span class="faculty-var-pill positive"
+                          ><strong>ØKO</strong> +0,8M</span
+                        >
+                        <span class="faculty-var-pill"
+                          ><strong>Felles</strong> -0,1M</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="preview-modules-list">
                     <span class="preview-module-tag"
-                      ><strong>01</strong> Instituttleder</span
+                      ><strong>01</strong> EVM S-Kurve (PV/EV/AC/EAC)</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>02</strong> Dekan &amp; fakultet</span
+                      ><strong>02</strong> Fakultetsvis Netto Avvik</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>03</strong> Universitetsdirektør</span
+                      ><strong>03</strong> AI Action Engine Simulator</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>07</strong> Action Tracker</span
+                      ><strong>04</strong> FactAction Tiltaksportefølje</span
                     >
                     <span class="preview-module-tag"
-                      ><strong>08</strong> Controller Cockpit</span
+                      ><strong>05</strong> SRS 1/9/10/17 &amp; BOA TDI</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>06</strong> 5%-Regel for Avsetninger
+                      (k2080)</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>07</strong> Styrenotat AI Co-Pilot</span
                     >
                   </div>
                 </div>
@@ -1779,19 +2378,19 @@
 
               <div class="project-actions">
                 <a
-                  href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
+                  href="https://frank-ellingsen.github.io/university_controlling/"
                   target="_blank"
                   rel="noopener"
                   class="btn-action-primary"
                 >
-                  Open Live Controller Portal &rarr;
+                  Open Live Executive Report &rarr;
                 </a>
                 <button
                   type="button"
                   class="btn-action-secondary preview-modal-trigger"
-                  data-preview-url="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
-                  data-preview-title="Statlig Utdanningsinstitusjon — Controller &amp; Forecast Portal"
-                  data-preview-icon="📊"
+                  data-preview-url="https://frank-ellingsen.github.io/university_controlling/"
+                  data-preview-title="University | Controller Executive Report &amp; AI Action Engine"
+                  data-preview-icon="🏛️"
                   title="Interactive live modal preview"
                 >
                   <svg
@@ -1812,7 +2411,7 @@
                   Interactive Quick Preview
                 </button>
                 <a
-                  href="https://github.com/Frank-Ellingsen/pbi_statlig_regnskapsstandarder"
+                  href="https://github.com/Frank-Ellingsen/university_controlling"
                   target="_blank"
                   rel="noopener"
                   class="btn-action-secondary"
@@ -1820,50 +2419,6 @@
                   GitHub Repository ↗
                 </a>
               </div>
-            </div>
-
-            <div class="project-media controller-dashboard-preview">
-              <a
-                href="https://frank-ellingsen.github.io/pbi_statlig_regnskapsstandarder/"
-                target="_blank"
-                rel="noopener"
-                title="Click to open the live Controller & Forecast Portal"
-              >
-                <div class="media-live-badge">
-                  <span class="live-dot"></span> LIVE PORTAL
-                </div>
-                <div class="dashboard-topline">
-                  <span>Power BI / PBIP</span><span>DFØ SRS R-102</span>
-                </div>
-                <div class="dashboard-heading">
-                  Instituttleder<br />Operativ styring
-                </div>
-                <div class="dashboard-kpis">
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Regnskap YTD</span
-                    ><span class="dashboard-kpi-value">10.62M</span>
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Forecast LE</span
-                    ><span class="dashboard-kpi-value">36.79M</span>
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Avvik YTD</span
-                    ><span class="dashboard-kpi-value" style="color: #86efac"
-                      >-130K</span
-                    >
-                  </div>
-                  <div class="dashboard-kpi">
-                    <span class="dashboard-kpi-label">Forecastavvik</span
-                    ><span class="dashboard-kpi-value" style="color: #fca5a5"
-                      >+26.05M</span
-                    >
-                  </div>
-                </div>
-                <div class="dashboard-footer">
-                  <span>13 dashboards</span><span>43/43 QA tests</span>
-                </div>
-              </a>
             </div>
           </article>
 
@@ -2307,6 +2862,31 @@
                 >
                   Watch Video on YouTube &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://www.youtube.com/embed/Eo1HK0InVc4?autoplay=1"
+                  data-preview-title="AI in Business Strategy"
+                  data-preview-icon="🎥"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -2860,6 +3440,31 @@
                 >
                   Open Whiteboard &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/Whiteboard-App/"
+                  data-preview-title="Project Controls Whiteboard"
+                  data-preview-icon="🧭"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -2928,6 +3533,31 @@
                 >
                   Live Interactive Dashboard &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/PMO-EVM-Analytics-in-Microsoft-Fabric/"
+                  data-preview-title="PMO EVM Analytics in Microsoft Fabric"
+                  data-preview-icon="📈"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
                 <a
                   href="https://github.com/Frank-Ellingsen/PMO-EVM-Analytics-in-Microsoft-Fabric"
                   target="_blank"
@@ -2996,6 +3626,31 @@
                 >
                   Live Interactive Dashboard &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/North-Sea-Oil-Platform-Drill-Tower-Construction/"
+                  data-preview-title="North Sea Oil Platform Drill Tower Construction"
+                  data-preview-icon="🛢️"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
                 <a
                   href="https://github.com/Frank-Ellingsen/North-Sea-Oil-Platform-Drill-Tower-Construction"
                   target="_blank"
@@ -3058,6 +3713,31 @@
                 >
                   Explore AI System &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/3-Layer-Agentic-AI-Topic-Researcher/"
+                  data-preview-title="3-Layer Agentic AI Topic Researcher"
+                  data-preview-icon="🤖"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
                 <a
                   href="https://github.com/Frank-Ellingsen/3-Layer-Agentic-AI-Topic-Researcher"
                   target="_blank"
@@ -3080,6 +3760,192 @@
                   alt="3-Layer Agentic AI Topic Researcher Architecture"
                   loading="lazy"
                 />
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Multi-Agent Architectures for Autonomous Data Analytics -->
+          <article
+            class="project-card featured-flagship"
+            data-category="ai bi controlling"
+          >
+            <div class="project-body">
+              <div>
+                <div class="project-category">
+                  Flagship AI &amp; Autonomous Data Analytics
+                </div>
+                <h3 class="project-title">
+                  Multi-Agent Architectures for Autonomous Data Analytics
+                </h3>
+
+                <div class="tag-list">
+                  <span class="tag-badge primary">Multi-Agent AI</span>
+                  <span class="tag-badge primary">Financial Analytics</span>
+                  <span class="tag-badge primary">30 Modular Skills</span>
+                  <span class="tag-badge">DuckDB &amp; SQLite</span>
+                  <span class="tag-badge">Forecasting &amp; Monte Carlo</span>
+                  <span class="tag-badge">Tufte Data-Ink UI</span>
+                </div>
+
+                <p class="project-description">
+                  A production-ready framework that transforms enterprise data
+                  into decision-ready executive intelligence through six
+                  autonomous phases: ingestion, modeling, diagnostics,
+                  prognostics, prescriptions, and storytelling. Includes a web
+                  Analytics Studio, deterministic governance, and multi-provider
+                  LLM integration.
+                </p>
+
+                <div class="preview-summary-box">
+                  <div class="preview-header">
+                    <span class="preview-title-badge">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                          d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.7 1.7-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V20h-2.4v-.2a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-1.7-1.7.06-.06A1.7 1.7 0 0 0 8.4 15a1.7 1.7 0 0 0-1.56-1.03H6v-2.4h.2A1.7 1.7 0 0 0 7.76 10a1.7 1.7 0 0 0-.34-1.88l-.06-.06 1.7-1.7.06.06A1.7 1.7 0 0 0 11 6.08V6h2.4v.08a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.7 1.7-.06.06A1.7 1.7 0 0 0 17.6 10a1.7 1.7 0 0 0 1.56 1.03h.2v2.4h-.2A1.7 1.7 0 0 0 17.6 15z"
+                        ></path>
+                      </svg>
+                      Analytics Studio Preview
+                    </span>
+                    <span class="preview-status-pill"
+                      >30 skills &bull; 6 phases</span
+                    >
+                  </div>
+                  <div class="preview-kpi-row">
+                    <div class="preview-kpi-cell">
+                      <span class="label">ERP Tables</span
+                      ><span class="val">15</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Rows Analyzed</span
+                      ><span class="val">127K</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Relationships</span
+                      ><span class="val">22</span>
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Integrity</span
+                      ><span class="val" style="color: var(--accent-teal)"
+                        >100%</span
+                      >
+                    </div>
+                    <div class="preview-kpi-cell">
+                      <span class="label">Engine</span
+                      ><span class="val">DuckDB</span>
+                    </div>
+                  </div>
+                  <div class="preview-modules-list">
+                    <span class="preview-module-tag"
+                      ><strong>I</strong> Ingest &amp; inspect</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>II</strong> Model &amp; validate</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>III</strong> Diagnose &amp; measure</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>IV</strong> Forecast &amp; simulate</span
+                    >
+                    <span class="preview-module-tag"
+                      ><strong>V–VI</strong> Prescribe &amp; publish</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://frank-ellingsen.github.io/Multi-Agent-Architectures-for-Autonomous-Data-Analytics/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-primary"
+                >
+                  Open Analytics Studio &rarr;
+                </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/Multi-Agent-Architectures-for-Autonomous-Data-Analytics/"
+                  data-preview-title="Multi-Agent Architectures for Autonomous Data Analytics"
+                  data-preview-icon="🧠"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
+                <a
+                  href="https://github.com/Frank-Ellingsen/Multi-Agent-Architectures-for-Autonomous-Data-Analytics"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-action-secondary"
+                >
+                  GitHub Repository ↗
+                </a>
+              </div>
+            </div>
+
+            <div class="project-media multi-agent-preview">
+              <a
+                href="https://frank-ellingsen.github.io/Multi-Agent-Architectures-for-Autonomous-Data-Analytics/"
+                target="_blank"
+                rel="noopener"
+                title="Open the Multi-Agent Analytics Studio"
+              >
+                <div class="media-live-badge">
+                  <span class="live-dot"></span> LIVE STUDIO
+                </div>
+                <div class="preview-topline">
+                  <span>Autonomous AI</span><span>Decision Intelligence</span>
+                </div>
+                <h4>Analytics Studio</h4>
+                <div class="phase-list">
+                  <div class="phase-item">
+                    <strong>Phase I</strong>Ingest &amp; inspect
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase II</strong>Schema &amp; modeling
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase III</strong>Diagnostics &amp; KPIs
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase IV</strong>Prognostics &amp; simulation
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase V</strong>Prescriptions &amp; optimization
+                  </div>
+                  <div class="phase-item">
+                    <strong>Phase VI</strong>Storytelling &amp; publishing
+                  </div>
+                </div>
+                <div class="preview-footer">
+                  <span>15-table demo ERP</span><span>RAG governance</span>
+                </div>
               </a>
             </div>
           </article>
@@ -3120,6 +3986,31 @@
                 >
                   Live EVM Dashboard &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/Project-Mangagement/"
+                  data-preview-title="Project Finance AI &amp; EVM Performance Dashboard"
+                  data-preview-icon="📊"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
                 <a
                   href="https://github.com/Frank-Ellingsen/Project-Mangagement"
                   target="_blank"
@@ -3179,6 +4070,31 @@
                 >
                   Maven Showcase &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://mavenshowcase.com/project/55578"
+                  data-preview-title="Car Rental Analytics Platform"
+                  data-preview-icon="🚗"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3227,6 +4143,31 @@
                 >
                   Open Live Application &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://flight-app-sandy-one.vercel.app/"
+                  data-preview-title="Flights Tracker Norway"
+                  data-preview-icon="✈️"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3273,6 +4214,31 @@
                 <a href="housing_details.html" class="btn-action-primary">
                   Technical Case Study &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="housing_details.html"
+                  data-preview-title="Housing Price Valuation Predictor"
+                  data-preview-icon="🏠"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3321,6 +4287,31 @@
                 >
                   Open Tableau Report &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/Global_Countries_Report/"
+                  data-preview-title="Global Countries Demographic &amp; Economic Report"
+                  data-preview-icon="🌍"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3373,6 +4364,31 @@
                 >
                   Open Weather Dashboard &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/weather-project/"
+                  data-preview-title="Automated Weather Reporting Pipeline"
+                  data-preview-icon="🌦️"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3425,6 +4441,31 @@
                 >
                   View Excel Model (OneDrive) &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://1drv.ms/x/c/54f658c2284aac0e/IQCQXBIr8-gTQ6AVag90f6paARp2AxslK-PmbqLS99vNzf4?e=vGANMK"
+                  data-preview-title="World Cup 2026 Analytical Schedule Model"
+                  data-preview-icon="🏆"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
@@ -3476,6 +4517,31 @@
                 >
                   Open AI Learning Library &rarr;
                 </a>
+                <button
+                  type="button"
+                  class="btn-action-secondary preview-modal-trigger"
+                  data-preview-url="https://frank-ellingsen.github.io/AI-Learn/"
+                  data-preview-title="AI Learning Library"
+                  data-preview-icon="📚"
+                  title="Interactive live modal preview"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  Interactive Quick Preview
+                </button>
               </div>
             </div>
 
