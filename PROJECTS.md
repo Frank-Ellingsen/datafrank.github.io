@@ -1,5 +1,12 @@
 # Portfolio Projects Documentation
 
+## Kristiansand EPM & Responsible AI Framework
+- **Description**: Full-scale Antigravity EPM Framework for proactive municipal financial management in Kristiansand kommune. Shifts municipal controlling from traditional, reactive trimester reporting to continuous, agent-based early warning (60–90 days prior to trimester close). Implemented across two representative units: Mevold Grunnskole (KOSTRA 202; frame budget, teaching hour compliance, and substitute teacher variance) and Slettheia Bofellesskap (KOSTRA 254; 24/7 care facility with shift pressures, overtime, and agency costs). Built on a canonical Single Source of Truth (SSOT) star schema in SQLite and DuckDB, Power BI / DAX forecasting models, and strict compliance with Kommuneloven § 14-5, the gross accounting principle (§ 14-6), and EU AI Act (Human-in-the-Loop audit logging).
+- **Technologies**: Municipal EPM Analytics, KOSTRA SSOT, Multi-Agent Architecture (8 Agents), Human-in-the-Loop (HITL), SQLite & DuckDB Star Schema, Power BI & DAX Modeling, EU AI Act & Kommuneloven Compliance, Edward Tufte Data-Ink UI.
+- **Business Impact**: Provides municipal financial controllers, department leaders, and council committees with T-60 day early warning on budget variances, prescriptive action menus (A, B, C) with confidence scoring, and full auditability for automated AI advisories.
+- **GitHub Repository**: [Bruk av AI i kommunal sektor Repo](https://github.com/Frank-Ellingsen/Bruk-av-AI-i-kommunal-sektor)  
+- **Live Demo**: [Kristiansand EPM & Responsible AI Framework Live](https://frank-ellingsen.github.io/Bruk-av-AI-i-kommunal-sektor/)
+
 ## Power Market Back Office & Data Platform (Skagerak Kraft)
 - **Description**: Full-scale Power Market Back Office and Project Controller platform engineered for portfolio anomaly detection, hydropower generation monitoring (52 plants across NO1, NO2, and NO5 price zones), and physical power imbalance settlement. Features dynamic EVM-style imbalance risk simulation (BAC/AC/ETC/EAC), interactive S-Curves with direct labeling, an Isolation Forest machine learning anomaly detection engine for SCADA telemetry faults, and an in-browser DuckDB/SQLite analytical SQL studio.
 - **Technologies**: Project Controlling & EVM, Isolation Forest (Machine Learning), DuckDB (OLAP) & SQLite (OLTP), Edward Tufte Data-Ink UI, Interactive SVG S-Curves, Nord Pool / Statnett Settlement.
