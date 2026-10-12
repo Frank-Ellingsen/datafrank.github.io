@@ -7,6 +7,22 @@
 - **GitHub Repository**: [Bruk av AI i kommunal sektor Repo](https://github.com/Frank-Ellingsen/Bruk-av-AI-i-kommunal-sektor)  
 - **Live Demo**: [Kristiansand EPM & Responsible AI Framework Live](https://frank-ellingsen.github.io/Bruk-av-AI-i-kommunal-sektor/)
 
+## Brønnøysund AI Lookup & Financial S-Curve Prognosis
+- **Description**: Real-time Norwegian corporate intelligence platform powered by the official Brønnøysundregisteret Open REST API (Enhetsregisteret) and Google Gemini AI. Enables instant company lookup by organization number (org.nr) or company name across all Norwegian enterprises (e.g. AMOK EQUIPMENT AS, UMOE MANDAL AS, EQUINOR ASA, KONGSBERG GRUPPEN ASA). Features automated strategic financial diagnosis, AI action recommendations (EAC cost overrun mitigation, DSO reduction, FX/material hedging), and 12-month cumulative free cash flow S-Curve trajectory modeling adhering to Edward Tufte Data-Ink principles.
+- **Technologies**: Brønnøysund Enhetsregisteret API, Google Gemini AI 2.5 Flash, Financial S-Curve Prognosis, EAC Risk Mitigation, Working Capital & DSO, Chart.js 4.4 Engine, Edward Tufte Data-Ink Standard.
+- **Business Impact**: Provides project controllers, financial analysts, and corporate leadership with instant Norwegian enterprise registration lookup, automated AI strategic recommendations, and predictive 12-month cash flow trajectory modeling.
+- **GitHub Repository**: [Look_Up_Bronnoysund Repo](https://github.com/Frank-Ellingsen/Look_Up_Bronnoysund)  
+- **Live Demo**: [Brønnøysund AI Lookup & Financial S-Curve Prognosis](https://frank-ellingsen.github.io/br-nn-ysund-oppslag/)
+
+## AMOK EQUIPMENT AS — Integrated 3-Statement Model & Executive Dashboard
+- **Description**: End-to-end corporate financial intelligence suite, SQLite DataOps engine, integrated 8-year 3-statement financial model (2023–2030), and Power BI developer project for AMOK EQUIPMENT AS (Org.nr 911823705). Features automated API extraction from Brønnøysundregistrene (BrReg), FAST/ICAEW compliant Excel corkscrew modeling with 4 dynamic scenario cases (Base, Bull, Bear, Severe Stress), transactional SQLite WAL-mode database with cryptographic SHA-256 audit logging, and Power BI PBIP developer mode with TMDL semantic models and PBIR report layouts.
+- **Technologies**: Integrated 3-Statement Model, FAST & ICAEW Standard, SQLite WAL-Mode DataOps, Brønnøysundregistrene BrReg API, Power BI PBIP Developer Mode (TMDL/PBIR), SR 11-7 & EU AI Act Governance, Edward Tufte Data-Ink UI.
+- **Business Impact**: Delivers C-suite executive financial intelligence, 8-year liquidity and solvency forecasting, stress testing under extreme macroeconomic shifts, and version-controlled PBIP semantic reporting.
+- **GitHub Repository**: [Three_State_Model Repository](https://github.com/Frank-Ellingsen/Three_State_Model)  
+- **Live Demo**: [AMOK EQUIPMENT 3-Statement Model & Executive Dashboard Demo](https://frank-ellingsen.github.io/Three_State_Model/)  
+- **Excel Model**: [Excel 3-Statement Model](https://github.com/Frank-Ellingsen/Three_State_Model/blob/main/models/Amok_Equipment_Integrated_3_Statement_Model.xlsx)  
+- **Power BI Report**: [Power BI PBIP Project](https://github.com/Frank-Ellingsen/Three_State_Model/tree/main/powerbi)
+
 ## Power Market Back Office & Data Platform (Skagerak Kraft)
 - **Description**: Full-scale Power Market Back Office and Project Controller platform engineered for portfolio anomaly detection, hydropower generation monitoring (52 plants across NO1, NO2, and NO5 price zones), and physical power imbalance settlement. Features dynamic EVM-style imbalance risk simulation (BAC/AC/ETC/EAC), interactive S-Curves with direct labeling, an Isolation Forest machine learning anomaly detection engine for SCADA telemetry faults, and an in-browser DuckDB/SQLite analytical SQL studio.
 - **Technologies**: Project Controlling & EVM, Isolation Forest (Machine Learning), DuckDB (OLAP) & SQLite (OLTP), Edward Tufte Data-Ink UI, Interactive SVG S-Curves, Nord Pool / Statnett Settlement.
