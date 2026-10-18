@@ -1,5 +1,12 @@
 # Portfolio Projects Documentation
 
+## Kristiansand Kommune — AI Project Controller Hub & EPM Analytics
+- **Description**: Enterprise-grade municipal project controlling, EPM analytics, and Responsible AI platform developed for Kristiansand kommune covering 6 business sectors (Oppvekst, Helse, Byutvikling, Kultur, Org/Tek, Økonomi), 81 subordinate units, and a total budget allocation of 7.24 billion NOK (BAC). Features automated budget-to-actual variance detection in Visma Enterprise ERP reconciled against Framsikt EPM, rolling full-year EAC/ETC prognosis, statutory compliance monitoring (Kommuneloven §§ 14-5 & 14-6, HTA § 4, VAT Compensation Act Account 2130), Responsible AI governance with Human-in-the-Loop (HITL) Stage-Gate approval gates (Port 4 & 9), immutable SHA-256 audit logging, and one-click political reporting exports (PowerPoint/Word).
+- **Technologies**: Kommuneloven §§ 14-5/14-6, Framsikt EPM & Visma ERP, Ansvarlig AI (HITL Approval Gate), SQLite Golden Record & DuckDB OLAP, Google Gemini 3.8 Flash & Ollama, EU AI Act (Art. 26/27 FRIA), VAT Comp Account 2130, Edward Tufte Data-Ink Standard.
+- **Business Impact**: Delivers C-level and council-grade financial transparency for Kristiansand kommune, ensuring statutory compliance, early detection of payroll and sub-budget overruns, and transparent human-overseen AI decision support.
+- **GitHub Repository**: [AI_KOM Repository](https://github.com/Frank-Ellingsen/AI_KOM)  
+- **Live Demo**: [Kristiansand Kommune Control Office Hub](https://frank-ellingsen.github.io/AI_KOM/)
+
 ## Brønnøysund AI Lookup & Financial S-Curve Prognosis
 - **Description**: Real-time Norwegian corporate intelligence platform powered by the official Brønnøysundregisteret Open REST API (Enhetsregisteret) and Google Gemini AI. Enables instant company lookup by organization number (org.nr) or company name across all Norwegian enterprises (e.g. AMOK EQUIPMENT AS, UMOE MANDAL AS, EQUINOR ASA, KONGSBERG GRUPPEN ASA). Features automated strategic financial diagnosis, AI action recommendations (EAC cost overrun mitigation, DSO reduction, FX/material hedging), and 12-month cumulative free cash flow S-Curve trajectory modeling adhering to Edward Tufte Data-Ink principles.
 - **Technologies**: Brønnøysund Enhetsregisteret API, Google Gemini AI 2.5 Flash, Financial S-Curve Prognosis, EAC Risk Mitigation, Working Capital & DSO, Chart.js 4.4 Engine, Edward Tufte Data-Ink Standard.
