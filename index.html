@@ -589,6 +589,12 @@
     }
 
     /* Project Card */
+    .project-card,
+    .project-body,
+    .project-media {
+      min-width: 0;
+    }
+
     .project-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-light);
@@ -597,7 +603,7 @@
       box-shadow: var(--shadow-card);
       transition: var(--transition);
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
       align-items: stretch;
     }
 
@@ -612,7 +618,7 @@
     }
 
     .project-card.featured-flagship.ui-left-illustration {
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     }
 
     .project-card.featured-flagship.ui-left-illustration .project-media {
@@ -626,6 +632,47 @@
     }
 
     .project-card.featured-flagship.ui-left-illustration .project-body {
+      order: 1;
+    }
+
+    /* Hero Banner Flagship Card (Full-width Live Preview Showcase) */
+    .project-card.featured-flagship.ui-hero-banner {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: none;
+    }
+
+    .project-card.featured-flagship.ui-hero-banner .project-media {
+      order: 0;
+      width: 100%;
+      background: #09131d;
+      border-left: none;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+    }
+
+    .project-card.featured-flagship.ui-hero-banner .project-media a {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .project-card.featured-flagship.ui-hero-banner .project-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card.featured-flagship.ui-hero-banner:hover .project-media img {
+      transform: scale(1.01);
+    }
+
+    .project-card.featured-flagship.ui-hero-banner .project-body {
       order: 1;
     }
 
@@ -1994,18 +2041,18 @@
         </article>
 
         <!-- 2. TOP FEATURED PROJECT: Kristiansand EPM & Responsible AI Framework -->
-        <article class="project-card featured-flagship ui-left-illustration" data-category="controlling bi ai">
+        <article class="project-card featured-flagship ui-hero-banner" data-category="controlling bi ai">
           <div class="project-media">
             <a href="https://frank-ellingsen.github.io/AI_KOM/" target="_blank" rel="noopener"
               title="Click to open live Kristiansand EPM &amp; Responsible AI Framework">
               <div class="media-live-badge">
-                <span class="live-dot"></span> LIVE FRAMEWORK &bull; MUNICIPAL EPM &amp; AI
+                <span class="live-dot"></span> LIVE WEB APP &bull; CONTROL OFFICE HUB
               </div>
-              <img src="images/kristiansand_epm_ai.png"
-                alt="Kristiansand EPM &amp; Responsible AI Framework Architecture" loading="lazy" />
+              <img src="images/kristiansand_epm_hub.png"
+                alt="Kristiansand EPM &amp; Responsible AI Framework — Control Office Hub &amp; Topp 3 Finansielle Nøkkeltall" loading="lazy" />
               <div class="media-caption-overlay">
-                <span>🏛️ Kristiansand EPM &amp; Responsible AI Framework</span>
-                <span style="color: #38bdf8; font-weight: 600">Open Live Framework ↗</span>
+                <span>🏛️ Kristiansand EPM &bull; Control Office Hub</span>
+                <span style="color: #38bdf8; font-weight: 600">Open Live Hub ↗</span>
               </div>
             </a>
           </div>
