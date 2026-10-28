@@ -693,6 +693,11 @@
       margin-bottom: 0.5rem;
     }
 
+    .project-category a:hover {
+      text-decoration: underline;
+      color: var(--cyan-600);
+    }
+
     .project-title {
       font-family: var(--font-heading);
       font-size: 1.35rem;
@@ -1805,7 +1810,7 @@
       <!-- Domain Filter Tabs (Interactive Vanilla JS) -->
       <div class="filter-bar" role="tablist" aria-label="Project Categories">
         <button class="filter-btn active" data-filter="all">
-          All Projects (26)
+          All Projects (27)
         </button>
         <button class="filter-btn" data-filter="controlling">
           Project Controlling &amp; EVM
@@ -1819,16 +1824,16 @@
       </div>
 
       <div class="projects-list" id="projectsContainer">
-        <!-- 1. TOP FEATURED PROJECT: KOM-G | Kristiansand Kommune – Finansiell Virksomhetsstyring & KOSTRA Cockpit -->
+        <!-- 1. TOP FEATURED FLAGSHIP: KOM-G | Kristiansand Kommune – Finansiell Virksomhetsstyring & KOSTRA Cockpit -->
         <article class="project-card featured-flagship ui-hero-banner" data-category="controlling bi ai">
           <div class="project-media">
             <a href="https://frank-ellingsen.github.io/KOM-G/" target="_blank" rel="noopener"
               title="Click to open live KOM-G | Kristiansand Kommune – Finansiell Virksomhetsstyring &amp; KOSTRA Cockpit">
               <div class="media-live-badge">
-                <span class="live-dot"></span> LIVE WEB APP &bull; KOSTRA COCKPIT &amp; EPM
+                <span class="live-dot"></span> LIVE WEB APP &bull; KOSTRA COCKPIT &amp; PBIP
               </div>
-              <img src="images/kom_g_cockpit_hero.png"
-                alt="KOM-G — Kristiansand Kommune KOSTRA Cockpit &amp; Finansiell Virksomhetsstyring" loading="lazy" />
+              <img src="images/kom_g_kostra_cockpit.png"
+                alt="KOM-G | Kristiansand Kommune – Finansiell Virksomhetsstyring &amp; KOSTRA Cockpit Dashboard" loading="lazy" />
               <div class="media-caption-overlay">
                 <span>🏛️ KOM-G &bull; Kristiansand KOSTRA Cockpit</span>
                 <span style="color: #38bdf8; font-weight: 600">Open Live Cockpit ↗</span>
@@ -1853,27 +1858,32 @@
                   </svg>
                   TOP FEATURED FLAGSHIP
                 </span>
-                &bull; Kommunal Virksomhetsstyring, KOSTRA Cockpit, Hybrid RAG &amp; ML Tidsserieprognoser
+                &bull; <a href="https://frank-ellingsen.github.io/KOM-G/" target="_blank" rel="noopener"
+                  style="color: inherit; text-decoration: none">KOM-G | Kristiansand Kommune &ndash; Finansiell Virksomhetsstyring, KOSTRA Cockpit, Hybrid RAG &amp; ML Tidsserieprognoser</a>
               </div>
               <h3 class="project-title">
                 <a href="https://frank-ellingsen.github.io/KOM-G/" target="_blank" rel="noopener"
                   style="color: inherit; text-decoration: none">
-                  KOM-G | Kristiansand Kommune – Finansiell Virksomhetsstyring &amp; KOSTRA Cockpit
+                  KOM-G | Kristiansand Kommune &ndash; Finansiell Virksomhetsstyring &amp; KOSTRA Cockpit
                 </a>
               </h3>
 
               <div class="tag-list">
-                <span class="tag-badge primary">Power BI PBIP &amp; TMDL / PBIR</span>
+                <span class="tag-badge primary">Power BI PBIP (.pbip / .tmdl)</span>
+                <span class="tag-badge primary">Stjerneskjema (fact_data)</span>
+                <span class="tag-badge primary">78 DAX Måltall (_Måltall)</span>
                 <span class="tag-badge primary">25 Spesialiserte Rapportsider</span>
-                <span class="tag-badge primary">Random Forest ML Tidsserie &amp; Drift</span>
+                <span class="tag-badge primary">Random Forest ML Tidsserieprognoser</span>
                 <span class="tag-badge primary">MLflow Tracking Server</span>
                 <span class="tag-badge primary">Hybrid RAG (ChromaDB + BM25 + RRF)</span>
                 <span class="tag-badge primary">AI Controller Chatbot</span>
                 <span class="tag-badge primary">Uforanderlig DuckDB Audit Trail</span>
                 <span class="tag-badge">NOARK 5 &amp; eInnsyn Hotfolder</span>
                 <span class="tag-badge">Star Schema &amp; DuckDB OLAP</span>
-                <span class="tag-badge">What-If Scenariosimulator (EAC)</span>
+                <span class="tag-badge">What-If Scenariosimulator (EAC / Kutt)</span>
                 <span class="tag-badge">Tufte S-Kurver (Edward Tufte Standard)</span>
+                <span class="tag-badge">KOSTRA Funksjon (4-siffer) &amp; Art (6-siffer)</span>
+                <span class="tag-badge">Oppvekst (KomSkole) &amp; Helse (Bomiljø 2540)</span>
                 <span class="tag-badge">Kommuneloven §§ 13-1, 14-6 &amp; 16-1</span>
                 <span class="tag-badge">Offentleglova § 3 &amp; Forvaltningsloven</span>
                 <span class="tag-badge">Anskaffelsesstrategi Kristiansand 2026–2030</span>
@@ -1883,10 +1893,10 @@
               </div>
 
               <p class="project-description">
-                Helhetlig virksomhetsstyrings- og rapporteringsplattform (<strong>KOM-G / KomKostra</strong>) for <strong>Kristiansand kommune</strong>, bygget på <strong>Power BI Developer Mode (.pbip)</strong> med <strong>TMDL</strong> og <strong>PBIR</strong>, samt en interaktiv executive web-cockpit og Streamlit AI Workbench. Løsningen overvåker driftssektorene <strong>Oppvekst og Utdanning (KomSkole)</strong> og <strong>Helse og Omsorg (Bomiljø)</strong> mot <strong>KOSTRA-standarden</strong> og <strong>Kommuneloven § 14-6</strong>. Plattformen integrerer <strong>Random Forest maskinlæring</strong> for tidsserieprognoser med automatisert <strong>Model Drift-deteksjon (&gt;20 % økning i MAE)</strong> koblet til <strong>MLflow</strong>, en <strong>Hybrid RAG-vektordatabase</strong> (ChromaDB + BM25 med Reciprocal Rank Fusion) forankret i lovverk og kommunale anskaffelsesstrategier, en <strong>flytende AI Controller Chatbot</strong>, interaktiv <strong>What-If scenariosimulering</strong> av budsjettbalanse (EAC), samt en <strong>uforanderlig DuckDB revisjonslogg</strong> med automatisk eksport til <strong>NOARK 5 / eInnsyn hotfolder</strong> (Public 360 / Elements).
+                <strong>KOM-G (KomKostra)</strong> er en helhetlig virksomhetsstyrings- og rapporteringsløsning for <strong>Kristiansand kommune</strong> bygget på <strong>Power BI Developer Mode (PBIP)</strong> med <strong>TMDL</strong> (Tabular Model Definition Language) og <strong>PBIR</strong> (Power BI Report format), samt en interaktiv executive web-cockpit og Streamlit AI Workbench. Løsningen strukturerer faktiske ERP- og budsjettdata (<code>fact_data</code>) i et stringent stjerneskjema koblet mot KOSTRA-kontoplan og funksjonsinndeling for kommunens to sentrale driftssektorer: <strong>Oppvekst og Utdanning (KomSkole)</strong> og <strong>Helse og Omsorg (Bomiljø 2540)</strong>. Modellen inneholder <strong>78 sentraliserte DAX-måltall</strong>, <strong>25 spesialiserte rapportsider</strong> (ledelsesrapporter, MoM-tidsserier, overforbruksrangering og KOSTRA-strukturer), <strong>Tufte S-kurver</strong> med 3-måneders glidende snitt, <strong>What-If scenariosimulator</strong> for tiltak og budsjettomdisponering, <strong>Random Forest ML-tidsserieprognoser</strong> med automatisert Model Drift-varsel koblet til <strong>MLflow</strong>, <strong>Hybrid RAG-vektordatabase</strong> (ChromaDB + BM25 med Reciprocal Rank Fusion) forankret i lovverk, flytende <strong>AI Controller Chatbot</strong>, samt <strong>uforanderlig DuckDB revisjonsspor</strong> med automatisk eksport til <strong>NOARK 5 / eInnsyn hotfolder</strong> (Public 360 / Elements).
               </p>
 
-              <!-- Live Framework Content Preview Widget (Tufte High Data-Ink) -->
+              <!-- Live README Summary Widget (Tufte High Data-Ink) -->
               <div class="preview-summary-box">
                 <div class="preview-header">
                   <span class="preview-title-badge">
@@ -1896,48 +1906,48 @@
                       <line x1="8" y1="21" x2="16" y2="21"></line>
                       <line x1="12" y1="17" x2="12" y2="21"></line>
                     </svg>
-                    README Summary &bull; KOM-G KomKostra Virksomhetsstyring &amp; KOSTRA Cockpit
+                    README Summary &bull; KOM-G KomKostra &bull; Kristiansand Kommune KOSTRA Cockpit
                   </span>
-                  <span class="preview-status-pill">v2.4 &bull; PBIP TMDL &bull; 25 Sider &bull; Random Forest ML &bull; Hybrid RAG &bull; DuckDB Audit</span>
+                  <span class="preview-status-pill">v2.4 &bull; PBIP + TMDL &bull; 78 DAX-Måltall &bull; 25 Rapportsider &bull; YTD Avvik -2 229,6 kNOK</span>
                 </div>
 
                 <!-- Executive KPI / Metric Summary Row -->
                 <div class="preview-kpi-row">
                   <div class="preview-kpi-cell">
-                    <span class="label">Rapporteringsomfang</span>
-                    <span class="val">M08 / YTD <small>(Oppvekst &amp; Helse)</small></span>
+                    <span class="label">Konsolidert YTD Regnskap</span>
+                    <span class="val">31 524,9 k <small>(Budsj: 29 295,2 k)</small></span>
                   </div>
                   <div class="preview-kpi-cell">
-                    <span class="label">Power BI Stack</span>
-                    <span class="val">25 Sider <small>(PBIP, TMDL, PBIR)</small></span>
+                    <span class="label">Akkumulert YTD Avvik</span>
+                    <span class="val" style="color: #c0392b">-2 229,6 k <small>(-107,6 %)</small></span>
                   </div>
                   <div class="preview-kpi-cell">
-                    <span class="label">ML Tidsserie</span>
-                    <span class="val">Random Forest <small>(Drift &gt;20% &bull; MLflow)</small></span>
+                    <span class="label">Oppvekst &amp; Utdanning YTD</span>
+                    <span class="val" style="color: #d97706">18 902,0 k <small>(Avvik: -944,0 k)</small></span>
                   </div>
                   <div class="preview-kpi-cell">
-                    <span class="label">AI &amp; RAG Engine</span>
-                    <span class="val">Hybrid RAG <small>(ChromaDB &bull; BM25 &bull; RRF)</small></span>
+                    <span class="label">Helse &amp; Omsorg (Bomiljø)</span>
+                    <span class="val" style="color: #c0392b">12 622,9 k <small>(Avvik: -1 285,6 k)</small></span>
                   </div>
                   <div class="preview-kpi-cell">
-                    <span class="label">Sikkerhet &amp; Innsyn</span>
-                    <span class="val" style="color: #27ae60">DuckDB Audit <small>(NOARK 5 &bull; Offl. § 3)</small></span>
+                    <span class="label">AI, ML &amp; Audit Engine</span>
+                    <span class="val" style="color: #0284c7">RAG + DuckDB <small>(MLflow &bull; NOARK 5)</small></span>
                   </div>
                 </div>
 
                 <!-- Visuals Container -->
                 <div class="preview-visuals-container">
-                  <!-- Visual 1: Tufte Avviksstyring & KOSTRA Forbruk -->
+                  <!-- Visual 1: Topp Kostnadsdrivere i Måned 08 -->
                   <div class="preview-visual-card">
                     <div class="preview-visual-title">
-                      <span>📊 Avviksstyring &amp; KOSTRA Kostnadsdrivere</span>
-                      <span class="sub">YTD Merforbruk: -2 229,6 kNOK (107,6 %)</span>
+                      <span>📊 Topp Kostnadsdrivere &amp; Avvik (Måned 08)</span>
+                      <span class="sub">Avvik pr. August 2024 isolert (-350,7 kNOK)</span>
                     </div>
-                    <div class="scenario-bars" style="gap: 12px">
+                    <div class="scenario-bars" style="gap: 10px">
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
-                          <span class="label">Fastlønn ordinære (Art 101000 - Lønnsoppgjør)</span>
-                          <span class="val" style="color: #c0392b">-1 888,9 kNOK</span>
+                          <span class="label">Vikarbyråtjenester (127040) • Helse</span>
+                          <span class="val" style="color: #c0392b">-253,2 kNOK (Nullbudsjettert innleie)</span>
                         </div>
                         <div class="scenario-bar-track">
                           <div class="scenario-bar-fill" style="width: 100%; background: #c0392b"></div>
@@ -1945,54 +1955,72 @@
                       </div>
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
-                          <span class="label">Vikarbyråtjenester (Art 127040 - Helse/Pleie)</span>
-                          <span class="val" style="color: #d35400">-382,7 kNOK (M08: 253,2 k)</span>
+                          <span class="label">Fastlønn ordinære (101000) • Begge sektorer</span>
+                          <span class="val" style="color: #d97706">-196,8 kNOK (Lønnsoppgjør/bemanning)</span>
                         </div>
                         <div class="scenario-bar-track">
-                          <div class="scenario-bar-fill" style="width: 78%; background: #d35400"></div>
+                          <div class="scenario-bar-fill" style="width: 78%; background: #d97706"></div>
                         </div>
                       </div>
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
-                          <span class="label">Overtid &amp; Korttidsvikar (Skolestart/Turnus)</span>
-                          <span class="val" style="color: #e67e22">-170,1 kNOK</span>
+                          <span class="label">Vikarer fravær &amp; turnustillegg (102013/31)</span>
+                          <span class="val" style="color: #d97706">-95,1 kNOK (Skolestart &amp; helg/natt)</span>
                         </div>
                         <div class="scenario-bar-track">
-                          <div class="scenario-bar-fill" style="width: 65%; background: #e67e22"></div>
+                          <div class="scenario-bar-fill" style="width: 48%; background: #d97706"></div>
+                        </div>
+                      </div>
+                      <div class="scenario-row">
+                        <div class="scenario-row-meta">
+                          <span class="label">Statlige refusjoner (2040) • Oppvekst</span>
+                          <span class="val" style="color: #10b981">+38,4 kNOK (Gunstig merinntekt)</span>
+                        </div>
+                        <div class="scenario-bar-track">
+                          <div class="scenario-bar-fill" style="width: 25%; background: #10b981"></div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Visual 2: AI Forvaltningsmotor & Compliance -->
+                  <!-- Visual 2: KOSTRA Funksjonsfordeling & AI Compliance -->
                   <div class="preview-visual-card">
                     <div class="preview-visual-title">
-                      <span>⚡ AI Forvaltningsmotor &amp; Styringssøyler</span>
+                      <span>🏛️ KOSTRA Fordeling &amp; AI Forvaltningsmotor</span>
                       <span class="sub">MLflow, Hybrid RAG, NOARK 5 &amp; HITL</span>
                     </div>
-                    <div class="scenario-bars" style="gap: 12px">
+                    <div class="scenario-bars" style="gap: 10px">
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
-                          <span class="label">Hybrid RAG Vector Search (ChromaDB + BM25)</span>
-                          <span class="val" style="color: #0284c7">Lovforankret &bull; Kommuneloven § 14-6</span>
+                          <span class="label">2020 Grunnskole (Oppvekst) • 1 809 k</span>
+                          <span class="val" style="color: #0284c7">Avvik -106,4 k &bull; Lærernorm § 8-2</span>
                         </div>
                         <div class="scenario-bar-track">
-                          <div class="scenario-bar-fill" style="width: 95%; background: #0284c7"></div>
+                          <div class="scenario-bar-fill" style="width: 100%; background: #0284c7"></div>
                         </div>
                       </div>
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
-                          <span class="label">ML Tidsserieprognoser &amp; Drift Monitor</span>
-                          <span class="val" style="color: #3b82f6">Random Forest &bull; MLflow Port 5000</span>
+                          <span class="label">2540 Pleie &amp; Omsorg (Helse) • 1 758 k</span>
+                          <span class="val" style="color: #3b82f6">Avvik -232,6 k &bull; Helse § 4-1</span>
                         </div>
                         <div class="scenario-bar-track">
-                          <div class="scenario-bar-fill" style="width: 90%; background: #3b82f6"></div>
+                          <div class="scenario-bar-fill" style="width: 97%; background: #3b82f6"></div>
+                        </div>
+                      </div>
+                      <div class="scenario-row">
+                        <div class="scenario-row-meta">
+                          <span class="label">Hybrid RAG &amp; MLflow Drift Monitor</span>
+                          <span class="val" style="color: #8b5cf6">ChromaDB + Random Forest (Port 5000)</span>
+                        </div>
+                        <div class="scenario-bar-track">
+                          <div class="scenario-bar-fill" style="width: 90%; background: #8b5cf6"></div>
                         </div>
                       </div>
                       <div class="scenario-row">
                         <div class="scenario-row-meta">
                           <span class="label">Revisjonsspor &amp; NOARK 5 eInnsyn Eksport</span>
-                          <span class="val" style="color: #27ae60">Uforanderlig DuckDB &bull; Offentleglova § 3</span>
+                          <span class="val" style="color: #27ae60">Uforanderlig DuckDB &bull; Offl. § 3</span>
                         </div>
                         <div class="scenario-bar-track">
                           <div class="scenario-bar-fill" style="width: 88%; background: #27ae60"></div>
@@ -2004,14 +2032,15 @@
 
                 <!-- Modules / Key Highlights List from README -->
                 <div class="preview-modules-list" style="margin-top: 0.85rem">
-                  <span class="preview-module-tag"><strong>01 README Sammendrag &amp; Formål:</strong> Helhetlig kommunal styringscockpit og rapporteringsløsning for Kristiansand kommune koblet direkte mot KOSTRA-standarden. Forener 25 spesialiserte Power BI-sider (PBIP/TMDL), lokal DuckDB OLAP-database og en responsiv styringscockpit for Oppvekst (KomSkole) og Helse (Bomiljø).</span>
-                  <span class="preview-module-tag"><strong>02 Maskinlæring &amp; Prediksjon (ML Forecasting):</strong> Innebygd Random Forest tidsserie-modell for å fremskrive månedlige forbruksmønstre og avdekke sesongavvik (f.eks. vikartopper ved skolestart og sommermåneder). Inkluderer automatisert Model Drift-deteksjon (&gt;20 % økning i MAE mot baseline) og integrert MLflow tracking server på port 5000.</span>
-                  <span class="preview-module-tag"><strong>03 AI-drevne Anbefalinger &amp; What-If Scenariosimulator:</strong> Handlingsorienterte råd fra Gemini 3.8 Flash og lokal Ollama med sanntids What-If simulator. Beregner umiddelbar effekt av administrative tiltak som vikarstopp (Art 127040) og overtidskutt (Art 104000) for å lukke EAC-avviket og gjenopprette budsjettbalanse iht. Kommuneloven § 14-6.</span>
-                  <span class="preview-module-tag"><strong>04 AI Controller Chatbot med RAG-Vektordatabase:</strong> Flytende web-chatbot og Streamlit RAG-rådgiver koblet til ChromaDB og BM25 med Reciprocal Rank Fusion (RRF). Indeksert på Kommuneloven (§§ 13-1, 14-6, 16-1), Kristiansands Anskaffelsesstrategi 2026–2030, DFØ terskelverdier (1,3 MNOK), Opplæringsloven § 8-2 (Lærernormen), Helse- og omsorgstjenesteloven § 4-1 og Arbeidsmiljøloven § 10-6.</span>
-                  <span class="preview-module-tag"><strong>05 Åpenhet, Sikkerhet &amp; PII-Skjerming:</strong> Lokal-først arkitektur (DuckDB / ChromaDB / lokal Ollama) som sikrer at sensitive personopplysninger, interne arbeidsnotater og upubliserte regnskapsdata forblir skjermet, i fullt samsvar med GDPR og Forvaltningsloven § 17.</span>
-                  <span class="preview-module-tag"><strong>06 Uforanderlig Logging &amp; Revisjonsspor (Audit Trail):</strong> Alle AI-analyser, RAG-oppslag, juridiske vurderinger og controllerspørringer logges uforanderlig i DuckDB for full notoritet og transparens iht. Offentleglova § 3 og Forvaltningsloven §§ 24–25.</span>
-                  <span class="preview-module-tag"><strong>07 NOARK 5 &amp; eInnsyn Hotfolder Dispatcher:</strong> Automatisk generering av formelle saksnotater som PDF/A-1b ledsaget av NOARK 5 metadata sidecar JSON-filer (for Public 360, Elements og ACOS Websak) klare for direkte journalføring i kommunens saksarkiv.</span>
-                  <span class="preview-module-tag"><strong>08 Human-In-The-Loop (HITL) Styringsprinsipp:</strong> AI-løsningen opptrer utelukkende som en rådgivende analytiker og forvaltningsassistent for politisk og administrativ ledelse — 0 autonome enkeltvedtak fatte uten menneskelig sign-off.</span>
+                  <span class="preview-module-tag"><strong>01 PBIP &amp; TMDL Arkitektur:</strong> Versjonskontrollert Power BI Developer Mode med model.tmdl, relationships.tmdl og 78 sentraliserte DAX-måltall i _Måltall over 25 spesialiserte rapportsider.</span>
+                  <span class="preview-module-tag"><strong>02 Stjerneskjema (fact_data):</strong> 1:N-relasjoner til dim_date, dim_ansvar (sektor/enhet), dim_kostra_kontoplan (art 6-siffer) og dim_kostra_funksjon (4-siffer) for Oppvekst (KomSkole) og Helse (Bomiljø).</span>
+                  <span class="preview-module-tag"><strong>03 Maskinlæring &amp; Prediksjon (ML Forecasting):</strong> Innebygd Random Forest tidsserie-modell for å fremskrive månedlige forbruksmønstre og avdekke sesongavvik (f.eks. vikartopper ved skolestart og sommermåneder). Inkluderer automatisert Model Drift-deteksjon (&gt;20 % økning i MAE mot baseline) og integrert MLflow tracking server på port 5000.</span>
+                  <span class="preview-module-tag"><strong>04 AI-drevne Anbefalinger &amp; What-If Scenariosimulator:</strong> Handlingsorienterte råd fra Gemini 3.8 Flash og lokal Ollama med sanntids What-If simulator. Beregner umiddelbar effekt av administrative tiltak som kutt i vikarbyrå (Art 127040) og overtid (Art 104000) for å lukke EAC-avviket og gjenopprette budsjettbalanse iht. Kommuneloven § 14-6.</span>
+                  <span class="preview-module-tag"><strong>05 AI Controller Chatbot med RAG-Vektordatabase:</strong> Flytende web-chatbot og Streamlit RAG-rådgiver koblet til ChromaDB og BM25 med Reciprocal Rank Fusion (RRF). Indeksert på Kommuneloven (§§ 13-1, 14-6, 16-1), Kristiansands Anskaffelsesstrategi 2026–2030, DFØ terskelverdier (1,3 MNOK), Opplæringsloven § 8-2 (Lærernormen), Helse- og omsorgstjenesteloven § 4-1 og Arbeidsmiljøloven § 10-6.</span>
+                  <span class="preview-module-tag"><strong>06 Åpenhet, Sikkerhet &amp; PII-Skjerming:</strong> Lokal-først arkitektur (DuckDB / ChromaDB / lokal Ollama) som sikrer at sensitive personopplysninger, interne arbeidsnotater og upubliserte regnskapsdata forblir skjermet, i fullt samsvar med GDPR og Forvaltningsloven § 17.</span>
+                  <span class="preview-module-tag"><strong>07 Uforanderlig Logging &amp; Revisjonsspor (Audit Trail):</strong> Alle AI-analyser, RAG-oppslag, juridiske vurderinger og controllerspørringer logges uforanderlig i DuckDB for full notoritet og transparens iht. Offentleglova § 3 og Forvaltningsloven §§ 24–25.</span>
+                  <span class="preview-module-tag"><strong>08 NOARK 5 &amp; eInnsyn Hotfolder Dispatcher:</strong> Automatisk generering av formelle saksnotater som PDF/A-1b ledsaget av NOARK 5 metadata sidecar JSON-filer (for Public 360, Elements og ACOS Websak) klare for direkte journalføring i kommunens saksarkiv.</span>
+                  <span class="preview-module-tag"><strong>09 Human-In-The-Loop (HITL) Styringsprinsipp:</strong> AI-løsningen opptrer utelukkende som en rådgivende analytiker og forvaltningsassistent for politisk og administrativ ledelse — 0 autonome enkeltvedtak fatte uten menneskelig sign-off.</span>
                 </div>
               </div>
             </div>
@@ -2019,7 +2048,7 @@
             <div class="project-actions">
               <a href="https://frank-ellingsen.github.io/KOM-G/" target="_blank" rel="noopener"
                 class="btn-action-primary">
-                Open Live Cockpit &rarr;
+                Open Live KOSTRA Cockpit &rarr;
               </a>
               <button type="button" class="btn-action-secondary preview-modal-trigger"
                 data-preview-url="https://frank-ellingsen.github.io/KOM-G/"
@@ -2044,7 +2073,7 @@
           </div>
         </article>
 
-        <!-- 2. Kristiansand EPM & Responsible AI Framework -->
+        <!-- 2. TOP FEATURED PROJECT: Kristiansand EPM & Responsible AI Framework -->
         <article class="project-card featured-flagship ui-hero-banner" data-category="controlling bi ai">
           <div class="project-media">
             <a href="https://frank-ellingsen.github.io/AI_KOM/" target="_blank" rel="noopener"
