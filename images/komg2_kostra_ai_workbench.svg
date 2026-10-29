@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 680" width="1280" height="680" font-family="'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif">
+  <defs>
+    <linearGradient id="sidebarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Canvas Background (Tufte High Data-Ink Light Surface) -->
+  <rect width="1280" height="680" fill="#F8F9FA" />
+
+  <!-- Left Sidebar (260px, mirrors KOMG2 index.html & src/app.py) -->
+  <rect x="0" y="0" width="260" height="680" fill="url(#sidebarGrad)" />
+  <line x1="260" y1="0" x2="260" y2="680" stroke="#334155" stroke-width="1" />
+
+  <!-- Brand Block -->
+  <text x="20" y="34" fill="#94A3B8" font-size="10.5" font-weight="700" letter-spacing="0.08em">KRISTIANSAND KOMMUNE</text>
+  <text x="20" y="56" fill="#FFFFFF" font-size="16" font-weight="800">🏛️ KOSTRA AI Workbench</text>
+  <text x="20" y="74" fill="#CBD5E1" font-size="11">Financial Controlling &amp; MLOps Suite</text>
+  <line x1="20" y1="88" x2="240" y2="88" stroke="#334155" stroke-width="1" />
+
+  <!-- Sidebar Navigation (7 Synchronized Modules) -->
+  <text x="20" y="110" fill="#94A3B8" font-size="10" font-weight="700" letter-spacing="0.08em">7 SYNKRONISERTE MODULER</text>
+
+  <!-- Active Module 1 -->
+  <rect x="16" y="120" width="228" height="34" rx="6" fill="#FFFFFF" />
+  <text x="28" y="141" fill="#0F172A" font-size="11.5" font-weight="700">📊 1. Avviksoversikt (Gold Layer)</text>
+
+  <!-- Module 2 -->
+  <rect x="16" y="160" width="228" height="32" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="28" y="180" fill="#E2E8F0" font-size="11" font-weight="500">📈 2. Tidsserie &amp; Årsprognose (EAC)</text>
+
+  <!-- Module 3 -->
+  <rect x="16" y="198" width="228" height="32" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="28" y="218" fill="#E2E8F0" font-size="11" font-weight="500">🤖 3. ML Prognoser &amp; Early Warning</text>
+
+  <!-- Module 4 -->
+  <rect x="16" y="236" width="228" height="32" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="28" y="256" fill="#E2E8F0" font-size="11" font-weight="500">🔍 4. Anomaly Detection &amp; Klynger</text>
+
+  <!-- Module 5 -->
+  <rect x="16" y="274" width="228" height="32" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="28" y="294" fill="#E2E8F0" font-size="11" font-weight="500">🗂️ 5. Modelready &amp; 06_CHECKS</text>
+
+  <!-- Module 6 -->
+  <rect x="16" y="312" width="228" height="32" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="28" y="332" fill="#E2E8F0" font-size="11" font-weight="500">💬 6. KI-Saksbehandler &amp; RAG</text>
+
+  <!-- Module 7 -->
+  <rect x="16" y="350" width="228" height="32" rx="6" fill="#0F291E" stroke="#10B981" stroke-width="1" />
+  <text x="28" y="370" fill="#A7F3D0" font-size="11" font-weight="700">🎛️ 7. Cockpit &amp; Pipeline Kontroll</text>
+
+  <!-- Sidebar Architecture & Reconciliation Status Card -->
+  <rect x="16" y="405" width="228" height="255" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1" />
+  <rect x="28" y="418" width="176" height="22" rx="4" fill="#D1FAE5" />
+  <text x="36" y="433" fill="#065F46" font-size="10" font-weight="700" font-family="Consolas, monospace">✓ MASTER_CHECK: 0,00 kr</text>
+
+  <text x="28" y="458" fill="#94A3B8" font-size="10" font-weight="700">MEDALLION LAKEHOUSE (DUCKDB)</text>
+  <text x="28" y="476" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">• Bronze: 21 CSV (0 karantene)</text>
+  <text x="28" y="493" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">• Silver: LAG() monthly_delta</text>
+  <text x="28" y="510" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">• Gold: 2 256 rader × 32 var</text>
+
+  <line x1="28" y1="524" x2="230" y2="524" stroke="#334155" stroke-width="1" />
+  <text x="28" y="542" fill="#94A3B8" font-size="10" font-weight="700">FAST EXCEL &amp; POWER BI (.PBIP)</text>
+  <text x="28" y="560" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">• 01_DASHBOARD → 06_CHECKS</text>
+  <text x="28" y="577" fill="#E2E8F0" font-size="10.5" font-family="Consolas, monospace">• 21 DAX-mål &amp; CUBEVALUE</text>
+  <text x="28" y="594" fill="#60A5FA" font-size="10.5" font-family="Consolas, monospace">• 26 Param_* (#0000FF FAST)</text>
+  <text x="28" y="611" fill="#34D399" font-size="10.5" font-family="Consolas, monospace">• 11/11 Kontroller = 0,00 kr</text>
+  <text x="28" y="638" fill="#94A3B8" font-size="9.5" font-family="Consolas, monospace">Audit Log: UUIDv4 • eInnsyn Klar</text>
+
+  <!-- Main Workspace Area (x=280 to 1260) -->
+  <!-- Top Executive Header Bar -->
+  <rect x="280" y="18" width="980" height="62" rx="8" fill="url(#bannerGrad)" />
+  <text x="300" y="44" fill="#FFFFFF" font-size="16.5" font-weight="800">KOSTRA AI Workbench &amp; Financial Controlling Suite — Kristiansand Kommune</text>
+  <text x="300" y="64" fill="#CBD5E1" font-size="11.5" font-family="Consolas, monospace">DuckDB Medallion (Bronze/Silver/Gold) • Streamlit + Tufte Web-UI • FAST Excel (.xlsb) • Power BI (.pbip) • MLOps</text>
+
+  <!-- Pipeline Status Pill -->
+  <rect x="1084" y="31" width="160" height="34" rx="6" fill="#065F46" stroke="#10B981" stroke-width="1" />
+  <circle cx="1100" cy="48" r="4.5" fill="#34D399" />
+  <text x="1112" y="52" fill="#ECFDF5" font-size="11" font-weight="700" font-family="Consolas, monospace">PIPELINE: ONLINE</text>
+
+  <!-- 5 Executive KPI Cards Row (Tufte High Data-Ink, Tabular Numbers) -->
+  <!-- KPI 1: YTD Budsjett -->
+  <rect x="280" y="94" width="188" height="86" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="294" y="114" fill="#64748B" font-size="10" font-weight="700" letter-spacing="0.05em">PERIODISERT BUDSJETT (M1–M8)</text>
+  <text x="294" y="142" fill="#0F172A" font-size="20" font-weight="800" font-family="Consolas, monospace">29 295 237 kr</text>
+  <text x="294" y="164" fill="#475569" font-size="10.5">Oppvekst &amp; Helse/Omsorg</text>
+
+  <!-- KPI 2: Bokført YTD Regnskap -->
+  <rect x="478" y="94" width="188" height="86" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="492" y="114" fill="#64748B" font-size="10" font-weight="700" letter-spacing="0.05em">BOKFØRT YTD (MND 1–8)</text>
+  <text x="492" y="142" fill="#0F172A" font-size="20" font-weight="800" font-family="Consolas, monospace">31 524 851 kr</text>
+  <text x="492" y="164" fill="#D97706" font-size="10.5" font-weight="600">Forbruksrate: 107,6 % av YTD</text>
+
+  <!-- KPI 3: Netto YTD Avvik -->
+  <rect x="676" y="94" width="188" height="86" rx="6" fill="#FFF5F5" stroke="#FCA5A5" stroke-width="1.2" />
+  <text x="690" y="114" fill="#9C0006" font-size="10" font-weight="700" letter-spacing="0.05em">NETTO AVVIK YTD (M1–M8)</text>
+  <text x="690" y="142" fill="#D62728" font-size="20" font-weight="800" font-family="Consolas, monospace">-2 229 614 kr</text>
+  <text x="690" y="164" fill="#9C0006" font-size="10.5" font-weight="700">🔴 KRITISK AVVIK (Vikar/Lønn)</text>
+
+  <!-- KPI 4: Fullårsprognose EAC -->
+  <rect x="874" y="94" width="188" height="86" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="888" y="114" fill="#64748B" font-size="10" font-weight="700" letter-spacing="0.05em">FULLÅRSPROGNOSE EAC (31.12)</text>
+  <text x="888" y="142" fill="#0F172A" font-size="20" font-weight="800" font-family="Consolas, monospace">47 252 826 kr</text>
+  <text x="888" y="164" fill="#D62728" font-size="10.5" font-weight="600">Q4 ETC: 15,73M • Avvik: -3,31M</text>
+
+  <!-- KPI 5: ML & Modellkontroll -->
+  <rect x="1072" y="94" width="188" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.2" />
+  <text x="1086" y="114" fill="#065F46" font-size="10" font-weight="700" letter-spacing="0.05em">ML YTELSE &amp; 06_CHECKS</text>
+  <text x="1086" y="142" fill="#065F46" font-size="20" font-weight="800" font-family="Consolas, monospace">R² = 0.9104</text>
+  <text x="1086" y="164" fill="#065F46" font-size="10.5" font-weight="700">MAE 18,4k • Diff: 0,00 kr</text>
+
+  <!-- Middle Row: Left = Tufte S-Curve (YTD + Q4 ETC/EAC), Right = MLOps & Anomaly Detection -->
+  <!-- Panel 1: Tufte S-Curve & FAST Parameter Forecast -->
+  <rect x="280" y="194" width="500" height="256" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="298" y="218" fill="#0F172A" font-size="13.5" font-weight="700">📈 Tidsserie &amp; Årsprognose (EAC / ETC per 31.12) — Tufte S-Kurve</text>
+  <text x="298" y="234" fill="#64748B" font-size="10.5" font-family="Consolas, monospace">Bokført M1–M8 (31,52M) + Sesongkorrigert Q4 ETC M9–M12 (15,73M) • Direkte merking</text>
+  <line x1="298" y1="244" x2="762" y2="244" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- Horizontal Hairline Gridlines Only (No Vertical Gridlines per Tufte Rule) -->
+  <line x1="330" y1="275" x2="685" y2="275" stroke="#F1F5F9" stroke-width="1" />
+  <line x1="330" y1="315" x2="685" y2="315" stroke="#F1F5F9" stroke-width="1" />
+  <line x1="330" y1="355" x2="685" y2="355" stroke="#F1F5F9" stroke-width="1" />
+  <line x1="330" y1="395" x2="685" y2="395" stroke="#CBD5E1" stroke-width="1" />
+
+  <text x="298" y="278" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">48M</text>
+  <text x="298" y="318" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">32M</text>
+  <text x="298" y="358" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">16M</text>
+  <text x="298" y="398" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">0M</text>
+
+  <!-- Budget Trajectory Line (Muted Slate Dashed) -->
+  <path d="M 335 390 L 395 362 L 455 335 L 545 316 L 675 280" fill="none" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,4" />
+  <text x="682" y="286" fill="#475569" font-size="10" font-weight="600" font-family="Consolas, monospace">Årsbudsjett 43,94M</text>
+
+  <!-- Actual YTD M1-M8 Solid Line -->
+  <path d="M 335 389 L 395 358 L 455 328 L 545 304" fill="none" stroke="#0F172A" stroke-width="2.8" />
+  <circle cx="545" cy="304" r="4.5" fill="#0F172A" />
+  <text x="485" y="294" fill="#0F172A" font-size="10" font-weight="700" font-family="Consolas, monospace">YTD M8: 31,52M</text>
+
+  <!-- Projected Q4 ETC M9-M12 Highlight Red Line -->
+  <path d="M 545 304 L 610 284 L 675 262" fill="none" stroke="#D62728" stroke-width="2.8" stroke-dasharray="4,3" />
+  <circle cx="675" cy="262" r="5" fill="#D62728" />
+  <text x="682" y="265" fill="#D62728" font-size="10.5" font-weight="800" font-family="Consolas, monospace">EAC: 47,25M (-3,31M)</text>
+
+  <!-- Month Labels -->
+  <text x="330" y="412" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">M01</text>
+  <text x="390" y="412" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">M03</text>
+  <text x="450" y="412" fill="#64748B" font-size="9.5" font-family="Consolas, monospace">M06</text>
+  <text x="536" y="412" fill="#0F172A" font-size="9.5" font-weight="700" font-family="Consolas, monospace">M08 (YTD)</text>
+  <text x="602" y="412" fill="#D62728" font-size="9.5" font-family="Consolas, monospace">M10</text>
+  <text x="660" y="412" fill="#D62728" font-size="9.5" font-weight="700" font-family="Consolas, monospace">M12 (EAC)</text>
+
+  <!-- Interactive FAST Blue Parameter Strip -->
+  <rect x="298" y="420" width="464" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+  <text x="308" y="435" fill="#0000FF" font-size="10" font-weight="700" font-family="Consolas, monospace">FAST Inputs (#0000FF): Param_Lonnsvekst_Q4 • Param_Effektiviseringskrav_Pct • Param_Sesongvekt_M12</text>
+
+  <!-- Panel 2: ML Portfolio & Anomaly / Clustering Engine -->
+  <rect x="794" y="194" width="466" height="256" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="812" y="218" fill="#0F172A" font-size="13.5" font-weight="700">🤖 ML-Modellportefølje, XAI &amp; Anomaly Detection</text>
+  <text x="812" y="234" fill="#64748B" font-size="10.5" font-family="Consolas, monospace">2 256 rader × 32 features • 4 MLOps-algoritmer i produksjon</text>
+  <line x1="812" y1="244" x2="1242" y2="244" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- ML Algorithm Cards -->
+  <rect x="812" y="254" width="430" height="40" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+  <text x="822" y="271" fill="#0F172A" font-size="11" font-weight="700">1. Random Forest Regressor (Neste måneds forbruk)</text>
+  <text x="1232" y="271" fill="#065F46" font-size="11" font-weight="700" text-anchor="end" font-family="Consolas, monospace">R² = 0.9104 | MAE 18 420 kr</text>
+  <text x="822" y="287" fill="#475569" font-size="10">Forklarbar AI (XAI) rangerer topp kostnadsdrivere og sesongmønstre</text>
+
+  <rect x="812" y="302" width="430" height="40" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+  <text x="822" y="319" fill="#0F172A" font-size="11" font-weight="700">2. Decision Tree Classifier (Early Warning IF-THEN)</text>
+  <text x="1232" y="319" fill="#0284C7" font-size="11" font-weight="700" text-anchor="end" font-family="Consolas, monospace">100 % Accuracy (Revisjonsklar)</text>
+  <text x="822" y="335" fill="#475569" font-size="10">Status 0: I RUTE • Status 1: ADVARSEL • Status 2: KRITISK AVVIK</text>
+
+  <rect x="812" y="350" width="430" height="40" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+  <text x="822" y="367" fill="#0F172A" font-size="11" font-weight="700">3. Agglomerative Clustering (hclust — 4 Utgiftsprofiler)</text>
+  <text x="1232" y="367" fill="#0F172A" font-size="11" font-weight="700" text-anchor="end" font-family="Consolas, monospace">1 131 / 16 / 1 100 / 9 konti</text>
+  <text x="822" y="383" fill="#475569" font-size="10">Stabil drift (1131) • Høyvolatil/Vikar (16) • Sesong (1100) • Ekstraord. (9)</text>
+
+  <rect x="812" y="398" width="430" height="42" rx="5" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" />
+  <text x="822" y="415" fill="#92400E" font-size="11" font-weight="700">4. Isolation Forest (iforest) &amp; Z-Score (&gt; 2.5σ)</text>
+  <text x="1232" y="415" fill="#D97706" font-size="11" font-weight="700" text-anchor="end" font-family="Consolas, monospace">113 rader flagget (Topp 5 %)</text>
+  <text x="822" y="431" fill="#92400E" font-size="10">Automatisk sjekkliste for potensielle føringsfeil og bilagskontroll</text>
+
+  <!-- Bottom Row: Workflow Pipeline Cockpit (4 Production Steps & FAST Workbook Architecture) -->
+  <rect x="280" y="464" width="980" height="198" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="298" y="488" fill="#0F172A" font-size="13.5" font-weight="700">🎛️ Cockpit &amp; Workflow Pipeline Kontroll — End-to-End Medallion, MLOps &amp; FAST/PBIP Sync</text>
+  <text x="1242" y="488" fill="#065F46" font-size="11" font-weight="700" text-anchor="end" font-family="Consolas, monospace">run.ps1 -BuildDB -Reconcile -Retrain • 06_CHECKS = 0,00 kr</text>
+  <line x1="298" y1="498" x2="1242" y2="498" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- Step 1 Box -->
+  <rect x="298" y="510" width="224" height="96" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+  <text x="310" y="528" fill="#0284C7" font-size="10.5" font-weight="700" font-family="Consolas, monospace">STEG 1: BRONZE LAYER (-BuildDB)</text>
+  <text x="310" y="546" fill="#0F172A" font-size="11.5" font-weight="700">src/db_manager.py → stg_fact</text>
+  <text x="310" y="564" fill="#475569" font-size="10">• 21 CSV-filer (UTF-8 / Latin1)</text>
+  <text x="310" y="580" fill="#475569" font-size="10">• Konto 4→6 &amp; Funksjon 3→4/5 siffer</text>
+  <text x="310" y="596" fill="#065F46" font-size="10" font-weight="700">✓ 0 filer i karantene (INGESTION_REPORT)</text>
+
+  <!-- Step 2 Box -->
+  <rect x="536" y="510" width="224" height="96" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+  <text x="548" y="528" fill="#0284C7" font-size="10.5" font-weight="700" font-family="Consolas, monospace">STEG 2: SILVER &amp; GOLD (-Reconcile)</text>
+  <text x="548" y="546" fill="#0F172A" font-size="11.5" font-weight="700">silver_fact → modelready_fact</text>
+  <text x="548" y="564" fill="#475569" font-size="10">• LAG() månedlig netto (monthly_delta)</text>
+  <text x="548" y="580" fill="#475569" font-size="10">• 2 256 rader × 32 engineered features</text>
+  <text x="548" y="596" fill="#065F46" font-size="10" font-weight="700">✓ 0,0 % manglende verdier (Null-sjekk)</text>
+
+  <!-- Step 3 Box -->
+  <rect x="774" y="510" width="224" height="96" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+  <text x="786" y="528" fill="#0284C7" font-size="10.5" font-weight="700" font-family="Consolas, monospace">STEG 3: MLOPS &amp; XAI (-Retrain)</text>
+  <text x="786" y="546" fill="#0F172A" font-size="11.5" font-weight="700">src/retrain_pipeline.py</text>
+  <text x="786" y="564" fill="#475569" font-size="10">• Random Forest (R²=0.9104) &amp; XAI</text>
+  <text x="786" y="580" fill="#475569" font-size="10">• Decision Tree (100% Acc) &amp; hclust</text>
+  <text x="786" y="596" fill="#D97706" font-size="10" font-weight="700">✓ 113 avvik flagget (Isolation Forest)</text>
+
+  <!-- Step 4 Box -->
+  <rect x="1012" y="510" width="230" height="96" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1" />
+  <text x="1024" y="528" fill="#065F46" font-size="10.5" font-weight="700" font-family="Consolas, monospace">STEG 4: BI &amp; FAST SYNC (06_CHECKS)</text>
+  <text x="1024" y="546" fill="#0F172A" font-size="11.5" font-weight="700">Excel (.xlsb) &amp; Power BI (.pbip)</text>
+  <text x="1024" y="564" fill="#475569" font-size="10">• 21 DAX-mål i ThisWorkbookDataModel</text>
+  <text x="1024" y="580" fill="#475569" font-size="10">• 6 FAST-faner (01_DASHBOARD–06_CHECKS)</text>
+  <text x="1024" y="596" fill="#065F46" font-size="10" font-weight="700">✓ 11/11 Kontroller • Diff = 0,00 kr</text>
+
+  <!-- Bottom CLI & Governance Strip -->
+  <rect x="298" y="616" width="944" height="32" rx="5" fill="#0F172A" />
+  <text x="312" y="636" fill="#38BDF8" font-size="10.5" font-family="Consolas, monospace">&gt; #pipeline-console: [OK] DuckDB kostra_prod.duckdb avstemt | [OK] RAG Kommuneloven § 14-4 aktiv | [OK] audit_log UUIDv4 signert</text>
+</svg>
+
