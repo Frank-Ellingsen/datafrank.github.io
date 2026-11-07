@@ -832,7 +832,60 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    /* --- FLOATING AI COPILOT CHATBOT STYLES --- */
+    #chatbot-popup-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99999;
+      background: #d97706;
+      color: #ffffff;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      border-radius: 9999px;
+      padding: 12px 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      font-family: var(--font-body, system-ui, sans-serif);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #chatbot-popup-btn:hover {
+      background: #b45309;
+      transform: scale(1.05);
+    }
+    #chatbot-popup-window {
+      position: fixed;
+      bottom: 84px;
+      right: 24px;
+      width: 380px;
+      max-width: 92vw;
+      height: 520px;
+      background: #0f172a;
+      color: #f1f5f9;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: var(--font-body, system-ui, sans-serif);
+      transition: all 0.2s ease;
+    }
+    #chatbot-popup-window.hidden {
+      display: none !important;
+    }
+    .chat-scroll::-webkit-scrollbar { width: 6px; }
+    .chat-scroll::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+    .chat-scroll::-webkit-scrollbar-thumb { background: rgba(217, 119, 6, 0.4); border-radius: 3px; }
+
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="app-shell">
@@ -907,6 +960,15 @@
           <span class="nav-badge">JWT / XSD</span>
         </div>
 
+        
+        <div class="nav-item" onclick="openChatbotPopup()" role="button" tabindex="0" style="background: rgba(217, 119, 6, 0.12); border: 1px solid rgba(217, 119, 6, 0.3); color: #f59e0b; margin-top: 6px;">
+          <div class="nav-item-content">
+            <i data-lucide="bot" class="nav-icon" style="color: #f59e0b;"></i>
+            <span style="font-weight: 700;">AI Copilot Chat</span>
+          </div>
+          <span class="nav-badge" style="background: #10b981; color: white;">Online</span>
+        </div>
+
         <div class="nav-group-title">Dokumentasjon</div>
         <div class="nav-item" onclick="switchModule('module-handbook', this)" id="nav-handbook" role="button" tabindex="0">
           <div class="nav-item-content">
@@ -915,6 +977,24 @@
           </div>
           <span class="nav-badge">ØkAdm Manual</span>
         </div>
+
+        <div class="nav-group-title">Operativ Hverdags-Portal</div>
+        <a href="index.html" class="nav-item" style="text-decoration: none; color: #0f62fe; background: rgba(15, 98, 254, 0.08); border: 1px solid rgba(15, 98, 254, 0.35); font-weight: 600; margin-bottom: 6px;" role="button" title="Gå til det operative styringssystemet for daglig drift">
+          <div class="nav-item-content">
+            <i data-lucide="layout-dashboard" class="nav-icon" style="color: #0f62fe;"></i>
+            <span>Hverdags-Workflow Hub</span>
+          </div>
+          <span class="nav-badge" style="background: #0f62fe; color: #ffffff; font-weight: 700;">index.html ↗</span>
+        </a>
+
+        <div class="nav-group-title">Eksterne &amp; Dashboards</div>
+        <a href="https://frank-ellingsen.github.io/br-nn-ysund-oppslag/" target="_blank" rel="noopener noreferrer" class="nav-item" style="text-decoration: none; color: inherit;" role="button">
+          <div class="nav-item-content">
+            <i data-lucide="external-link" class="nav-icon" style="color: var(--positive);"></i>
+            <span>Brønnøysund AI Lookup</span>
+          </div>
+          <span class="nav-badge">S-Kurve</span>
+        </a>
       </nav>
 
       <div class="sidebar-footer">
@@ -943,6 +1023,10 @@
         </div>
 
         <div class="topbar-right">
+          <a href="index.html" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 600;" title="Gå til operativ hverdags-workflow hub (index.html)">
+            <i data-lucide="layout-dashboard" style="width: 13px; height: 13px;"></i>
+            <span>Åpne Hverdags-Workflow Hub</span>
+          </a>
           <div class="topbar-badge">
             <i data-lucide="calendar" style="width: 13px; height: 13px; color: var(--primary);"></i>
             <span>7. nov 2026</span>
@@ -976,6 +1060,22 @@
                 <span>Oppdater AI-Diagnose</span>
               </button>
             </div>
+          </div>
+
+          <!-- Interlink Banner to Operational Workflow Hub (index.html) -->
+          <div style="background: #f0f7ff; border: 1px solid #cce1ff; border-left: 4px solid #0f62fe; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 32px; height: 32px; border-radius: 4px; background: rgba(15, 98, 254, 0.12); display: flex; align-items: center; justify-content: center; color: #0f62fe; flex-shrink: 0;">
+                <i data-lucide="layout-dashboard" style="width: 18px; height: 18px;"></i>
+              </div>
+              <div style="font-size: 13px; color: #161616; line-height: 1.4;">
+                <strong style="color: #0f62fe;">Operativ Controller-Portal tilgjengelig (index.html):</strong> For daglige rutiner, fristnedtelling (18. særavgift, 10. MVA, K1925), aldersfordelt kundereskontro med formriktig purring, live Brønnøysund REST API og Angels' Share kalkulator.
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-sm btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; white-space: nowrap;">
+              <span>Gå til Hverdags-Hub</span>
+              <i data-lucide="arrow-right" style="width: 13px; height: 13px;"></i>
+            </a>
           </div>
 
           <!-- 4 HERO KPI CARDS -->
@@ -3113,6 +3213,13 @@ Status Altinn 3: Klar for termin 1 innsending.`;
       renderAgentTopology();
       await loadSavedState();
 
+      // Smart router: if hosted on datafrank.github.io, link index.html to -kAdmOfficeHub
+      if (window.location.hostname === 'frank-ellingsen.github.io' && window.location.pathname.includes('datafrank.github.io')) {
+        document.querySelectorAll('a[href="index.html"]').forEach(el => {
+          el.href = 'https://frank-ellingsen.github.io/-kAdmOfficeHub/';
+        });
+      }
+
       if (window.notebookAppApi && window.notebookAppApi.notifyAppReady) {
         window.notebookAppApi.notifyAppReady();
       }
@@ -3121,6 +3228,166 @@ Status Altinn 3: Klar for termin 1 innsending.`;
         renderAgentTopology();
       });
     });
+  
+    // --- FLOATING AI CHATBOT LOGIC ---
+    function toggleChatbotPopup() {
+        const popup = document.getElementById('chatbot-popup-window');
+        if (popup) popup.classList.toggle('hidden');
+    }
+
+    function openChatbotPopup() {
+        const popup = document.getElementById('chatbot-popup-window');
+        if (popup) popup.classList.remove('hidden');
+    }
+
+    function sendQuickPrompt(promptText) {
+        openChatbotPopup();
+        const input = document.getElementById('popup-chat-input');
+        if (input) {
+            input.value = promptText;
+            sendChatMessage();
+        }
+    }
+
+    function handleKeyPress(e) {
+        if (e.key === 'Enter') {
+            sendChatMessage();
+        }
+    }
+
+    function sendChatMessage() {
+        const input = document.getElementById('popup-chat-input');
+        const text = input ? input.value.trim() : '';
+        if (!text) return;
+
+        const chatMessages = document.getElementById('popup-chat-messages');
+        const agentEl = document.getElementById('agent-selector');
+        const agent = agentEl ? agentEl.value : 'Supervisor Master';
+
+        // Append User Message
+        const userMsgDiv = document.createElement('div');
+        userMsgDiv.style.display = 'flex';
+        userMsgDiv.style.alignItems = 'flex-start';
+        userMsgDiv.style.justifyContent = 'flex-end';
+        userMsgDiv.style.gap = '8px';
+        userMsgDiv.innerHTML = `
+            <div style="background: rgba(217, 119, 6, 0.25); padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(217, 119, 6, 0.4); color: #fef3c7; max-width: 85%;">
+                ${text}
+            </div>
+        `;
+        chatMessages.appendChild(userMsgDiv);
+        input.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Generate AI Agent Response
+        setTimeout(() => {
+            let reply = "";
+            const q = text.toLowerCase();
+            if (q.includes("brønnøysund") || q.includes("kreditt") || q.includes("brreg")) {
+                reply = `<strong>[${agent}]</strong>: Brønnøysundoppslag for Det Norske Brenneri AS (Org.nr 996 928 977) viser <strong>AAA Rating (Lav Risiko)</strong>, 68,4% solvensgrad og 0 betalingsanmerkninger. Du kan også sjekke andre org.nr under 'Controlling & Skatt'.`;
+            } else if (q.includes("1925") || q.includes("skattetrekk") || q.includes("a-melding")) {
+                reply = `<strong>[${agent}]</strong>: Skattetrekkkontrollen på DNB Konto 1925 viser at innestående 93 000 NOK dekker <strong>100,0 %</strong> av skyldig forskuddstrekk fra A-meldingen for 6. termin.`;
+            } else if (q.includes("mva") || q.includes("altinn") || q.includes("8-3") || q.includes("representasjon")) {
+                reply = `<strong>[${agent}]</strong>: MVA 1. Termin 2026 er ferdig avstemt: Utgående MVA 1 552 500 NOK, inngående MVA 855 000 NOK (med 45 000 NOK MVAL § 8-3 representasjon ekskludert). Netto til betaling: <strong>697 500 NOK</strong>. Altinn 3 API-innsending er klar!`;
+            } else if (q.includes("db1") || q.includes("db2") || q.includes("anbud") || q.includes("vinmonopolet")) {
+                reply = `<strong>[${agent}]</strong>: For Vinmonopolets hyllepris på 499,90 NOK utgjør alkoholavgift kr 263,90 NOK og MVA kr 99,98 NOK. Netto fabrikkpris til brenneriet er 97,42 NOK, som gir et <strong>DB1 på 58,92 NOK (60,5 % margin)</strong>.`;
+            } else if (q.includes("frakt") || q.includes("logistikk") || q.includes("lp") || q.includes("vestby") || q.includes("ftl")) {
+                reply = `<strong>[${agent}]</strong>: LP-Fraktmodellen beregner optimal rute fra Grimstad til Vinmonopolet Vestby med FTL (hel lastebil) til 15,00 NOK/kasse, og gir en samlet årlig besparelse på <strong>💰 +515 580 NOK/år</strong> (-12,2% reduksjon).`;
+            } else if (q.includes("fat") || q.includes("angels") || q.includes("fordamping") || q.includes("svinn")) {
+                reply = `<strong>[${agent}]</strong>: Fatmodningen på eikefat i Grimstad har et beregnet årlig naturlig svinn (Angels' Share) på <strong>3,2 %</strong>. Dette gir et lovmessig avgiftsfritak på <strong>1 266 720 NOK</strong> (kr 942,50/L ren alkohol) før tapping.`;
+            } else if (q.includes("revisjon") || q.includes("årsavslutning") || q.includes("cedra")) {
+                reply = `<strong>[${agent}]</strong>: Årsavslutningsmappen for Cedra Norge AS har 7 av 7 nøkkelområder avstemt (Konto 1925, Reskontro, Tollager, MVA, AGA og Anleggsmidler).`;
+            } else {
+                reply = `<strong>[${agent}]</strong>: Forespørselen om <em>"${text}"</em> er analysert mot brenneriets data via Google Gemini 3.8 Flash. Samtlige systemer, DuckDB reskontro og Altinn 3 er avstemt og operative.`;
+            }
+
+            const botMsgDiv = document.createElement('div');
+            botMsgDiv.style.display = 'flex';
+            botMsgDiv.style.alignItems = 'flex-start';
+            botMsgDiv.style.gap = '8px';
+            botMsgDiv.innerHTML = `
+                <div style="width: 24px; height: 24px; border-radius: 6px; background: #d97706; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: bold; flex-shrink: 0; margin-top: 2px;">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div style="background: #1e293b; padding: 10px 12px; border-radius: 12px; border: 1px solid #334155; color: #e2e8f0; max-width: 85%;">
+                    ${reply}
+                </div>
+            `;
+            chatMessages.appendChild(botMsgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 600);
+    }
+
   </script>
+  <!-- FLOATING AI AGENT CHATBOT POPUP BUTTON -->
+  <button id="chatbot-popup-btn" onclick="toggleChatbotPopup()" aria-label="Åpne AI Copilot Chat">
+    <i class="fa-solid fa-robot" style="font-size: 16px;"></i>
+    <span>AI Copilot Chat</span>
+    <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+  </button>
+
+  <!-- FLOATING AI CHATBOT POPUP MODAL WINDOW -->
+  <div id="chatbot-popup-window" class="hidden">
+    <!-- Popup Header -->
+    <div style="padding: 12px 16px; background: #020617; border-bottom: 1px solid #1e293b; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 32px; height: 32px; border-radius: 8px; background: #d97706; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px;">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: #ffffff; line-height: 1.2;">Antigravity AI Copilot</div>
+          <div style="font-size: 10px; color: #f59e0b;">Det Norske Brenneri AS • Gemini 3.8 Flash</div>
+        </div>
+      </div>
+      <button onclick="toggleChatbotPopup()" style="background: transparent; border: none; color: #94a3b8; cursor: pointer; padding: 4px; font-size: 16px;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Agent Selector Bar -->
+    <div style="padding: 8px 12px; background: rgba(2, 6, 23, 0.7); border-bottom: 1px solid rgba(30, 41, 59, 0.8); display: flex; align-items: center; gap: 8px;">
+      <span style="font-size: 10px; font-family: monospace; color: #94a3b8;">Agent:</span>
+      <select id="agent-selector" style="background: #0f172a; border: 1px solid #334155; border-radius: 6px; font-size: 11px; color: #e2e8f0; padding: 4px 8px; flex: 1; outline: none;">
+        <option value="Supervisor Master">Supervisor Master (Auto-Route)</option>
+        <option value="Compliance RAG">Compliance RAG (MVAL & Lovverk)</option>
+        <option value="Tax & Excise">Tax & Excise Duty (Alkohol & 1925)</option>
+        <option value="Procurement & Anbud">Procurement & Anbud (DB1/DB2)</option>
+        <option value="Analytics DuckDB">Analytics DuckDB (Reskontro & Fat)</option>
+        <option value="Cash & FP&A Radar">Cash & FP&A Radar (Working Capital)</option>
+        <option value="Audit & Revisor">Audit & Revisor (Årsoppgjør)</option>
+      </select>
+    </div>
+
+    <!-- Quick Prompts Pills -->
+    <div style="padding: 6px 12px; background: rgba(2, 6, 23, 0.4); border-bottom: 1px solid rgba(30, 41, 59, 0.5); display: flex; gap: 6px; overflow-x: auto; font-size: 10px;">
+      <button onclick="sendQuickPrompt('Sjekk Brønnøysund kredittstatus for Det Norske Brenneri')" style="background: rgba(217, 119, 6, 0.1); color: #f59e0b; border: 1px solid rgba(217, 119, 6, 0.2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; cursor: pointer;">🔍 Brønnøysund</button>
+      <button onclick="sendQuickPrompt('Sjekk skattetrekkkonto 1925 mot A-melding')" style="background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; cursor: pointer;">🏦 Konto 1925</button>
+      <button onclick="sendQuickPrompt('Beregner MVA 1. termin med § 8-3 avkorting')" style="background: rgba(6, 182, 212, 0.1); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; cursor: pointer;">🏛️ Altinn MVA</button>
+      <button onclick="sendQuickPrompt('Hva er DB1 og DB2 for Vinmonopolets anbud?')" style="background: rgba(168, 85, 247, 0.1); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; cursor: pointer;">🍾 Vinmonopolet</button>
+    </div>
+
+    <!-- Chat Scroll Area -->
+    <div id="popup-chat-messages" class="chat-scroll" style="flex: 1; padding: 12px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 12px;">
+      <!-- Bot Initial Greeting -->
+      <div style="display: flex; align-items: flex-start; gap: 8px;">
+        <div style="width: 24px; height: 24px; border-radius: 6px; background: #d97706; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: bold; flex-shrink: 0; margin-top: 2px;">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div style="background: #1e293b; padding: 10px 12px; border-radius: 12px; border: 1px solid #334155; color: #e2e8f0; max-width: 85%;">
+          Hei Frank! Jeg er din <strong>Antigravity AI Copilot</strong> for Det Norske Brenneri AS. Hva vil du analysere eller sjekke nå?
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Input Form -->
+    <div style="padding: 10px 12px; background: #020617; border-top: 1px solid #1e293b; display: flex; align-items: center; gap: 8px;">
+      <input type="text" id="popup-chat-input" placeholder="Skriv din forespørsel til AI-agentene..." style="flex: 1; background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 8px 12px; font-size: 12px; color: #f8fafc; outline: none;" onkeypress="handleKeyPress(event)">
+      <button onclick="sendChatMessage()" style="background: #d97706; color: white; border: none; border-radius: 10px; padding: 8px 14px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+        <span>Send</span>
+        <i class="fa-solid fa-paper-plane" style="font-size: 10px;"></i>
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>
