@@ -1863,11 +1863,17 @@
     .library-compact-grid {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.15rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 1080px) {
+      .library-compact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
       .library-compact-grid {
         grid-template-columns: 1fr;
       }
@@ -1877,32 +1883,68 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1.15rem 1.25rem;
-      gap: 0.65rem;
+      padding: 0.85rem 1rem;
+      gap: 0.4rem;
     }
 
     .project-card.library-compact .project-body {
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
+      justify-content: space-between;
+      height: 100%;
+      gap: 0.4rem;
+    }
+
+    .project-card.library-compact .project-category {
+      font-size: 0.66rem;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .project-card.library-compact .project-title {
-      font-size: 1.05rem;
+      font-size: 0.94rem;
+      line-height: 1.3;
       margin-bottom: 0.25rem;
     }
 
     .project-card.library-compact .project-description {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      margin-bottom: 0.25rem;
+      font-size: 0.78rem;
+      line-height: 1.42;
+      margin-bottom: 0.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #475569;
+    }
+
+    .project-card.library-compact .library-more {
+      margin-top: 0.2rem;
+      padding: 0.28rem 0.5rem;
+    }
+
+    .project-card.library-compact .library-more summary {
+      font-size: 0.72rem;
     }
 
     .project-card.library-compact .project-actions {
-      margin-top: 0.4rem;
-      padding-top: 0.5rem;
+      margin-top: 0.35rem;
+      padding-top: 0.4rem;
       border-top: 1px solid #f1f5f9;
+      gap: 0.35rem;
+    }
+
+    .project-card.library-compact .project-actions .btn-action-primary,
+    .project-card.library-compact .project-actions .btn-action-secondary {
+      padding: 0.26rem 0.55rem;
+      font-size: 0.72rem;
+    }
+
+    .project-card.library-compact .project-actions> :nth-child(n+3) {
+      display: none;
     }
 
     .library-more {
@@ -1962,7 +2004,7 @@
       <div class="value-prop-inner">
         <div class="value-prop-eyebrow">Frank Ellingsen</div>
         <p>
-          With a formal background in <strong>Finance &amp; Business Administration</strong>, I connect financial
+          Formal background in <strong>Finance &amp; Business Administration</strong>, I connect financial
           controlling, project performance, and modern analytics—turning operational and accounting data into reliable
           forecasts, clear variance explanations, and decision-ready management reporting.
         </p>
@@ -2050,7 +2092,7 @@
                 <div class="case-story-block highlight-result" style="grid-column: 1 / -1;">
                   <div class="case-story-label">Business Result</div>
                   <ul class="case-result-list">
-                    <li><strong>31%</strong> Close Readiness</li>
+                    <li><strong>99.9</strong> Close Readiness</li>
                     <li><strong>4</strong> exceptions requiring investigation</li>
                     <li><strong>0.00 NOK</strong> reconciled difference</li>
                     <li><strong>Human approval</strong> required before final action</li>
@@ -3080,8 +3122,8 @@
             <div class="wf-eyebrow">05 &bull; Technology for Finance</div>
             <h3>Built for Deterministic Accuracy &amp; Auditability</h3>
             <div class="workflow-steps">
-              <span class="workflow-step-pill">Power BI</span>
               <span class="workflow-step-pill">Excel</span>
+              <span class="workflow-step-pill">Power BI</span>
               <span class="workflow-step-pill">SQL</span>
               <span class="workflow-step-pill">Python</span>
               <span class="workflow-step-pill">DuckDB</span>
@@ -5621,9 +5663,8 @@
         <div class="footer-brand">
           <h4>data_frank</h4>
           <p>
-            Project Controlling, Business Intelligence &amp; Applied AI.
-            Adhering to Edward Tufte's Data-Ink principles to deliver
-            actionable business clarity.
+            Financial &amp; Project Controller &mdash; Financial control, project
+            performance, and better decisions.
           </p>
         </div>
 
